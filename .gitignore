@@ -34,4 +34,18 @@
 # Build artifacts.
 target/
 
+*.a
+*.dll
+*.exe
+*.lib
+*.o
+*.obj
+*.so
+
+
+
+# Documentation artifacts.
+html/
+latex/
+
 ################################################################################
