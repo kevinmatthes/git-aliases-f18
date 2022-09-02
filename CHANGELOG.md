@@ -40,10 +40,11 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-* Doxygen settings:  Fortran presets
+* basic citation meta data
 * create repository README
 * create this changelog
 * create this repository
+* Doxygen settings:  Fortran presets
 * license:  GPL-2.0
 
 <!----------------------------------------------------------------------------->
