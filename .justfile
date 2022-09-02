@@ -38,5 +38,6 @@ alias d := doxygen
 @doxygen:
     doxygen doxygen.cfg
     cd latex/ && latexmk -f -r ../.latexmkrc --silent refman
+    cp latex/refman.pdf doxygen.pdf
 
 ################################################################################
