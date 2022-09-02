@@ -32,11 +32,20 @@
 ################################################################################
 
 # Synonyms for the configured recipes.
+alias b    := build
 alias d    := doxygen
 alias dirs := directories
 
 # The default recipe to execute.
-@default: doxygen
+@default: build
+
+# Compile the target application.
+@build: directories
+    gfortran \
+        -std=f2018 \
+        -Wall -Werror -Wextra -Wpedantic \
+        src/*.f \
+        -o target/ga-f18
 
 # Create the required directories for the other recipes.
 @directories:
