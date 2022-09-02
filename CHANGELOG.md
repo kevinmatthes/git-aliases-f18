@@ -42,6 +42,7 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 * basic citation meta data
 * create `.gitignore`
+* create `.justfile`
 * create repository README
 * create this changelog
 * create this repository
