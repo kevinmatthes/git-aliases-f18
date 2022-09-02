@@ -62,7 +62,8 @@ version is as follows:
 
 | Requirement       | Type          | Role                                  |
 |:------------------|:-------------:|:--------------------------------------|
-| Doxygen           | application   | source code documentation             | 
+| Doxygen           | application   | source code documentation             |
+| Git               | application   | application to configure              |
 | Just              | Rust binary   | execution of the build instructions   |
 | Latexmk           | application   | LaTeX compilation of Doxygen manual   |
 | TeX Live (full)   | package       | LaTeX environment for Doxygen manual  |
