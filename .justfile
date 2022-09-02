@@ -59,7 +59,7 @@ alias v    := valgrind
 
 # Create the required directories for the other recipes.
 @directories:
-    mkdir target/
+    mkdir -p target/
 
 # Create the Doxygen documentation for this project.
 @doxygen:
