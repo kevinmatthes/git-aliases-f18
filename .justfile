@@ -32,7 +32,15 @@
 ################################################################################
 
 # Synonyms for the configured recipes.
-alias d := doxygen
+alias d    := doxygen
+alias dirs := directories
+
+# The default recipe to execute.
+@default: doxygen
+
+# Create the required directories for the other recipes.
+@directories:
+    mkdir target/
 
 # Create the Doxygen documentation for this project.
 @doxygen:
