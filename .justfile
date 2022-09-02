@@ -32,12 +32,18 @@
 ################################################################################
 
 # Synonyms for the configured recipes.
+alias a    := all
 alias b    := build
+alias clr  := clear
 alias d    := doxygen
 alias dirs := directories
+alias v    := valgrind
 
 # The default recipe to execute.
-@default: build
+@default: valgrind
+
+# Execute all configured recipes.
+@all: clear doxygen valgrind
 
 # Compile the target application.
 @build: directories
@@ -46,6 +52,10 @@ alias dirs := directories
         -Wall -Werror -Wextra -Wpedantic \
         src/*.f \
         -o target/ga-f18
+
+# Remove build and documentation artifacts.
+@clear:
+    git clean -dfx
 
 # Create the required directories for the other recipes.
 @directories:
@@ -56,5 +66,11 @@ alias dirs := directories
     doxygen doxygen.cfg
     cd latex/ && latexmk -f -r ../.latexmkrc --silent refman
     cp latex/refman.pdf doxygen.pdf
+
+# Analyse the memory management of the target application.
+@valgrind: build
+    valgrind \
+        --leak-check=full --redzone-size=512 --show-leak-kinds=all \
+        ./target/ga-f18
 
 ################################################################################
