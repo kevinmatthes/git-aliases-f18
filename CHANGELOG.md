@@ -41,10 +41,12 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 * basic citation meta data
+* create `.gitignore`
 * create repository README
 * create this changelog
 * create this repository
 * Doxygen settings:  Fortran presets
+* GitHub Action:  CFF validation
 * license:  GPL-2.0
 
 <!----------------------------------------------------------------------------->
