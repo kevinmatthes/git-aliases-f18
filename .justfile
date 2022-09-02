@@ -37,6 +37,6 @@ alias d := doxygen
 # Create the Doxygen documentation for this project.
 @doxygen:
     doxygen doxygen.cfg
-    cd latex/ && latexmk --silent refman
+    cd latex/ && latexmk -f -r ../.latexmkrc --silent refman
 
 ################################################################################
