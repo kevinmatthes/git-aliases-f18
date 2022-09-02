@@ -58,4 +58,10 @@ version is as follows:
 > with this program; if not, write to the Free Software Foundation, Inc.,
 > 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
+## Software Requirements
+
+| Requirement       | Type          | Role                                  |
+|:------------------|:-------------:|:--------------------------------------|
+| Just              | Rust binary   | execution of the build instructions   |
+
 <!----------------------------------------------------------------------------->
