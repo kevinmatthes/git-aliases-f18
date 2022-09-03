@@ -41,7 +41,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine rewind ()
+      subroutine rewind_git ()
       implicit none
 
       call git
