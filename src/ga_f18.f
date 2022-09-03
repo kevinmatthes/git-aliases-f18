@@ -52,6 +52,7 @@
       call bugfix ()
       call checkin ()
       call create ()
+      call delbranch ()
       call unconfigure ()
 
       end
