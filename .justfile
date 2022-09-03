@@ -37,6 +37,7 @@ alias b    := build
 alias clr  := clear
 alias d    := doxygen
 alias dirs := directories
+alias i    := install
 alias v    := valgrind
 
 # The default recipe to execute.
@@ -60,13 +61,17 @@ alias v    := valgrind
 
 # Create the required directories for the other recipes.
 @directories:
-    mkdir -p target/
+    mkdir -p ~/.local/bin/ target/
 
 # Create the Doxygen documentation for this project.
 @doxygen:
     doxygen doxygen.cfg
     cd latex/ && latexmk -f -r ../.latexmkrc --silent refman
     cp latex/refman.pdf doxygen.pdf
+
+# Copy the target application to this user's path.
+@install: build
+    cp target/ga-f18 ~/.local/bin/
 
 # Analyse the memory management of the target application.
 @valgrind: build
