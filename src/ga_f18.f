@@ -46,7 +46,11 @@
       program ga_f18
       implicit none
 
-      print '(A)', 'Hello, world!'
+      call backup ()
+      call backupdestination ()
+      call bone ()
+      call bugfix ()
+      call checkin ()
 
       end
 
