@@ -49,7 +49,7 @@
       call git
      &( 'bugfix'
      &, '!git commit -m Bugfix && git store'
-     &, 'Commit and backup the currently staged changes as a bugfix.'
+     &, 'Commit and backup the staged changes as a bugfix.'
      &)
 
       end
