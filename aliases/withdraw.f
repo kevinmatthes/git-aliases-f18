@@ -47,7 +47,7 @@
       call git
      &( 'withdraw'
      &, 'reset HEAD --'
-     &, 'Remove the given files from the staging area.
+     &, 'Remove the given files from the staging area.'
      &)
 
       end
