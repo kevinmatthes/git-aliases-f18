@@ -37,7 +37,7 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
 !> \brief   The Git alias configuration program.
-!> \return  Whether the configuration was successfully.
+!> \return  This program will return with exit code zero, by default.
 !>
 !> This program will invoke the configuration of the defined Git alias commands.
 !!
