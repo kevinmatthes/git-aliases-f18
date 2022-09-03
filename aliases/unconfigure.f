@@ -49,7 +49,7 @@
       call git
      &( 'unconfigure'
      &, 'config --global --unset'
-     &, 'Remove a configuration entry from this user's Git settings.'
+     &, 'Remove a configuration entry from this user''s Git settings.'
      &)
 
       end
