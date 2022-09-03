@@ -40,6 +40,29 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
+* alias:  `backup`
+* alias:  `backupdestination`
+* alias:  `bone`
+* alias:  `bugfix`
+* alias:  `checkin`
+* alias:  `create`
+* alias:  `delbranch`
+* alias:  `ff`
+* alias:  `goto`
+* alias:  `grab`
+* alias:  `graph`
+* alias:  `newbranch`
+* alias:  `noff`
+* alias:  `rewind`
+* alias:  `savetags`
+* alias:  `store`
+* alias:  `tidy`
+* alias:  `unconfigure`
+* alias:  `verbose`
+* alias:  `view`
+* alias:  `whereami`
+* alias:  `whichremotes`
+* alias:  `withdraw`
 * basic citation meta data
 * create `.gitignore`
 * create `.justfile`
