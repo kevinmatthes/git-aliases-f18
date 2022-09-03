@@ -48,6 +48,8 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * create repository README
 * create this changelog
 * create this repository
+* define Git invocation subroutine
+* define summary subroutine for aliases to be configured
 * Doxygen settings:  Fortran presets
 * GitHub Action:  CFF validation
 * license:  GPL-2.0
