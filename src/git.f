@@ -53,11 +53,12 @@
       character (*), intent (in)   :: definition
       character (*), intent (in)   :: comment
 
-      call overview (alias, comment)
-
       call execute_command_line
-     &('git config --global alias.' // alias // ' "' // definition //
-     &'"')
+     &(     'git config --global alias.' // alias
+     &//    ' "' // definition // '"'
+     &)
+
+      call overview (alias, comment)
 
       end
 
