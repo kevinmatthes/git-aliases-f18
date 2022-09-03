@@ -56,8 +56,8 @@
       call overview (alias, comment)
 
       call execute_command_line
-     &('git config --global alias.' // alias // ' ''' // definition //
-     &'''')
+     &('git config --global alias.' // alias // ' "' // definition //
+     &'"')
 
       end
 
