@@ -51,7 +51,7 @@
       character (*), intent (in)   :: alias
       character (*), intent (in)   :: comment
 
-      print '(a25, t30, a)', alias, comment
+      print '(a20, t24, a)', alias, comment
 
       end
 
