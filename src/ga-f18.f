@@ -25,7 +25,7 @@
 !> \copyright   (C) 2022 Kevin Matthes.
 !>              This file is licensed GPL 2 as of June 1991.
 !> \date        2022
-!> \file        ga_f18.f
+!> \file        ga-f18.f
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
@@ -45,6 +45,15 @@
 
       program ga_f18
       implicit none
+
+      print '(a / a / a / a / a ///)'
+     &,     'ga-f18, version 0.1.0'
+     &,     'Copyright (C) 2022 Kevin Matthes.'
+     &,     'This is free software according to GPL-2.0.'
+     &,     'THERE IS ABSOLUTELY NO WARRANTY, WITHOUT EVEN THE IMPLIED '
+     &//    'WARRANTY OF'
+     &,     'MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE.'
+      print '(a20, t24, a /)', 'ALIAS', 'DESCRIPTION'
 
       call backup ()
       call backupdestination ()
