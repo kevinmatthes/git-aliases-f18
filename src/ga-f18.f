@@ -46,14 +46,14 @@
       program ga_f18
       implicit none
 
-      print '(a / a / a / a / a ///)'
+      print '(a / a / a / a / a /// a20, t24, a /)'
      &,     'ga-f18, version 0.1.0'
      &,     'Copyright (C) 2022 Kevin Matthes.'
      &,     'This is free software according to GPL-2.0.'
      &,     'THERE IS ABSOLUTELY NO WARRANTY, WITHOUT EVEN THE IMPLIED '
      &//    'WARRANTY OF'
      &,     'MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE.'
-      print '(a20, t24, a /)', 'ALIAS', 'DESCRIPTION'
+     &,     'ALIAS', 'DESCRIPTION'
 
       call backup ()
       call backupdestination ()
