@@ -46,8 +46,7 @@
 
       call git
      &( 'create'
-     &, '!git init && git add . && git commit -m ' //
-     &  '\''This is the initial commit.\'''
+     &, '!git init && git checkin -m ''This is the initial commit.'''
      &, 'Create a new repository.'
      &)
 
