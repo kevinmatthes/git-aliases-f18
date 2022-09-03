@@ -59,7 +59,7 @@
       call graph ()
       call newbranch ()
       call noff ()
-      call rewind ()
+      call rewind_git ()
       call savetags ()
       call store ()
       call tidy ()
