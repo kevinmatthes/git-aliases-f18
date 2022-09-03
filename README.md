@@ -70,4 +70,30 @@ version is as follows:
 | TeX Live (full)   | package       | LaTeX environment for Doxygen manual  |
 | Valgrind          | application   | memory leak detection                 |
 
+Since the application is written in Fortran 2018, a Fortran compiler is a
+mandatory software requirement.  For this project, *GFortran* will be employed
+for this task.
+
+The purpose of this application is to configure alias commands for *Git*.  Thus,
+an installation of Git needs to be ensured.  Furthermore, Git is employed to
+perform several tasks in the build routine.
+
+The compilation of the source code will be invoked automatically by *Just*.  All
+required steps are defined in the `.justfile` and explained in the corresponding
+section below.
+
+The source code contains docstrings to be processed by *Doxygen*.  By default,
+both an HTML and a LaTeX manual will be compiled.  They are saved in dedicated
+directories in the repository's root.  The LaTeX manual needs to be finalised
+with according compilers.  Their invocation is managed by Doxygen itself by the
+provision of multiple build scripts.  Instead of relying on them, this project
+defines an equal finalisation routine based upon *Latexmk*.  This finalisation
+will be called automatically by Just.  Please note that the compilation of a
+LaTeX project requires the installation of a LaTeX distribution.  The
+recommended distribution is the *full* installation of *TeX Live*.
+
+In order to demonstrate the appropriate handling of memory allocations, a test
+therefore is configured as Just recipe.  This test uses *Valgrind* and is
+optional.
+
 <!----------------------------------------------------------------------------->
