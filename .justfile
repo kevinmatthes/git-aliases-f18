@@ -50,7 +50,7 @@ alias v    := valgrind
     gfortran \
         -std=f2018 \
         -Wall -Werror -Wextra -Wpedantic \
-        aliases/*.f
+        aliases/*.f \
         src/*.f \
         -o target/ga-f18
 
