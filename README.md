@@ -96,4 +96,33 @@ In order to demonstrate the appropriate handling of memory allocations, a test
 therefore is configured as Just recipe.  This test uses *Valgrind* and is
 optional.
 
+## Description
+
+This repository contains the source code of an application named `ga-f18`.  When
+compiled, it will configure the hard coded Git alias commands.  A common use
+case of this application is hence the initialisation of Git in a new user
+account.
+
+`ga-f18` can be freely expanded with further commands.  The procedure to do so
+is illustrated by the source files in the `aliases/` directory of this
+repository.
+
+When calling the application, it will show some default information about itself
+in the first five lines.  These information are about the application's name and
+version and the copyright information.  After three empty lines, a table will
+follow with information about the commands configured by this application.  On
+the left-hand side, there are the names of the aliases listed, whereas on the
+right-hand side, there is a short description about what this alias command is
+supposed to do.  The writing of a line indicates that the respective was
+configured successfully.
+
+Despite the actual functionality, this project also demonstrates the following
+features of Fortran 2018:
+
+* documentation with Doxygen
+* memory management
+* string concatenation in subroutine calls
+* subroutines
+* synchronous invocation of applications from a program
+
 <!----------------------------------------------------------------------------->
