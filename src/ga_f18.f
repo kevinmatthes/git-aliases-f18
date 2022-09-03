@@ -53,6 +53,9 @@
       call checkin ()
       call create ()
       call delbranch ()
+      call ff ()
+      call newbranch ()
+      call noff ()
       call unconfigure ()
 
       end
