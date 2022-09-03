@@ -21,33 +21,20 @@
 ################################################################################
 ##
 ##  AUTHOR      Kevin Matthes
-##  BRIEF       Settings for the Git repository.
+##  BRIEF       The settings for the LaTeX compilation system.
 ##  COPYRIGHT   (C) 2022 Kevin Matthes.
 ##              This file is licensed GPL 2 as of June 1991.
 ##  DATE        2022
-##  FILE        .gitignore
+##  FILE        .latexmkrc
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-# Build artifacts.
-target/
+# Set the maximum count of compilation runs to the Doxygen default value.
+$max_repeat = 8;
 
-*.a
-*.dll
-*.exe
-*.lib
-*.o
-*.obj
-*.so
-
-
-
-# Documentation artifacts.
-html/
-latex/
-
-*.pdf
+# Use `pdflatex` as LaTeX compiler.
+$pdf_mode = 1;
 
 ################################################################################

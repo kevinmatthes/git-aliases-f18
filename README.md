@@ -58,4 +58,16 @@ version is as follows:
 > with this program; if not, write to the Free Software Foundation, Inc.,
 > 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
+## Software Requirements
+
+| Requirement       | Type          | Role                                  |
+|:------------------|:-------------:|:--------------------------------------|
+| Doxygen           | application   | source code documentation             |
+| GFortran          | application   | Fortran 2018 compiler                 |
+| Git               | application   | application to configure              |
+| Just              | Rust binary   | execution of the build instructions   |
+| Latexmk           | application   | LaTeX compilation of Doxygen manual   |
+| TeX Live (full)   | package       | LaTeX environment for Doxygen manual  |
+| Valgrind          | application   | memory leak detection                 |
+
 <!----------------------------------------------------------------------------->

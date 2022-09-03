@@ -21,33 +21,62 @@
 ################################################################################
 ##
 ##  AUTHOR      Kevin Matthes
-##  BRIEF       Settings for the Git repository.
+##  BRIEF       The recipes in order to compile the provided executable.
 ##  COPYRIGHT   (C) 2022 Kevin Matthes.
 ##              This file is licensed GPL 2 as of June 1991.
 ##  DATE        2022
-##  FILE        .gitignore
+##  FILE        .justfile
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-# Build artifacts.
-target/
+# Synonyms for the configured recipes.
+alias a    := all
+alias b    := build
+alias clr  := clear
+alias d    := doxygen
+alias dirs := directories
+alias i    := install
+alias v    := valgrind
 
-*.a
-*.dll
-*.exe
-*.lib
-*.o
-*.obj
-*.so
+# The default recipe to execute.
+@default: valgrind
 
+# Execute all configured recipes.
+@all: clear doxygen valgrind
 
+# Compile the target application.
+@build: directories
+    gfortran \
+        -std=f2018 \
+        -Wall -Werror -Wextra -Wpedantic \
+        aliases/*.f \
+        src/*.f \
+        -o target/ga-f18
 
-# Documentation artifacts.
-html/
-latex/
+# Remove build and documentation artifacts.
+@clear:
+    git clean -dfx
 
-*.pdf
+# Create the required directories for the other recipes.
+@directories:
+    mkdir -p ~/.local/bin/ target/
+
+# Create the Doxygen documentation for this project.
+@doxygen:
+    doxygen doxygen.cfg
+    cd latex/ && latexmk -f -r ../.latexmkrc --silent refman
+    cp latex/refman.pdf doxygen.pdf
+
+# Copy the target application to this user's path.
+@install: build
+    cp target/ga-f18 ~/.local/bin/
+
+# Analyse the memory management of the target application.
+@valgrind: build
+    valgrind \
+        --leak-check=full --redzone-size=512 --show-leak-kinds=all \
+        ./target/ga-f18
 
 ################################################################################

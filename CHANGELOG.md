@@ -40,11 +40,39 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
+* alias:  `backup`
+* alias:  `backupdestination`
+* alias:  `bone`
+* alias:  `bugfix`
+* alias:  `checkin`
+* alias:  `create`
+* alias:  `delbranch`
+* alias:  `ff`
+* alias:  `goto`
+* alias:  `grab`
+* alias:  `graph`
+* alias:  `newbranch`
+* alias:  `noff`
+* alias:  `rewind`
+* alias:  `savetags`
+* alias:  `store`
+* alias:  `tidy`
+* alias:  `unconfigure`
+* alias:  `verbose`
+* alias:  `view`
+* alias:  `whereami`
+* alias:  `whichremotes`
+* alias:  `withdraw`
 * basic citation meta data
 * create `.gitignore`
+* create `.justfile`
+* create `.latexmkrc`
+* create main source file
 * create repository README
 * create this changelog
 * create this repository
+* define Git invocation subroutine
+* define summary subroutine for aliases to be configured
 * Doxygen settings:  Fortran presets
 * GitHub Action:  CFF validation
 * license:  GPL-2.0
