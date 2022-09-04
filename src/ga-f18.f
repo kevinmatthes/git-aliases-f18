@@ -46,7 +46,7 @@
       program ga_f18
       implicit none
 
-      print '(a / a / a / a / a /// a20, t24, a /)'
+      print '(a / a / a / a / a //// a20, t24, a /)'
      &,     'ga-f18, version 0.1.0'
      &,     'Copyright (C) 2022 Kevin Matthes.'
      &,     'This is free software according to GPL-2.0.'
@@ -55,29 +55,29 @@
      &,     'MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE.'
      &,     'ALIAS', 'DESCRIPTION'
 
-      call backup ()
-      call backupdestination ()
-      call bone ()
-      call bugfix ()
-      call checkin ()
-      call create ()
-      call delbranch ()
-      call ff ()
-      call goto_git ()
-      call grab ()
-      call graph ()
-      call newbranch ()
-      call noff ()
-      call rewind_git ()
-      call savetags ()
-      call store ()
-      call tidy ()
-      call verbose ()
-      call view ()
-      call unconfigure ()
-      call whereami ()
-      call whichremotes ()
-      call withdraw ()
+      call backup
+      call backupdestination
+      call bone
+      call bugfix
+      call checkin
+      call create
+      call delbranch
+      call ff
+      call goto_git
+      call grab
+      call graph
+      call newbranch
+      call noff
+      call rewind_git
+      call savetags
+      call store
+      call tidy
+      call verbose
+      call view
+      call unconfigure
+      call whereami
+      call whichremotes
+      call withdraw
 
       end
 
