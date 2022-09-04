@@ -43,7 +43,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine backupdestination ()
+      subroutine backupdestination
       implicit none
 
       call git
