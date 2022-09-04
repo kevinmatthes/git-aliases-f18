@@ -181,4 +181,47 @@ All build artifacts will be removed from the working directory.  The selection
 of the files and directories to remove is controlled by the `.gitignore` as the
 respective Git command is invoked by this recipe.
 
+### Creation of Directories
+
+```
+just dirs
+just directories
+```
+
+For both the compilation and the installation, several directories are required.
+They are created automatically when the respective commands are invoked.
+
+### Doxygen Manual
+
+```
+just d
+just doxygen
+```
+
+Doxygen will compile the defined dosctrings to a manual in both HTML and PDF
+formats.  The finalisation of the LaTeX manual is defined as a hard coded part
+of this recipe.  The compiled LaTeX manual will be copied to the repository
+root.
+
+### Installation
+
+```
+just i
+just install
+```
+
+The compiled application is copied to the user's home directory's storage for
+user defined binary executables.  This is `~/.local/bin/`.  If should not
+already exist, it will be created.
+
+### Valgrind Memory Management Analysis
+
+```
+just v
+just valgrind
+```
+
+This an optional recipe to ensure that the memory allocations are handled
+appropriately by the target application.
+
 <!----------------------------------------------------------------------------->
