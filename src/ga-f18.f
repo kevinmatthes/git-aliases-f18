@@ -55,29 +55,29 @@
      &,     'MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE.'
      &,     'ALIAS', 'DESCRIPTION'
 
-      call backup ()
-      call backupdestination ()
-      call bone ()
-      call bugfix ()
-      call checkin ()
-      call create ()
-      call delbranch ()
-      call ff ()
-      call goto_git ()
-      call grab ()
-      call graph ()
-      call newbranch ()
-      call noff ()
-      call rewind_git ()
-      call savetags ()
-      call store ()
-      call tidy ()
-      call verbose ()
-      call view ()
-      call unconfigure ()
-      call whereami ()
-      call whichremotes ()
-      call withdraw ()
+      call backup
+      call backupdestination
+      call bone
+      call bugfix
+      call checkin
+      call create
+      call delbranch
+      call ff
+      call goto_git
+      call grab
+      call graph
+      call newbranch
+      call noff
+      call rewind_git
+      call savetags
+      call store
+      call tidy
+      call verbose
+      call view
+      call unconfigure
+      call whereami
+      call whichremotes
+      call withdraw
 
       end
 
