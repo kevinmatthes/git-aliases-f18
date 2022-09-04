@@ -143,4 +143,42 @@ just
 When calling Just without any recipe, the default recipe will be executed.  This
 is the Valgrind check for memory leaks.
 
+### All Recipes
+
+```
+just a
+just all
+```
+
+All meaningful recipes are executed in the following order.
+
+* removal of build artifacts
+* creation of a Doxygen manual
+* memory management analysis with Valgrind
+
+Thereby, all required directories as well as the target application itself will
+be created.
+
+### Build of the Application
+
+```
+just b
+just build
+```
+
+The application itself will be compiled and saved in the directory `target/`.
+This directory will be created automatically during the build process and is
+situated in the repository root.
+
+### Removal of Build Artifacts
+
+```
+just clr
+just clear
+```
+
+All build artifacts will be removed from the working directory.  The selection
+of the files and directories to remove is controlled by the `.gitignore` as the
+respective Git command is invoked by this recipe.
+
 <!----------------------------------------------------------------------------->
