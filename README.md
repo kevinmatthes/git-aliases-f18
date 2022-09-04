@@ -124,4 +124,23 @@ features of Fortran 2018:
 * subroutines
 * synchronous invocation of applications from a program
 
+## Build Instructions
+
+All build instructions are configured as Just recipes in the `.justfile` located
+in the repository root.  An overview about all defined recipes can be requested
+by calling the following command in a terminal.
+
+```
+just --list
+```
+
+### Default Recipe
+
+```
+just
+```
+
+When calling Just without any recipe, the default recipe will be executed.  This
+is the Valgrind check for memory leaks.
+
 <!----------------------------------------------------------------------------->
