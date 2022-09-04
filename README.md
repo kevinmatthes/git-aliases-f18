@@ -92,7 +92,7 @@ LaTeX project requires the installation of a LaTeX distribution.  The
 recommended distribution is the *full* installation of *TeX Live*.
 
 In order to demonstrate the appropriate handling of memory allocations, a test
-therefore is configured as Just recipe.  This test uses *Valgrind* and is
+therefore is configured as a Just recipe.  This test uses *Valgrind* and is
 optional.
 
 ## Description
@@ -153,7 +153,7 @@ just all
 This recipe is designed to invoke all meaningful other recipes.  This utility
 recipe is intended as an abbreviation during the development of this project.
 All meaningful recipes are executed in the following order.  The purposes of
-the recipes is explained subsequent sections.
+the recipes are explained in subsequent sections.
 
 1. `just clear`
 2. `just doxygen`
@@ -171,7 +171,7 @@ just build
 
 The application itself will be compiled and saved in the directory `target/`.
 This directory will be created automatically during the build process and is
-situated in the repository root.
+situated in the repository's root.
 
 ### Removal of Build Artifacts
 
@@ -180,8 +180,8 @@ just clr
 just clear
 ```
 
-All build artifacts will be removed from the working directory.  The selection
-of the files and directories to remove is controlled by the `.gitignore` as the
+All build artifacts will be removed from the whole repository.  The selection of
+the files and directories to remove is controlled by the `.gitignore` as the
 respective Git command is invoked by this recipe.
 
 ### Creation of Directories
@@ -205,7 +205,7 @@ just doxygen
 ```
 
 All source files are equipped with docstrings in order to explain the code.
-Doxygen will compile the these docstrings to manuals in the following formats:
+Doxygen will compile these docstrings to manuals in the following formats:
 
 * HTML
 * PDF
@@ -221,7 +221,7 @@ just install
 ```
 
 The compiled application is copied to the user's home directory's storage for
-user defined binary executables.  This is `~/.local/bin/`.  If should not
+user defined binary executables.  This is `~/.local/bin/`.  If it should not
 already exist, it will be created.
 
 ### Valgrind Memory Management Analysis
