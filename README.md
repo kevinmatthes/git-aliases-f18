@@ -198,10 +198,14 @@ just d
 just doxygen
 ```
 
-Doxygen will compile the defined dosctrings to a manual in both HTML and PDF
-formats.  The finalisation of the LaTeX manual is defined as a hard coded part
-of this recipe.  The compiled LaTeX manual will be copied to the repository
-root.
+All source files are equipped with docstrings in order to explain the code.
+Doxygen will compile the these docstrings to manuals in the following formats:
+
+* HTML
+* PDF
+
+The finalisation of the LaTeX manual is defined as a hard coded part of this
+recipe.  The compiled LaTeX manual will be copied to the repository root.
 
 ### Installation
 
