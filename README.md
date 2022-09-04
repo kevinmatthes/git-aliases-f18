@@ -118,11 +118,11 @@ configured successfully.
 Despite the actual functionality, this project also demonstrates the following
 features of Fortran 2018:
 
-* documentation with Doxygen
-* memory management
+* documentation of Fortran projects with Doxygen
+* Fortran's automatic memory management
 * string concatenation in subroutine calls
-* subroutines
-* synchronous invocation of applications from a program
+* subroutine definition
+* synchronous invocation of external applications from a Fortran program
 
 ## Build Instructions
 
