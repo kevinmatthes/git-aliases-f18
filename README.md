@@ -150,14 +150,17 @@ just a
 just all
 ```
 
-All meaningful recipes are executed in the following order.
+This recipe is designed to invoke all meaningful other recipes.  This utility
+recipe is intended as an abbreviation during the development of this project.
+All meaningful recipes are executed in the following order.  The purposes of
+the recipes is explained subsequent sections.
 
-* removal of build artifacts
-* creation of a Doxygen manual
-* memory management analysis with Valgrind
+1. `just clear`
+2. `just doxygen`
+3. `just valgrind`
 
 Thereby, all required directories as well as the target application itself will
-be created.
+be created automatically.
 
 ### Build of the Application
 
@@ -190,6 +193,9 @@ just directories
 
 For both the compilation and the installation, several directories are required.
 They are created automatically when the respective commands are invoked.
+
+This is an internal utility recipe.  It will be invoked automatically by other
+recipes, if required.
 
 ### Doxygen Manual
 
