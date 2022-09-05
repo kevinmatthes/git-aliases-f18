@@ -45,7 +45,7 @@
 !> Git will treat any applications prefixed with `git-` as associated commands.
 !> Doing so with this program is also a benefit for the user since one can not
 !> only configure all aliases with this tool but also request a summary of the
-!> aliases setup with this tool.
+!> aliases set up with this tool.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
