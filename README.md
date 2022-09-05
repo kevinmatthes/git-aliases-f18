@@ -97,14 +97,20 @@ optional.
 
 ## Description
 
-This repository contains the source code of an application named `ga-f18`.  When
-compiled, it will configure the hard coded Git alias commands.  A common use
-case of this application is hence the initialisation of Git in a new user
+This repository contains the source code of an application named `git-aliases`.
+When compiled, it will configure the hard coded Git alias commands.  A common
+use case of this application is hence the initialisation of Git in a new user
 account.
 
-`ga-f18` can be freely expanded with further commands.  The procedure in order
-to do so is illustrated by the source files in the `aliases/` directory of this
-repository.
+`git-aliases` can be freely expanded with further commands.  The procedure in
+order to do so is illustrated by the source files in the `aliases/` directory
+of this repository.
+
+This tool can be integrated into Git, at option.  Due to its naming convention,
+Git will consider all applications prefixed with `git-` associated commands.
+This feature offers two benefits.  One can not only configure all desired alias
+commands with this tool but also request a summary for the aliases set up by
+this application with Git itself.
 
 When calling the application, it will show some default information about itself
 in the first five lines.  These information are about the application's name and

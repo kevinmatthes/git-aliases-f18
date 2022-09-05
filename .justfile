@@ -53,7 +53,7 @@ alias v    := valgrind
         -Wall -Werror -Wextra -Wpedantic \
         aliases/*.f \
         src/*.f \
-        -o target/ga-f18
+        -o target/git-aliases
 
 # Remove build and documentation artifacts.
 @clear:
@@ -71,12 +71,12 @@ alias v    := valgrind
 
 # Copy the target application to this user's path.
 @install: build
-    cp target/ga-f18 ~/.local/bin/
+    cp target/git-aliases ~/.local/bin/
 
 # Analyse the memory management of the target application.
 @valgrind: build
     valgrind \
         --leak-check=full --redzone-size=512 --show-leak-kinds=all \
-        ./target/ga-f18
+        ./target/git-aliases
 
 ################################################################################
