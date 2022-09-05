@@ -25,7 +25,7 @@
 !> \copyright   (C) 2022 Kevin Matthes.
 !>              This file is licensed GPL 2 as of June 1991.
 !> \date        2022
-!> \file        ga-f18.f
+!> \file        git-aliases-f18.f
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
@@ -40,14 +40,20 @@
 !> \return  This program will return with exit code zero, by default.
 !>
 !> This program will invoke the configuration of the defined Git alias commands.
+!>
+!> Due to the naming convention of Git, this program can be integrated into it.
+!> Git will treat any applications prefixed with `git-` as associated commands.
+!> Doing so with this program is also a benefit for the user since one can not
+!> only configure all aliases with this tool but also request a summary of the
+!> aliases setup with this tool.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      program ga_f18
+      program git_aliases_f18
       implicit none
 
       print '(a / a / a / a / a //// a20, t24, a /)'
-     &,     'ga-f18, version 0.1.0'
+     &,     'git-aliases, version 0.1.0'
      &,     'Copyright (C) 2022 Kevin Matthes.'
      &,     'This is free software according to GPL-2.0.'
      &,     'THERE IS ABSOLUTELY NO WARRANTY, WITHOUT EVEN THE IMPLIED '
