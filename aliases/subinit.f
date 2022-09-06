@@ -21,70 +21,58 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
 !> \author      Kevin Matthes
-!> \brief       The main source file.
+!> \brief       Set up the current submodule.
 !> \copyright   (C) 2022 Kevin Matthes.
 !>              This file is licensed GPL 2 as of June 1991.
 !> \date        2022
-!> \file        git-aliases-f18.f
+!> \file        subinit.f
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> This source file defines the invocation of the configuration of the defined
-!> Git alias commands.
+!> This alias is used in order to initialise the current submodule.
+!>
+!> When cloning from a remote repository with submodules non-recursively, these
+!> are not going to be initialised during the cloning process.  Hence, users
+!> need to initialise those themselves.  If one does not initialise submodules
+!> frequently, the commands therefore can be easily forgotten.  This Git alias
+!> summarises the required commands in order to provide a useful abbreviation.
+!>
+!> This alias command requires the specification of the branch to checkout.
+!>
+!> \note It is assumed that the current working directory is the root of the
+!> submodule to initialise.  Hence, one needs to `cd` into the submodule to
+!> initialise, at first.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \brief   The Git alias configuration program.
-!> \return  This program will return with exit code zero, by default.
+!> \brief   Set up the current submodule.
 !>
-!> This program will invoke the configuration of the defined Git alias commands.
+!> This alias is used in order to initialise the current submodule.
 !>
-!> Due to the naming convention of Git, this program can be integrated into it.
-!> Git will treat any applications prefixed with `git-` as associated commands.
-!> Doing so with this program is also a benefit for the user since one can not
-!> only configure all aliases with this tool but also request a summary of the
-!> aliases set up with this tool.
+!> When cloning from a remote repository with submodules non-recursively, these
+!> are not going to be initialised during the cloning process.  Hence, users
+!> need to initialise those themselves.  If one does not initialise submodules
+!> frequently, the commands therefore can be easily forgotten.  This Git alias
+!> summarises the required commands in order to provide a useful abbreviation.
+!>
+!> This alias command requires the specification of the branch to checkout.
+!>
+!> \note It is assumed that the current working directory is the root of the
+!> submodule to initialise.  Hence, one needs to `cd` into the submodule to
+!> initialise, at first.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      program git_aliases_f18
+      subroutine subinit
       implicit none
 
-      print '(a / a / a / a / a //// a20, t24, a /)'
-     &,     'git-aliases, version 0.1.0'
-     &,     'Copyright (C) 2022 Kevin Matthes.'
-     &,     'This is free software according to GPL-2.0.'
-     &,     'THERE IS ABSOLUTELY NO WARRANTY, WITHOUT EVEN THE IMPLIED '
-     &//    'WARRANTY OF'
-     &,     'MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE.'
-     &,     'ALIAS', 'DESCRIPTION'
-
-      call backup
-      call backupdestination
-      call bone
-      call bugfix
-      call checkin
-      call create
-      call delbranch
-      call ff
-      call goto_git
-      call grab
-      call graph
-      call newbranch
-      call noff
-      call rewind_git
-      call savetags
-      call store
-      call subinit
-      call tidy
-      call verbose
-      call view
-      call unconfigure
-      call whereami
-      call whichremotes
-      call withdraw
+      call git
+     &( 'subinit'
+     &, '!git submodule init && git submodule update && git goto'
+     &, 'Set up the current submodule.'
+     &)
 
       end
 
