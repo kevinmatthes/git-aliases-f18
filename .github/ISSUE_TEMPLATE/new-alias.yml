@@ -49,13 +49,12 @@ body:
       placeholder: helloworld
     validations:
       required: true
-  - type: textarea
+  - type: input
     id: definition
     attributes:
       label: Definition
       description: Please specify how this alias shall be defined.
-      value: !echo Hello, World!
-      render: bash
+      placeholder: '!echo Hello, World!'
     validations:
       required: true
   - type: input
