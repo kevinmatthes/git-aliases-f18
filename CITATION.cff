@@ -50,4 +50,23 @@ repository-artifact: https://github.com/kevinmatthes/git-aliases-f18
 title: git-aliases-f18
 url: https://github.com/kevinmatthes/git-aliases-f18
 
+# References.
+references:
+  - abstract: Everything you need to know about Git.
+    authors:
+      - family-names: Chacon
+        given-names: Scott
+      - family-names: Straub
+        given-names: Ben
+    edition: '2'
+    isbn: 978-1-4842-0077-3
+    languages:
+      - en
+    location:
+      name: New York
+    publisher:
+      name: Apress
+    title: Pro Git
+    type: book
+
 ################################################################################
