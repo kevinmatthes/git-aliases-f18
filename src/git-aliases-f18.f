@@ -77,6 +77,7 @@
       call rewind_git
       call savetags
       call store
+      call subinit
       call tidy
       call verbose
       call view
