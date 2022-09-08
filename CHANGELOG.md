@@ -58,6 +58,7 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * alias:  `store`
 * alias:  `subinit`
 * alias:  `tidy`
+* alias:  `tws`
 * alias:  `unconfigure`
 * alias:  `verbose`
 * alias:  `view`
