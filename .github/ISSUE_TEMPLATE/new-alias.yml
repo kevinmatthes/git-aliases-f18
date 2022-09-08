@@ -34,13 +34,16 @@
 name: New Alias
 description: Request a new Git alias command.
 title: '[Feature Request] New Alias'
-labels: ['enhancement']
+labels: 
+  - 'enhancement'
 assignees:
   - kevinmatthes
 body:
   - type: markdown
     attributes:
-      value: This form is used in order request a new Git alias command.
+      value: |
+        Please provide the following information in order to request a new Git
+        alias command.
   - type: input
     attributes:
       label: Command Name
