@@ -68,5 +68,35 @@ references:
       name: Apress
     title: Pro Git
     type: book
+  - authors:
+      - family-names: Chivers
+        given-names: Ian
+      - family-names: Sleightholme
+        given-names: Jane
+    edition: '4'
+    isbn: 978-3-030-09248-1
+    languages:
+      - en
+    location:
+      name: Cham
+    publisher:
+      name: Springer
+    title: Introduction to Programming with Fortran
+    type: book
+  - authors:
+      - family-names: Kühme
+        given-names: Thomas
+      - family-names: Witschital
+        given-names: Peter
+    edition: '3'
+    isbn: 978-3-486-22016-2
+    languages:
+      - de
+    location:
+      name: Munich
+    publisher:
+      name: Oldenbourg
+    title: Die FORTRAN-Fibel
+    type: book
 
 ################################################################################
