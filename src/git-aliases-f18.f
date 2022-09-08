@@ -79,6 +79,7 @@
       call store
       call subinit
       call tidy
+      call tws
       call verbose
       call view
       call unconfigure
