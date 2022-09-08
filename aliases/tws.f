@@ -21,71 +21,52 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
 !> \author      Kevin Matthes
-!> \brief       The main source file.
+!> \brief       Search the repository for trailing whitespaces.
 !> \copyright   (C) 2022 Kevin Matthes.
 !>              This file is licensed GPL 2 as of June 1991.
 !> \date        2022
-!> \file        git-aliases-f18.f
+!> \file        withdraw.f
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> This source file defines the invocation of the configuration of the defined
-!> Git alias commands.
+!> This alias is used in order to search all files in the current repository for
+!> trailing whitespaces.  At option, one can also provide an additional path to
+!> search only there.
+!>
+!> Trailing whitespaces do not fulfill any meaningful task in most cases such
+!> that they require storage without any reason.  Furthermore, they are often
+!> considered very annoying during the development of projects.
+!>
+!> This alias command is intended to locate all occurences of those obsolete
+!> tokens in order to be able to remove them easier, if required.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \brief   The Git alias configuration program.
-!> \return  This program will return with exit code zero, by default.
+!> \brief   Search the repository for trailing whitespaces.
 !>
-!> This program will invoke the configuration of the defined Git alias commands.
+!> This alias is used in order to search all files in the current repository for
+!> trailing whitespaces.  At option, one can also provide an additional path to
+!> search only there.
 !>
-!> Due to the naming convention of Git, this program can be integrated into it.
-!> Git will treat any applications prefixed with `git-` as associated commands.
-!> Doing so with this program is also a benefit for the user since one can not
-!> only configure all aliases with this tool but also request a summary of the
-!> aliases set up with this tool.
+!> Trailing whitespaces do not fulfill any meaningful task in most cases such
+!> that they require storage without any reason.  Furthermore, they are often
+!> considered very annoying during the development of projects.
+!>
+!> This alias command is intended to locate all occurences of those obsolete
+!> tokens in order to be able to remove them easier, if required.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      program git_aliases_f18
+      subroutine tws
       implicit none
 
-      print '(a / a / a / a / a //// a20, t24, a /)'
-     &,     'git-aliases, version 0.1.0'
-     &,     'Copyright (C) 2022 Kevin Matthes.'
-     &,     'This is free software according to GPL-2.0.'
-     &,     'THERE IS ABSOLUTELY NO WARRANTY, WITHOUT EVEN THE IMPLIED '
-     &//    'WARRANTY OF'
-     &,     'MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE.'
-     &,     'ALIAS', 'DESCRIPTION'
-
-      call backup
-      call backupdestination
-      call bone
-      call bugfix
-      call checkin
-      call create
-      call delbranch
-      call ff
-      call goto_git
-      call grab
-      call graph
-      call newbranch
-      call noff
-      call rewind_git
-      call savetags
-      call store
-      call subinit
-      call tidy
-      call tws
-      call verbose
-      call view
-      call unconfigure
-      call whereami
-      call whichremotes
-      call withdraw
+      call git
+     &( 'tws'
+     &, 'grep [[:blank:]]$'
+     &, 'Search the repository for trailing whitespaces.'
+     &)
 
       end
 
