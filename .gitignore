@@ -38,6 +38,7 @@ target/
 *.dll
 *.exe
 *.lib
+*.mod
 *.o
 *.obj
 *.so
