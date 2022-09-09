@@ -47,6 +47,7 @@ target/
 # Documentation artifacts.
 html/
 latex/
+man/
 
 *.pdf
 
