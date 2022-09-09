@@ -25,7 +25,7 @@
 !> \copyright   (C) 2022 Kevin Matthes.
 !>              This file is licensed GPL 2 as of June 1991.
 !> \date        2022
-!> \file        withdraw.f
+!> \file        tws.f
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
