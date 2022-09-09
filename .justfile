@@ -52,6 +52,7 @@ alias v     := valgrind
         -std=f2018 \
         -Wall -Werror -Wextra -Wpedantic \
         aliases/*.f \
+        lib/*.f \
         src/*.f \
         -o target/git-aliases
 
