@@ -32,13 +32,13 @@
 ################################################################################
 
 # Synonyms for the configured recipes.
-alias a    := all
-alias b    := build
-alias clr  := clear
-alias d    := doxygen
-alias dirs := directories
-alias i    := install
-alias v    := valgrind
+alias a     := all
+alias b     := build
+alias clr   := clear
+alias d     := doxygen
+alias dirs  := directories
+alias i     := install
+alias v     := valgrind
 
 # The default recipe to execute.
 @default: valgrind
@@ -52,6 +52,7 @@ alias v    := valgrind
         -std=f2018 \
         -Wall -Werror -Wextra -Wpedantic \
         aliases/*.f \
+        lib/*.f \
         src/*.f \
         -o target/git-aliases
 

@@ -48,21 +48,21 @@ body:
     attributes:
       label: Command Name
       description: Please suggest a name for the new alias.
-      placeholder: helloworld
+      placeholder: Suggested alias name
     validations:
       required: true
   - type: input
     attributes:
       label: Definition
       description: Please specify how this alias shall be defined.
-      placeholder: '!echo Hello, World!'
+      placeholder: Definition of the new alias
     validations:
       required: true
   - type: input
     attributes:
       label: Description
       description: Please summarise briefly what this alias is supposed to do.
-      placeholder: Write 'Hello, World!' to `stdout`.
+      placeholder: Brief description of the purpose
     validations:
       required: true
 

@@ -62,9 +62,9 @@ references:
     isbn: 978-1-4842-0077-3
     languages:
       - en
-    location:
-      name: New York
     publisher:
+      city: New York
+      country: US
       name: Apress
     title: Pro Git
     type: book
@@ -77,9 +77,9 @@ references:
     isbn: 978-3-030-09248-1
     languages:
       - en
-    location:
-      name: Cham
     publisher:
+      city: Cham
+      country: CH
       name: Springer
     title: Introduction to Programming with Fortran
     type: book
@@ -92,9 +92,9 @@ references:
     isbn: 978-3-486-22016-2
     languages:
       - de
-    location:
-      name: Munich
     publisher:
+      city: Munich
+      country: DE
       name: Oldenbourg
     title: Die FORTRAN-Fibel
     type: book
