@@ -68,6 +68,7 @@ references:
       name: Apress
     title: Pro Git
     type: book
+    year: 2014
   - authors:
       - family-names: Chivers
         given-names: Ian
@@ -83,6 +84,7 @@ references:
       name: Springer
     title: Introduction to Programming with Fortran
     type: book
+    year: 2018
   - authors:
       - family-names: Kühme
         given-names: Thomas
@@ -98,5 +100,6 @@ references:
       name: Oldenbourg
     title: Die FORTRAN-Fibel
     type: book
+    year: 1991
 
 ################################################################################
