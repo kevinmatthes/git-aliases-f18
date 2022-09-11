@@ -74,6 +74,6 @@
      &, 'Set up the current submodule.'
      &)
 
-      end
+      end subroutine subinit
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
