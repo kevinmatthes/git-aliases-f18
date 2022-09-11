@@ -52,7 +52,7 @@
       character (*), intent (in)   :: alias
       character (*), intent (in)   :: definition
       character (*), intent (in)   :: comment
-      
+
       intrinsic :: execute_command_line
 
       call execute_command_line
