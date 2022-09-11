@@ -52,6 +52,6 @@
      &, 'Backup all commits to the given remote repository.'
      &)
 
-      end
+      end subroutine backup
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
