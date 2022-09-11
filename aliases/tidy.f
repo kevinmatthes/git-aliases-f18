@@ -50,6 +50,6 @@
      &, 'Clean build artifacts and empty directories.'
      &)
 
-      end
+      end subroutine tidy
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
