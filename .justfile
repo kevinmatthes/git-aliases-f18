@@ -40,6 +40,13 @@ alias dirs  := directories
 alias i     := install
 alias v     := valgrind
 
+
+
+# Settings for the recipes.
+flags   := '-std=f2018 -Wall -Werror -Wextra -Wpedantic'
+
+
+
 # The default recipe to execute.
 @default: valgrind
 
@@ -47,14 +54,8 @@ alias v     := valgrind
 @all: clear doxygen valgrind
 
 # Compile the target application.
-@build: directories
-    gfortran \
-        -std=f2018 \
-        -Wall -Werror -Wextra -Wpedantic \
-        aliases/*.f \
-        lib/*.f \
-        src/*.f \
-        -o target/git-aliases
+@build: directories library
+    gfortran {{flags}} aliases/*.f src/*.f -o target/git-aliases -I. -L. -lgaf18
 
 # Remove build and documentation artifacts.
 @clear:
@@ -73,6 +74,12 @@ alias v     := valgrind
 # Copy the target application to this user's path.
 @install: build
     cp target/git-aliases ~/.local/bin/
+
+# Create the business logic library.
+@library:
+    gfortran -c {{flags}} lib/*.f
+    ar rs libgaf18.a *.o
+    rm -rf *.o
 
 # Analyse the memory management of the target application.
 @valgrind: build
