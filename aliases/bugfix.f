@@ -52,6 +52,6 @@
      &, 'Commit and backup the staged changes as a bugfix.'
      &)
 
-      end
+      end subroutine bugfix
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
