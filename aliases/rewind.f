@@ -50,6 +50,6 @@
      &, 'Reset the history to the given commit.'
      &)
 
-      end
+      end subroutine rewind_git
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
