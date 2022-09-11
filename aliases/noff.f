@@ -50,6 +50,6 @@
      &, 'Merge without the fast-forward strategy.'
      &)
 
-      end
+      end subroutine noff
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
