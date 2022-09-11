@@ -52,6 +52,6 @@
      &, 'Create a new commit immediately.'
      &)
 
-      end
+      end subroutine checkin
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
