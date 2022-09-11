@@ -60,6 +60,6 @@
 
       call overview (alias, comment)
 
-      end
+      end subroutine git
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
