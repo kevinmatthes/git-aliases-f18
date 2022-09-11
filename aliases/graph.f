@@ -52,6 +52,6 @@
      &, 'Launch the external repository inspection tool.'
      &)
 
-      end
+      end subroutine graph
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

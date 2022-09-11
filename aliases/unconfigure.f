@@ -52,6 +52,6 @@
      &, 'Remove a configuration from this user''s Git settings.'
      &)
 
-      end
+      end subroutine unconfigure
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

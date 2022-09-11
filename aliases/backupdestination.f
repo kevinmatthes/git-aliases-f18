@@ -52,6 +52,6 @@
      &, 'Configure the default backup remote `backup-drive`.'
      &)
 
-      end
+      end subroutine backupdestination
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

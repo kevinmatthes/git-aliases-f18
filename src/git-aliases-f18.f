@@ -80,13 +80,13 @@
       call subinit
       call tidy
       call tws
+      call unconfigure
       call verbose
       call view
-      call unconfigure
       call whereami
       call whichremotes
       call withdraw
 
-      end
+      end program git_aliases_f18
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -50,6 +50,6 @@
      &, 'Show the available remote repositories.'
      &)
 
-      end
+      end subroutine whichremotes
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

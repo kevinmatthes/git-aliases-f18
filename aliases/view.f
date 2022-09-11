@@ -50,6 +50,6 @@
      &, 'Explore the Git history in the terminal.'
      &)
 
-      end
+      end subroutine view
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

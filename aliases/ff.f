@@ -50,6 +50,6 @@
      &, 'Merge with the fast-forward strategy.'
      &)
 
-      end
+      end subroutine ff
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
