@@ -68,6 +68,6 @@
      &, 'Search the repository for trailing whitespaces.'
      &)
 
-      end
+      end subroutine tws
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
