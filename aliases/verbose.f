@@ -52,6 +52,6 @@
      &, 'Explore the complete Git history in the terminal.'
      &)
 
-      end
+      end subroutine verbose
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
