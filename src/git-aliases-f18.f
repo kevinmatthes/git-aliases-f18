@@ -87,6 +87,6 @@
       call whichremotes
       call withdraw
 
-      end
+      end program git_aliases_f18
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
