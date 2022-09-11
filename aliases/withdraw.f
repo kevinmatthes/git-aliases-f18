@@ -50,6 +50,6 @@
      &, 'Remove the given files from the staging area.'
      &)
 
-      end
+      end subroutine withdraw
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
