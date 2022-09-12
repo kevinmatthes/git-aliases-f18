@@ -42,6 +42,7 @@
       public    :: bone
       public    :: bugfix
       public    :: checkin
+      public    :: complain
       public    :: create
       public    :: delbranch
       public    :: ff
@@ -70,6 +71,7 @@
       include 'bone.f'
       include 'bugfix.f'
       include 'checkin.f'
+      include 'complain.f'
       include 'create.f'
       include 'delbranch.f'
       include 'ff.f'
