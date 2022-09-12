@@ -50,12 +50,20 @@ flags   := '-std=f2018 -Wall -Werror -Wextra -Wpedantic'
 # The default recipe to execute.
 @default: valgrind
 
+# Create the alias command library.
+@aliases: library
+    gfortran -c {{flags}} aliases/*.f
+    ar rs libgaf18-aliases.a *.o
+    rm -rf *.o
+
 # Execute all configured recipes.
 @all: clear doxygen valgrind
 
 # Compile the target application.
-@build: directories library
-    gfortran {{flags}} aliases/*.f src/*.f -o target/git-aliases -I. -L. -lgaf18
+@build: aliases directories library
+    gfortran {{flags}} src/*.f \
+        -o target/git-aliases \
+        -I. -L. -lgaf18-aliases -lgaf18
 
 # Remove build and documentation artifacts.
 @clear:
