@@ -55,6 +55,7 @@
       use libgaf18_aliases, only: bone
       use libgaf18_aliases, only: bugfix
       use libgaf18_aliases, only: checkin
+      use libgaf18_aliases, only: complain
       use libgaf18_aliases, only: create
       use libgaf18_aliases, only: delbranch
       use libgaf18_aliases, only: ff
@@ -91,6 +92,7 @@
       call bone
       call bugfix
       call checkin
+      call complain
       call create
       call delbranch
       call ff
