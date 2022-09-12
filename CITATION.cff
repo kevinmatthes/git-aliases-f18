@@ -46,7 +46,7 @@ authors:
     family-names: Matthes
     given-names: Kevin
 license: GPL-2.0
-repository-artifact: https://github.com/kevinmatthes/git-aliases-f18
+repository-code: https://github.com/kevinmatthes/git-aliases-f18
 title: git-aliases-f18
 url: https://github.com/kevinmatthes/git-aliases-f18
 
