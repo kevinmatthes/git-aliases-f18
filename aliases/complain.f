@@ -21,78 +21,54 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
 !> \author      Kevin Matthes
-!> \brief       The Git alias commands `git-aliases-f18` provides.
+!> \brief       Search the repository for lines with more than 80 characters.
 !> \copyright   (C) 2022 Kevin Matthes.
 !>              This file is licensed GPL 2 as of June 1991.
 !> \date        2022
-!> \file        libgaf18-aliases.f
+!> \file        complain.f
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> This source file defines the library module containing the Git alias commands
-!> `git-aliases-f18` provides.
+!> This alias is used in order to search all files in the current repository for
+!> lines with more than eighty characters.  At option, one can also provide an
+!> additional path to search only there.
+!>
+!> A maximum line length is often considered a reasonable design choice.  For
+!> historical reasons, a length of at most eighty characters per line is still
+!> common in many projects.
+!>
+!> This alias command helps finding the lines with more than eighty characters
+!> such that those lines can be adjusted and shortened, if required.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      module libgaf18_aliases
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!
+!> \brief   Search the repository for lines with more than 80 characters.
+!>
+!> This alias is used in order to search all files in the current repository for
+!> lines with more than eighty characters.  At option, one can also provide an
+!> additional path to search only there.
+!>
+!> A maximum line length is often considered a reasonable design choice.  For
+!> historical reasons, a length of at most eighty characters per line is still
+!> common in many projects.
+!>
+!> This alias command helps finding the lines with more than eighty characters
+!> such that those lines can be adjusted and shortened, if required.
+!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+      subroutine complain
+      use libgaf18, only: git
       implicit none
 
-      public    :: backup
-      public    :: backupdestination
-      public    :: bone
-      public    :: bugfix
-      public    :: checkin
-      public    :: complain
-      public    :: create
-      public    :: delbranch
-      public    :: ff
-      public    :: goto_git
-      public    :: grab
-      public    :: graph
-      public    :: newbranch
-      public    :: noff
-      public    :: rewind_git
-      public    :: savetags
-      public    :: store
-      public    :: subinit
-      public    :: tidy
-      public    :: tws
-      public    :: unconfigure
-      public    :: verbose
-      public    :: view
-      public    :: whereami
-      public    :: whichremotes
-      public    :: withdraw
+      call git
+     &( 'complain'
+     &, 'grep -E ^.{81,}$'
+     &, 'Search the repository for lines longer than 80.'
+     &)
 
-      contains
-
-      include 'backup.f'
-      include 'backupdestination.f'
-      include 'bone.f'
-      include 'bugfix.f'
-      include 'checkin.f'
-      include 'complain.f'
-      include 'create.f'
-      include 'delbranch.f'
-      include 'ff.f'
-      include 'goto.f'
-      include 'grab.f'
-      include 'graph.f'
-      include 'newbranch.f'
-      include 'noff.f'
-      include 'rewind.f'
-      include 'savetags.f'
-      include 'store.f'
-      include 'subinit.f'
-      include 'tidy.f'
-      include 'tws.f'
-      include 'unconfigure.f'
-      include 'verbose.f'
-      include 'view.f'
-      include 'whereami.f'
-      include 'whichremotes.f'
-      include 'withdraw.f'
-
-      end module libgaf18_aliases
+      end subroutine complain
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

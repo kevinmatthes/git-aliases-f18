@@ -45,6 +45,7 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * alias:  `bone`
 * alias:  `bugfix`
 * alias:  `checkin`
+* alias:  `complain`
 * alias:  `create`
 * alias:  `delbranch`
 * alias:  `ff`
@@ -79,5 +80,7 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * GitHub Action:  CFF validation
 * GitHub Issue Template:  new alias
 * license:  GPL-2.0
+* module for alias commands
+* module for business logic
 
 <!----------------------------------------------------------------------------->
