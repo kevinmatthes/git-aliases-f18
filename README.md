@@ -149,6 +149,15 @@ just
 When calling Just without any recipe, the default recipe will be executed.  This
 is the Valgrind check for memory leaks.
 
+### Alias Module Compilation
+
+```
+just aliases
+```
+
+This recipe will compile the library module containing the provided alias
+commands.  This is an internal recipe invoked by the build routine, if required.
+
 ### All Recipes
 
 ```
@@ -229,6 +238,16 @@ just install
 The compiled application is copied to the user's home directory's storage for
 user defined binary executables.  This is `~/.local/bin/`.  If it should not
 already exist, it will be created.
+
+### Library Module Compilation
+
+```
+just library
+```
+
+This recipe will compile the library module containing the business logic of
+this project.  This is an internal recipe invoked by the build routine, if
+required.
 
 ### Valgrind Memory Management Analysis
 

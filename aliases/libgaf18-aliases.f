@@ -21,38 +21,76 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
 !> \author      Kevin Matthes
-!> \brief       Explore the complete Git history in the terminal.
+!> \brief       The Git alias commands `git-aliases-f18` provides.
 !> \copyright   (C) 2022 Kevin Matthes.
 !>              This file is licensed GPL 2 as of June 1991.
 !> \date        2022
-!> \file        verbose.f
+!> \file        libgaf18-aliases.f
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> This alias is used in order to explore the complete Git history in the
-!> terminal.
+!> This source file defines the library module containing the Git alias commands
+!> `git-aliases-f18` provides.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!
-!> \brief   Explore the complete Git history in the terminal.
-!>
-!> This alias is used in order to explore the complete Git history in the
-!> terminal.
-!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-      subroutine verbose
-      use libgaf18, only: git
+      module libgaf18_aliases
       implicit none
 
-      call git
-     &( 'verbose'
-     &, 'log --graph --stat --pretty=fuller --decorate --all -p'
-     &, 'Explore the complete Git history in the terminal.'
-     &)
+      public    :: backup
+      public    :: backupdestination
+      public    :: bone
+      public    :: bugfix
+      public    :: checkin
+      public    :: create
+      public    :: delbranch
+      public    :: ff
+      public    :: goto_git
+      public    :: grab
+      public    :: graph
+      public    :: newbranch
+      public    :: noff
+      public    :: rewind_git
+      public    :: savetags
+      public    :: store
+      public    :: subinit
+      public    :: tidy
+      public    :: tws
+      public    :: unconfigure
+      public    :: verbose
+      public    :: view
+      public    :: whereami
+      public    :: whichremotes
+      public    :: withdraw
 
-      end subroutine verbose
+      contains
+
+      include 'backup.f'
+      include 'backupdestination.f'
+      include 'bone.f'
+      include 'bugfix.f'
+      include 'checkin.f'
+      include 'create.f'
+      include 'delbranch.f'
+      include 'ff.f'
+      include 'goto.f'
+      include 'grab.f'
+      include 'graph.f'
+      include 'newbranch.f'
+      include 'noff.f'
+      include 'rewind.f'
+      include 'savetags.f'
+      include 'store.f'
+      include 'subinit.f'
+      include 'tidy.f'
+      include 'tws.f'
+      include 'unconfigure.f'
+      include 'verbose.f'
+      include 'view.f'
+      include 'whereami.f'
+      include 'whichremotes.f'
+      include 'withdraw.f'
+
+      end module libgaf18_aliases
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

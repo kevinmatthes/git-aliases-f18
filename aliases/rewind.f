@@ -42,6 +42,7 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
       subroutine rewind_git
+      use libgaf18, only: git
       implicit none
 
       call git

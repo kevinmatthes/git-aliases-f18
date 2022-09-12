@@ -53,6 +53,8 @@
       character (*), intent (in)   :: definition
       character (*), intent (in)   :: comment
 
+      intrinsic :: execute_command_line
+
       call execute_command_line
      &(     'git config --global alias.' // alias
      &//    ' "' // definition // '"'

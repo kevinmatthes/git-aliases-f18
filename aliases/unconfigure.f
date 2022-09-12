@@ -44,6 +44,7 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
       subroutine unconfigure
+      use libgaf18, only: git
       implicit none
 
       call git

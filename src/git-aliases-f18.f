@@ -50,6 +50,31 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
       program git_aliases_f18
+      use libgaf18_aliases, only: backup
+      use libgaf18_aliases, only: backupdestination
+      use libgaf18_aliases, only: bone
+      use libgaf18_aliases, only: bugfix
+      use libgaf18_aliases, only: checkin
+      use libgaf18_aliases, only: create
+      use libgaf18_aliases, only: delbranch
+      use libgaf18_aliases, only: ff
+      use libgaf18_aliases, only: goto_git
+      use libgaf18_aliases, only: grab
+      use libgaf18_aliases, only: graph
+      use libgaf18_aliases, only: newbranch
+      use libgaf18_aliases, only: noff
+      use libgaf18_aliases, only: rewind_git
+      use libgaf18_aliases, only: savetags
+      use libgaf18_aliases, only: store
+      use libgaf18_aliases, only: subinit
+      use libgaf18_aliases, only: tidy
+      use libgaf18_aliases, only: tws
+      use libgaf18_aliases, only: unconfigure
+      use libgaf18_aliases, only: verbose
+      use libgaf18_aliases, only: view
+      use libgaf18_aliases, only: whereami
+      use libgaf18_aliases, only: whichremotes
+      use libgaf18_aliases, only: withdraw
       implicit none
 
       print '(a / a / a / a / a //// a20, t24, a /)'
