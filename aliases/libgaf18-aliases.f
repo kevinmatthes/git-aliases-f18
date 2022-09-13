@@ -20,16 +20,22 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
+!> \file libgaf18-aliases.f
+!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!
 !> \author      Kevin Matthes
-!> \brief       The Git alias commands `git-aliases-f18` provides.
 !> \copyright   GPL-2.0
 !> \date        2022
-!> \file        libgaf18-aliases.f
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> This source file defines the library module containing the Git alias commands
-!> `git-aliases-f18` provides.
+!> \brief   The Git alias commands `git-aliases` provides.
+!>
+!> This is the library module containing the Git alias commands `git-aliases`
+!> provides.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
