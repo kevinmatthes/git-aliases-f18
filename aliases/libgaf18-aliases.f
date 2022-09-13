@@ -22,8 +22,7 @@
 !!
 !> \author      Kevin Matthes
 !> \brief       The Git alias commands `git-aliases-f18` provides.
-!> \copyright   (C) 2022 Kevin Matthes.
-!>              This file is licensed GPL 2 as of June 1991.
+!> \copyright   GPL-2.0
 !> \date        2022
 !> \file        libgaf18-aliases.f
 !> \note        See `LICENSE' for full license.
