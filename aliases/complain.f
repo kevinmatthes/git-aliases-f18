@@ -22,8 +22,7 @@
 !!
 !> \author      Kevin Matthes
 !> \brief       Search the repository for lines with more than 80 characters.
-!> \copyright   (C) 2022 Kevin Matthes.
-!>              This file is licensed GPL 2 as of June 1991.
+!> \copyright   GPL-2.0
 !> \date        2022
 !> \file        complain.f
 !> \note        See `LICENSE' for full license.
