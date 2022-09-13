@@ -22,8 +22,7 @@
 !!
 !> \author      Kevin Matthes
 !> \brief       Configure the default backup remote `backup-drive`.
-!> \copyright   (C) 2022 Kevin Matthes.
-!>              This file is licensed GPL 2 as of June 1991.
+!> \copyright   GPL-2.0
 !> \date        2022
 !> \file        backupdestination.f
 !> \note        See `LICENSE' for full license.
