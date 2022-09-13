@@ -22,8 +22,7 @@
 !!
 !> \author      Kevin Matthes
 !> \brief       Immediately stage and commit all changes at once.
-!> \copyright   (C) 2022 Kevin Matthes.
-!>              This file is licensed GPL 2 as of June 1991.
+!> \copyright   GPL-2.0
 !> \date        2022
 !> \file        checkin.f
 !> \note        See `LICENSE' for full license.
