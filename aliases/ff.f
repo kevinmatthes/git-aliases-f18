@@ -22,8 +22,7 @@
 !!
 !> \author      Kevin Matthes
 !> \brief       Merge with the fast-forward strategy.
-!> \copyright   (C) 2022 Kevin Matthes.
-!>              This file is licensed GPL 2 as of June 1991.
+!> \copyright   GPL-2.0
 !> \date        2022
 !> \file        ff.f
 !> \note        See `LICENSE' for full license.
