@@ -22,8 +22,7 @@
 !!
 !> \author      Kevin Matthes
 !> \brief       Search the repository for trailing whitespaces.
-!> \copyright   (C) 2022 Kevin Matthes.
-!>              This file is licensed GPL 2 as of June 1991.
+!> \copyright   GPL-2.0
 !> \date        2022
 !> \file        tws.f
 !> \note        See `LICENSE' for full license.
