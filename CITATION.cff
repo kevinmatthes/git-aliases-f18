@@ -39,7 +39,8 @@ message: Please cite this software using these meta data.
 #version: 0.1.0
 
 # Project information.
-abstract: Automatically configure Git alias commands with this Fortran 2018 application.
+abstract: >-
+  Automatically configure Git alias commands with this Fortran 2018 application.
 authors:
   - alias: kevinmatthes
     family-names: Matthes
