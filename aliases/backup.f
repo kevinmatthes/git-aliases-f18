@@ -46,7 +46,7 @@
 !>
 !> Since this Git command will upload every commit, this operation can also be
 !> thought as a backup of the current repository to the given remote repository.
-!> This Git alias command is intended to provide a semantic abbrevitation for
+!> This Git alias command is intended to provide a semantic abbreviation for
 !> this operation in order to avoid the loss of progress due to unsynchronised
 !> changes with a remote repository.
 !>
