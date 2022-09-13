@@ -20,25 +20,38 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \author      Kevin Matthes
-!> \brief       Backup all commits to the given remote repository.
-!> \copyright   GPL-2.0
-!> \date        2022
-!> \file        backup.f
-!> \note        See `LICENSE' for full license.
-!>              See `README.md' for project details.
-!>
-!> This alias is used in order to push all commits to the given remote
-!> repository.
+!> \file backup.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
+!> \author      Kevin Matthes
+!> \copyright   GPL-2.0
+!> \date        2022
+!> \note        See `LICENSE' for full license.
+!>              See `README.md' for project details.
+!>
 !> \brief   Backup all commits to the given remote repository.
 !>
 !> This alias is used in order to push all commits to the given remote
-!> repository.
+!> repository.  This is especially useful when there are multiple branches with
+!> changes to be uploaded to the respective remote repository.
+!>
+!> There are several development workflows with Git which require the creation
+!> and maintenance of branches.  When working on multiple branches at the same
+!> time, it is sometimes not easy to keep the overview which of them have not
+!> recently uploaded commits on them.  Then, the respective Git command `push
+!> --all` comes in handy.
+!>
+!> Since this Git command will upload every commit, this operation can also be
+!> thought as a backup of the current repository to the given remote repository.
+!> This Git alias command is intended to provide a semantic abbrevitation for
+!> this operation in order to avoid the loss of progress due to unsynchronised
+!> changes with a remote repository.
+!>
+!> Due to this command being an abbreviation for an already existing Git
+!> instruction, all available options can be freely combined with this alias.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
