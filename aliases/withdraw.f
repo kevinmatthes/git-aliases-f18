@@ -22,8 +22,7 @@
 !!
 !> \author      Kevin Matthes
 !> \brief       Remove the given files from the staging area.
-!> \copyright   (C) 2022 Kevin Matthes.
-!>              This file is licensed GPL 2 as of June 1991.
+!> \copyright   GPL-2.0
 !> \date        2022
 !> \file        withdraw.f
 !> \note        See `LICENSE' for full license.
