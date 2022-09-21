@@ -42,32 +42,32 @@
       module libgaf18_aliases
       implicit none
 
-      public    :: backup
-      public    :: backupdestination
-      public    :: bone
-      public    :: bugfix
-      public    :: checkin
-      public    :: complain
-      public    :: create
-      public    :: delbranch
-      public    :: ff
-      public    :: goto_git
-      public    :: grab
-      public    :: graph
-      public    :: newbranch
-      public    :: noff
-      public    :: rewind_git
-      public    :: savetags
-      public    :: store
-      public    :: subinit
-      public    :: tidy
-      public    :: tws
-      public    :: unconfigure
-      public    :: verbose
-      public    :: view
-      public    :: whereami
-      public    :: whichremotes
-      public    :: withdraw
+      public :: backup
+      public :: backupdestination
+      public :: bone
+      public :: bugfix
+      public :: checkin
+      public :: complain
+      public :: create
+      public :: delbranch
+      public :: ff
+      public :: goto_git
+      public :: grab
+      public :: graph
+      public :: newbranch
+      public :: noff
+      public :: rewind_git
+      public :: savetags
+      public :: store
+      public :: subinit
+      public :: tidy
+      public :: tws
+      public :: unconfigure
+      public :: verbose
+      public :: view
+      public :: whereami
+      public :: whichremotes
+      public :: withdraw
 
       contains
 
