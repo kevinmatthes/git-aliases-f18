@@ -24,7 +24,7 @@
 !> \brief       The main source file.
 !> \copyright   GPL-2.0
 !> \date        2022
-!> \file        git-aliases-f18.f
+!> \file        main.f
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
