@@ -41,8 +41,8 @@
       module libgaf18
       implicit none
 
-      public    :: git
-      public    :: overview
+      public :: git
+      public :: overview
 
       contains
 
