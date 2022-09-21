@@ -32,7 +32,7 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief       The business logic of `git-aliases`.
+!> \brief   The business logic of `git-aliases`.
 !>
 !> This is the library module containing the business logic of `git-aliases`.
 !!
