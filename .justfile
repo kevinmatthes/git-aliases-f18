@@ -42,7 +42,7 @@ alias v     := valgrind
 
 
 # Settings for the recipes.
-flags   := '-std=f2018 -Wall -Werror -Wextra -Wpedantic'
+flags   := '-std=f2018 -Wall -Werror -Wextra -Wpedantic -Wuse-without-only'
 
 
 
