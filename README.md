@@ -107,10 +107,10 @@ of this repository.
 
 This tool can be integrated into Git, at option.  Due to its naming convention,
 Git will consider all applications prefixed with `git-` associated commands.
-See the book by Chacon and Straub for details.  This feature offers two
-benefits.  One can not only configure all desired alias commands with this tool
-but also request a summary for the aliases set up by this application with Git
-itself.
+See [the book by Chacon and Straub](CITATION.cff) for details.  This feature
+offers two benefits.  One can not only configure all desired alias commands with
+this tool but also request a summary for the aliases set up by this application
+with Git itself.
 
 When calling the application, it will show some default information about itself
 in the first five lines.  These information are about the application's name and
