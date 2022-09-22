@@ -38,10 +38,10 @@
 !> This program will invoke the configuration of the defined Git alias commands.
 !>
 !> Due to the naming convention of Git, this program can be integrated into it.
-!> Git will treat any applications prefixed with `git-` as associated commands.
-!> Doing so with this program is also a benefit for the user since one can not
-!> only configure all aliases with this tool but also request a summary of the
-!> aliases set up by this tool.
+!> Git will treat any applications prefixed with `git-` as associated commands
+!> \cite chacon.straub:git:2014.  Doing so with this program is also a benefit
+!> for the user since one can not only configure all aliases with this tool but
+!> also request a summary of the aliases set up by this tool.
 !>
 !> The resulting program does not require any command line arguments.  If there
 !> should be some, they are going to be ignored.  The application is going to
@@ -49,6 +49,11 @@
 !>
 !> The exit code might vary in case that the call to Git should fail.  In this
 !> case, the exit code does not need to but still might be zero.
+!>
+!> Recommended further readings are:
+!> * \cite chacon.straub:git:2014
+!> * \cite chivers.sleightholme:fortran:2018
+!> * \cite kuhme.witschital:fortran:1991
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
