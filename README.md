@@ -224,6 +224,7 @@ Doxygen will compile these docstrings to manuals in the following formats:
 
 * HTML
 * PDF
+* UNIX manual pages
 
 The finalisation of the LaTeX manual is defined as a hard coded part of this
 recipe.  The compiled LaTeX manual will be copied to the repository root.
