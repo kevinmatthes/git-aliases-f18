@@ -52,7 +52,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      program git_aliases_f18
+      program git_aliases
       use libgaf18_aliases, only: backup
       use libgaf18_aliases, only: backupdestination
       use libgaf18_aliases, only: bone
@@ -117,6 +117,6 @@
       call whichremotes
       call withdraw
 
-      end program git_aliases_f18
+      end program git_aliases
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
