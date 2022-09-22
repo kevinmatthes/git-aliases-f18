@@ -256,9 +256,8 @@ required.
 just lib
 ```
 
-This recipe will compile the library module containing the business logic of
-this project.  This is an internal recipe invoked by the build routine, if
-required.
+This recipe will compile the library module containing the logic of this project
+project.  This is an internal recipe invoked by the build routine, if required.
 
 ### Logic Submodule Compilation
 
