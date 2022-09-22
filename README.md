@@ -149,13 +149,13 @@ just
 When calling Just without any recipe, the default recipe will be executed.  This
 is the Valgrind check for memory leaks.
 
-### Alias Module Compilation
+### Alias Submodule Compilation
 
 ```
 just aliases
 ```
 
-This recipe will compile the library module containing the provided alias
+This recipe will compile the library submodule containing the provided alias
 commands.  This is an internal recipe invoked by the build routine, if required.
 
 ### All Recipes
@@ -240,15 +240,34 @@ The compiled application is copied to the user's home directory's storage for
 user defined binary executables.  This is `~/.local/bin/`.  If it should not
 already exist, it will be created.
 
+### Interface Compilation
+
+```
+just interfaces
+```
+
+This recipe will create the Fortran interfaces in order to compile the library
+submodules.  This is an internal recipe invoked by the build routine, if
+required.
+
 ### Library Module Compilation
 
 ```
-just library
+just lib
 ```
 
 This recipe will compile the library module containing the business logic of
 this project.  This is an internal recipe invoked by the build routine, if
 required.
+
+### Logic Submodule Compilation
+
+```
+just logic
+```
+
+This recipe will compile the library submodule containing the business logic.
+This is an internal recipe invoked by the build routine, if required.
 
 ### Valgrind Memory Management Analysis
 
