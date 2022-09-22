@@ -79,6 +79,7 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * define summary subroutine for aliases to be configured
 * define table header subroutine
 * Doxygen settings:  Fortran presets
+* Doxygen settings:  literature database
 * GitHub Action:  CFF validation
 * GitHub Issue Template:  new alias
 * license:  GPL-2.0
