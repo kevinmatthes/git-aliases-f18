@@ -57,6 +57,7 @@
       include '../aliases/graph.f'
       include '../aliases/newbranch.f'
       include '../aliases/noff.f'
+      include '../aliases/preview.f'
       include '../aliases/rewind.f'
       include '../aliases/savetags.f'
       include '../aliases/store.f'
