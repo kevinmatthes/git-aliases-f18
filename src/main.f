@@ -50,7 +50,8 @@
 !> The exit code might vary in case that the call to Git should fail.  In this
 !> case, the exit code does not need to but still might be zero.
 !>
-!> Recommended further readings are:
+!> Recommended further readings are listed in the following.
+!>
 !> * \cite chacon.straub:git:2014
 !> * \cite chivers.sleightholme:fortran:2018
 !> * \cite kuhme.witschital:fortran:1991
