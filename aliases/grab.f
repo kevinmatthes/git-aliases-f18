@@ -38,6 +38,9 @@
 !> remote repositories.  The current branch will also be fast-forwarded to the
 !> latest revision of the respective remote repository automatically.  Each
 !> other branch with pending changes needs to be fast-forwarded manually.
+!>
+!> The backup is written to the configured default backup remote repository,
+!> `backup-drive`.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
