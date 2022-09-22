@@ -20,25 +20,24 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \author      Kevin Matthes
-!> \brief       Download and backup all latest changes.
-!> \copyright   GPL-2.0
-!> \date        2022
-!> \file        grab.f
-!> \note        See `LICENSE' for full license.
-!>              See `README.md' for project details.
-!>
-!> This alias is used in order to fetch, merge and backup all changes from all
-!> remote repositories.
+!> \file grab.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
+!> \author      Kevin Matthes
+!> \copyright   GPL-2.0
+!> \date        2022
+!> \note        See `LICENSE' for full license.
+!>              See `README.md' for project details.
+!>
 !> \brief   Download and backup all latest changes.
 !>
 !> This alias is used in order to fetch, merge and backup all changes from all
-!> remote repositories.
+!> remote repositories.  The current branch will also be fast-forwarded to the
+!> latest revision of the respective remote repository automatically.  Each
+!> other branch with pending changes needs to be fast-forwarded manually.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
