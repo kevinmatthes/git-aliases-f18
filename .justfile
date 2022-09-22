@@ -42,27 +42,26 @@ alias v     := valgrind
 
 
 # Settings for the recipes.
-flags   := '-std=f2018 -Wall -Werror -Wextra -Wpedantic -Wuse-without-only'
+flags   := '-std=f2018 -Wall -Werror -Wextra -Wpedantic'
+library := 'libgaf18.a'
 
 
 
 # The default recipe to execute.
 @default: valgrind
 
-# Create the alias command library.
-@aliases: library
-    gfortran -c {{flags}} aliases/*.f
-    ar rs libgaf18-aliases.a *.o
+# Create the alias command submodule.
+@aliases: interfaces logic
+    gfortran -c {{flags}} lib/aliases.f
+    ar rsv {{library}} *.o
     rm -rf *.o
 
 # Execute all configured recipes.
 @all: clear doxygen valgrind
 
 # Compile the target application.
-@build: aliases directories library
-    gfortran {{flags}} src/*.f \
-        -o target/git-aliases \
-        -I. -L. -lgaf18-aliases -lgaf18
+@build: directories lib
+    gfortran {{flags}} src/*.f -o target/git-aliases -I. -L. -lgaf18
 
 # Remove build and documentation artifacts.
 @clear:
@@ -82,10 +81,19 @@ flags   := '-std=f2018 -Wall -Werror -Wextra -Wpedantic -Wuse-without-only'
 @install: build
     cp target/git-aliases ~/.local/bin/
 
-# Create the business logic library.
-@library:
-    gfortran -c {{flags}} lib/*.f
-    ar rs libgaf18.a *.o
+# Create the Fortran interfaces.
+@interfaces:
+    gfortran -c {{flags}} lib/project.f
+    ar rsv {{library}} *.o
+    rm -rf *.o
+
+# Create the project library.
+@lib: aliases interfaces logic
+
+# Create the business logic submodule.
+@logic: interfaces
+    gfortran -c {{flags}} lib/logic.f
+    ar rsv {{library}} *.o
     rm -rf *.o
 
 # Analyse the memory management of the target application.

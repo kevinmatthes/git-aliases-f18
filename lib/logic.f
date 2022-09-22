@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file checkin.f
+!> \file logic.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,37 +32,21 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Immediately stage and commit all changes at once.
+!> \brief   The business logic of `git-aliases`.
 !>
-!> This alias is used in order to stage and commit all changes at once with just
-!> a single Git instruction.  In order to avoid option clashes with other passed
-!> options, the command definition was split into multiple Git operations.
-!>
-!> When working on a project, especially on the command line, it is common to
-!> finalise the changes to commit, at first, and to commit them all at once when
-!> the intended progress was achieved.  Then, this alias command comes in handy
-!> in order to persist them with a single instruction.
-!>
-!> Another possible use case is measuring the runtime of applications.  One can
-!> then use this alias in scripts in order to commit the measured data as soon
-!> as it is available.  That way, a loss of data is excluded due to the design
-!> of Git.
-!>
-!> Due to this command's definition, it is possible to pass additional options
-!> to `git commit` as required.
+!> This is the library submodule containing the business logic of `git-aliases`.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine checkin
-      use libgaf18, only: git
+      submodule (libgaf18) logic
       implicit none
+      contains
 
-      call git
-     &( 'checkin'
-     &, '!git preview . && git commit'
-     &, 'Create a new commit immediately.'
-     &)
+      include '../logic/git.f'
+      include '../logic/overview.f'
+      include '../logic/self-information.f'
+      include '../logic/table-header.f'
 
-      end subroutine checkin
+      end submodule logic
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

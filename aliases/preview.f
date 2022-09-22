@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file checkin.f
+!> \file preview.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,37 +32,26 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Immediately stage and commit all changes at once.
+!> \brief   Preview and stage all unstaged changes.
 !>
-!> This alias is used in order to stage and commit all changes at once with just
-!> a single Git instruction.  In order to avoid option clashes with other passed
-!> options, the command definition was split into multiple Git operations.
+!> This alias is used in order to show the introduced changes before they are
+!> staged.  This feedback is useful in order to avoid unintended mistakes being
+!> committed.
 !>
-!> When working on a project, especially on the command line, it is common to
-!> finalise the changes to commit, at first, and to commit them all at once when
-!> the intended progress was achieved.  Then, this alias command comes in handy
-!> in order to persist them with a single instruction.
-!>
-!> Another possible use case is measuring the runtime of applications.  One can
-!> then use this alias in scripts in order to commit the measured data as soon
-!> as it is available.  That way, a loss of data is excluded due to the design
-!> of Git.
-!>
-!> Due to this command's definition, it is possible to pass additional options
-!> to `git commit` as required.
+!> After showing the differences, all changes will be added to the staging area.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine checkin
+      subroutine preview
       use libgaf18, only: git
       implicit none
 
       call git
-     &( 'checkin'
-     &, '!git preview . && git commit'
-     &, 'Create a new commit immediately.'
+     &( 'preview'
+     &, '!git diff && git add .'
+     &, 'Preview and stage all unstaged changes.'
      &)
 
-      end subroutine checkin
+      end subroutine preview
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

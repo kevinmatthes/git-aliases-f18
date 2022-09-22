@@ -125,7 +125,7 @@ features of Fortran 2018:
 
 * documentation of Fortran projects with Doxygen
 * Fortran's automatic memory management
-* Fortran's module system
+* Fortran's module system, including submodules
 * string concatenation in subroutine calls
 * subroutine definition
 * synchronous invocation of external applications from a Fortran program
@@ -149,13 +149,13 @@ just
 When calling Just without any recipe, the default recipe will be executed.  This
 is the Valgrind check for memory leaks.
 
-### Alias Module Compilation
+### Alias Submodule Compilation
 
 ```
 just aliases
 ```
 
-This recipe will compile the library module containing the provided alias
+This recipe will compile the library submodule containing the provided alias
 commands.  This is an internal recipe invoked by the build routine, if required.
 
 ### All Recipes
@@ -224,6 +224,7 @@ Doxygen will compile these docstrings to manuals in the following formats:
 
 * HTML
 * PDF
+* UNIX manual pages
 
 The finalisation of the LaTeX manual is defined as a hard coded part of this
 recipe.  The compiled LaTeX manual will be copied to the repository root.
@@ -239,15 +240,33 @@ The compiled application is copied to the user's home directory's storage for
 user defined binary executables.  This is `~/.local/bin/`.  If it should not
 already exist, it will be created.
 
+### Interface Compilation
+
+```
+just interfaces
+```
+
+This recipe will create the Fortran interfaces in order to compile the library
+submodules.  This is an internal recipe invoked by the build routine, if
+required.
+
 ### Library Module Compilation
 
 ```
-just library
+just lib
 ```
 
-This recipe will compile the library module containing the business logic of
-this project.  This is an internal recipe invoked by the build routine, if
-required.
+This recipe will compile the library module containing the logic of this project
+project.  This is an internal recipe invoked by the build routine, if required.
+
+### Logic Submodule Compilation
+
+```
+just logic
+```
+
+This recipe will compile the library submodule containing the business logic.
+This is an internal recipe invoked by the build routine, if required.
 
 ### Valgrind Memory Management Analysis
 

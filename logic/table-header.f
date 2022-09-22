@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file libgaf18-aliases.f
+!> \file table-header.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,72 +32,18 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   The Git alias commands `git-aliases` provides.
+!> \brief   Print the Git alias command table header.
 !>
-!> This is the library module containing the Git alias commands `git-aliases`
-!> provides.
+!> This is a utility subroutine in order to write the Git alias command summary
+!> table's header to `stdout`.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      module libgaf18_aliases
+      subroutine table_header
       implicit none
 
-      public :: backup
-      public :: backupdestination
-      public :: bone
-      public :: bugfix
-      public :: checkin
-      public :: complain
-      public :: create
-      public :: delbranch
-      public :: ff
-      public :: goto_git
-      public :: grab
-      public :: graph
-      public :: newbranch
-      public :: noff
-      public :: rewind_git
-      public :: savetags
-      public :: store
-      public :: subinit
-      public :: tidy
-      public :: tws
-      public :: unconfigure
-      public :: verbose
-      public :: view
-      public :: whereami
-      public :: whichremotes
-      public :: withdraw
+      print '(/// a20, t24, a /)', 'ALIAS', 'DESCRIPTION'
 
-      contains
-
-      include 'backup.f'
-      include 'backupdestination.f'
-      include 'bone.f'
-      include 'bugfix.f'
-      include 'checkin.f'
-      include 'complain.f'
-      include 'create.f'
-      include 'delbranch.f'
-      include 'ff.f'
-      include 'goto.f'
-      include 'grab.f'
-      include 'graph.f'
-      include 'newbranch.f'
-      include 'noff.f'
-      include 'rewind.f'
-      include 'savetags.f'
-      include 'store.f'
-      include 'subinit.f'
-      include 'tidy.f'
-      include 'tws.f'
-      include 'unconfigure.f'
-      include 'verbose.f'
-      include 'view.f'
-      include 'whereami.f'
-      include 'whichremotes.f'
-      include 'withdraw.f'
-
-      end module libgaf18_aliases
+      end subroutine table_header
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

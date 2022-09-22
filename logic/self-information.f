@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file libgaf18.f
+!> \file self-information.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,23 +32,24 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   The business logic of `git-aliases`.
+!> \brief   A summary about this application.
 !>
-!> This is the library module containing the business logic of `git-aliases`.
+!> This is a utility subroutine in order to write some information about this
+!> program to `stdout`.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      module libgaf18
+      subroutine self_information
       implicit none
 
-      public :: git
-      public :: overview
+      print '(a / a / a / a, a / a)'
+     &, 'git-aliases, version 0.1.0'
+     &, 'Copyright (C) 2022 Kevin Matthes.'
+     &, 'This is free software according to GPL-2.0.'
+     &, 'THERE IS ABSOLUTELY NO WARRANTY, WITHOUT EVEN THE IMPLIED '
+     &, 'WARRANTY OF'
+     &, 'MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE.'
 
-      contains
-
-      include 'git.f'
-      include 'overview.f'
-
-      end module libgaf18
+      end subroutine self_information
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
