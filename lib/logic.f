@@ -44,6 +44,8 @@
 
       include '../logic/git.f'
       include '../logic/overview.f'
+      include '../logic/self-information.f'
+      include '../logic/table-header.f'
 
       end submodule logic
 
