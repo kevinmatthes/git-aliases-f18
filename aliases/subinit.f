@@ -20,32 +20,18 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \author      Kevin Matthes
-!> \brief       Set up the current submodule.
-!> \copyright   GPL-2.0
-!> \date        2022
-!> \file        subinit.f
-!> \note        See `LICENSE' for full license.
-!>              See `README.md' for project details.
-!>
-!> This alias is used in order to initialise the current submodule.
-!>
-!> When cloning from a remote repository with submodules non-recursively, these
-!> are not going to be initialised during the cloning process.  Hence, users
-!> need to initialise those themselves.  If one does not initialise submodules
-!> frequently, the commands therefore can be easily forgotten.  This Git alias
-!> summarises the required commands in order to provide a useful abbreviation.
-!>
-!> This alias command requires the specification of the branch to checkout.
-!>
-!> \note It is assumed that the current working directory is the root of the
-!> submodule to initialise.  Hence, one needs to `cd` into the submodule to
-!> initialise, at first.
+!> \file subinit.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
+!> \author      Kevin Matthes
+!> \copyright   GPL-2.0
+!> \date        2022
+!> \note        See `LICENSE' for full license.
+!>              See `README.md' for project details.
+!>
 !> \brief   Set up the current submodule.
 !>
 !> This alias is used in order to initialise the current submodule.
@@ -56,7 +42,9 @@
 !> frequently, the commands therefore can be easily forgotten.  This Git alias
 !> summarises the required commands in order to provide a useful abbreviation.
 !>
-!> This alias command requires the specification of the branch to checkout.
+!> This alias command requires the specification of the branch to checkout.  If
+!> no branch is given, however, the set up default branch of the respective
+!> submodule is assumed.
 !>
 !> \note It is assumed that the current working directory is the root of the
 !> submodule to initialise.  Hence, one needs to `cd` into the submodule to
