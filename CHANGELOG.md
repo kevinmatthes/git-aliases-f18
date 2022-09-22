@@ -79,7 +79,8 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * GitHub Action:  CFF validation
 * GitHub Issue Template:  new alias
 * license:  GPL-2.0
-* module for alias commands
-* module for business logic
+* module for project logic
+* submodule for alias commands
+* submodule for business logic
 
 <!----------------------------------------------------------------------------->
