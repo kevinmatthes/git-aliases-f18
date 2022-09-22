@@ -70,8 +70,10 @@
       use libgaf18, only: preview
       use libgaf18, only: rewind_git
       use libgaf18, only: savetags
+      use libgaf18, only: self_information
       use libgaf18, only: store
       use libgaf18, only: subinit
+      use libgaf18, only: table_header
       use libgaf18, only: tidy
       use libgaf18, only: tws
       use libgaf18, only: unconfigure
@@ -82,14 +84,8 @@
       use libgaf18, only: withdraw
       implicit none
 
-      print '(a / a / a / a / a //// a20, t24, a /)'
-     &,     'git-aliases, version 0.1.0'
-     &,     'Copyright (C) 2022 Kevin Matthes.'
-     &,     'This is free software according to GPL-2.0.'
-     &,     'THERE IS ABSOLUTELY NO WARRANTY, WITHOUT EVEN THE IMPLIED '
-     &//    'WARRANTY OF'
-     &,     'MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE.'
-     &,     'ALIAS', 'DESCRIPTION'
+      call self_information
+      call table_header
 
       call backup
       call backupdestination
