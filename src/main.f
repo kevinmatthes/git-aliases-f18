@@ -67,6 +67,7 @@
       use libgaf18, only: graph
       use libgaf18, only: newbranch
       use libgaf18, only: noff
+      use libgaf18, only: preview
       use libgaf18, only: rewind_git
       use libgaf18, only: savetags
       use libgaf18, only: store
@@ -104,6 +105,7 @@
       call graph
       call newbranch
       call noff
+      call preview
       call rewind_git
       call savetags
       call store
