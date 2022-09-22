@@ -57,6 +57,7 @@
       public :: newbranch
       public :: noff
       public :: overview
+      public :: preview
       public :: rewind_git
       public :: savetags
       public :: store
@@ -169,6 +170,12 @@
       character (*), intent (in) :: alias
       character (*), intent (in) :: comment
       end subroutine overview
+      end interface
+
+      interface
+      module subroutine preview
+      implicit none
+      end subroutine preview
       end interface
 
       interface
