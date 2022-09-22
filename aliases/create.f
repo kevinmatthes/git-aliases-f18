@@ -20,23 +20,31 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \author      Kevin Matthes
-!> \brief       Create a new repository.
-!> \copyright   GPL-2.0
-!> \date        2022
-!> \file        create.f
-!> \note        See `LICENSE' for full license.
-!>              See `README.md' for project details.
-!>
-!> This alias is used in order to immediately create a new repository.
+!> \file create.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
+!> \author      Kevin Matthes
+!> \copyright   GPL-2.0
+!> \date        2022
+!> \note        See `LICENSE' for full license.
+!>              See `README.md' for project details.
+!>
 !> \brief   Create a new repository.
 !>
 !> This alias is used in order to immediately create a new repository.
+!>
+!> A common use case for this Git alias command is to create a Git versioned
+!> repository from a directory containing some basic files.  Hence, this alias
+!> provides the functionality to create a repository including the base commit
+!> from only a `.gitignore`, for instance.
+!>
+!> \note It is assumed that the current working directory is the directory going
+!> to be intialised as a Git repository.  Thus, changing into the directory to
+!> be set up as a repository is a mandatory requirement for executing this alias
+!> command.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
