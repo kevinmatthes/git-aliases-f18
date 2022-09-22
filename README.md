@@ -125,7 +125,7 @@ features of Fortran 2018:
 
 * documentation of Fortran projects with Doxygen
 * Fortran's automatic memory management
-* Fortran's module system
+* Fortran's module system, including submodules
 * string concatenation in subroutine calls
 * subroutine definition
 * synchronous invocation of external applications from a Fortran program
