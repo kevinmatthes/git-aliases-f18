@@ -60,8 +60,10 @@
       public :: preview
       public :: rewind_git
       public :: savetags
+      public :: self_information
       public :: store
       public :: subinit
+      public :: table_header
       public :: tidy
       public :: tws
       public :: unconfigure
@@ -191,6 +193,12 @@
       end interface
 
       interface
+      module subroutine self_information
+      implicit none
+      end subroutine self_information
+      end interface
+
+      interface
       module subroutine store
       implicit none
       end subroutine store
@@ -200,6 +208,12 @@
       module subroutine subinit
       implicit none
       end subroutine subinit
+      end interface
+
+      interface
+      module subroutine table_header
+      implicit none
+      end subroutine table_header
       end interface
 
       interface
