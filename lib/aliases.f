@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file libgaf18-aliases.f
+!> \file aliases.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -34,70 +34,42 @@
 !>
 !> \brief   The Git alias commands `git-aliases` provides.
 !>
-!> This is the library module containing the Git alias commands `git-aliases`
+!> This is the library submodule containing the Git alias commands `git-aliases`
 !> provides.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      module libgaf18_aliases
+      submodule (libgaf18) aliases
       implicit none
-
-      public :: backup
-      public :: backupdestination
-      public :: bone
-      public :: bugfix
-      public :: checkin
-      public :: complain
-      public :: create
-      public :: delbranch
-      public :: ff
-      public :: goto_git
-      public :: grab
-      public :: graph
-      public :: newbranch
-      public :: noff
-      public :: rewind_git
-      public :: savetags
-      public :: store
-      public :: subinit
-      public :: tidy
-      public :: tws
-      public :: unconfigure
-      public :: verbose
-      public :: view
-      public :: whereami
-      public :: whichremotes
-      public :: withdraw
-
       contains
 
-      include 'backup.f'
-      include 'backupdestination.f'
-      include 'bone.f'
-      include 'bugfix.f'
-      include 'checkin.f'
-      include 'complain.f'
-      include 'create.f'
-      include 'delbranch.f'
-      include 'ff.f'
-      include 'goto.f'
-      include 'grab.f'
-      include 'graph.f'
-      include 'newbranch.f'
-      include 'noff.f'
-      include 'rewind.f'
-      include 'savetags.f'
-      include 'store.f'
-      include 'subinit.f'
-      include 'tidy.f'
-      include 'tws.f'
-      include 'unconfigure.f'
-      include 'verbose.f'
-      include 'view.f'
-      include 'whereami.f'
-      include 'whichremotes.f'
-      include 'withdraw.f'
+      include '../aliases/backup.f'
+      include '../aliases/backupdestination.f'
+      include '../aliases/bone.f'
+      include '../aliases/bugfix.f'
+      include '../aliases/checkin.f'
+      include '../aliases/complain.f'
+      include '../aliases/create.f'
+      include '../aliases/delbranch.f'
+      include '../aliases/ff.f'
+      include '../aliases/goto.f'
+      include '../aliases/grab.f'
+      include '../aliases/graph.f'
+      include '../aliases/newbranch.f'
+      include '../aliases/noff.f'
+      include '../aliases/rewind.f'
+      include '../aliases/savetags.f'
+      include '../aliases/store.f'
+      include '../aliases/subinit.f'
+      include '../aliases/tidy.f'
+      include '../aliases/tws.f'
+      include '../aliases/unconfigure.f'
+      include '../aliases/verbose.f'
+      include '../aliases/view.f'
+      include '../aliases/whereami.f'
+      include '../aliases/whichremotes.f'
+      include '../aliases/withdraw.f'
 
-      end module libgaf18_aliases
+      end submodule aliases
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
