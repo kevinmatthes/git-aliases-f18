@@ -36,13 +36,13 @@
 !>
 !> This alias is used in order to remove obsolete artifacts from the repository.
 !> The selection of the artifacts to remove is controlled by the settings in the
-!> most local `.gitignore`.  By default, this command will also clean empty
+!> most local `.gitignore`.  By default, this command will also clean up empty
 !> directories.
 !>
 !> \warning This command will also remove untracked files, by default.  These
 !> are files which are not already versioned by Git in the current repository or
-!> at least staged.  It is hence recommended to stage all newly created source
-!> files before calling this alias command in order to prevent a loss of
+!> at least staged.  It is, hence, highly recommended to stage all newly created
+!> source files before calling this alias command in order to prevent a loss of
 !> progress.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
