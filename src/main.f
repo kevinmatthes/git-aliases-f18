@@ -20,22 +20,18 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \author      Kevin Matthes
-!> \brief       The main source file.
-!> \copyright   (C) 2022 Kevin Matthes.
-!>              This file is licensed GPL 2 as of June 1991.
-!> \date        2022
-!> \file        git-aliases-f18.f
-!> \note        See `LICENSE' for full license.
-!>              See `README.md' for project details.
-!>
-!> This source file defines the invocation of the configuration of the defined
-!> Git alias commands.
+!> \file main.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
+!> \author      Kevin Matthes
+!> \copyright   GPL-2.0
+!> \date        2022
+!> \note        See `LICENSE' for full license.
+!>              See `README.md' for project details.
+!>
 !> \brief   The Git alias configuration program.
 !> \return  This program will return with exit code zero, by default.
 !>
@@ -45,11 +41,18 @@
 !> Git will treat any applications prefixed with `git-` as associated commands.
 !> Doing so with this program is also a benefit for the user since one can not
 !> only configure all aliases with this tool but also request a summary of the
-!> aliases set up with this tool.
+!> aliases set up by this tool.
+!>
+!> The resulting program does not require any command line arguments.  If there
+!> should be some, they are going to be ignored.  The application is going to
+!> exit with code zero.  Another behaviour is not configured.
+!>
+!> The exit code might vary in case that the call to Git should fail.  In this
+!> case, the exit code does not need to but still might be zero.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      program git_aliases_f18
+      program git_aliases
       use libgaf18_aliases, only: backup
       use libgaf18_aliases, only: backupdestination
       use libgaf18_aliases, only: bone
@@ -114,6 +117,6 @@
       call whichremotes
       call withdraw
 
-      end program git_aliases_f18
+      end program git_aliases
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

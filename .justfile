@@ -22,8 +22,7 @@
 ##
 ##  AUTHOR      Kevin Matthes
 ##  BRIEF       The recipes in order to compile the provided executable.
-##  COPYRIGHT   (C) 2022 Kevin Matthes.
-##              This file is licensed GPL 2 as of June 1991.
+##  COPYRIGHT   GPL-2.0
 ##  DATE        2022
 ##  FILE        .justfile
 ##  NOTE        See `LICENSE' for full license.
@@ -43,7 +42,7 @@ alias v     := valgrind
 
 
 # Settings for the recipes.
-flags   := '-std=f2018 -Wall -Werror -Wextra -Wpedantic'
+flags   := '-std=f2018 -Wall -Werror -Wextra -Wpedantic -Wuse-without-only'
 
 
 

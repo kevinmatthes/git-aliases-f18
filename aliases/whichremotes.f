@@ -20,21 +20,18 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \author      Kevin Matthes
-!> \brief       Show the available remote repositories.
-!> \copyright   (C) 2022 Kevin Matthes.
-!>              This file is licensed GPL 2 as of June 1991.
-!> \date        2022
-!> \file        whichremotes.f
-!> \note        See `LICENSE' for full license.
-!>              See `README.md' for project details.
-!>
-!> This alias is used in order to visualise the configured remote repositories.
+!> \file whichremotes.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
+!> \author      Kevin Matthes
+!> \copyright   GPL-2.0
+!> \date        2022
+!> \note        See `LICENSE' for full license.
+!>              See `README.md' for project details.
+!>
 !> \brief   Show the available remote repositories.
 !>
 !> This alias is used in order to visualise the configured remote repositories.

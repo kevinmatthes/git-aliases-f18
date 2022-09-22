@@ -20,26 +20,31 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \author      Kevin Matthes
-!> \brief       Configure the default backup remote `backup-drive`.
-!> \copyright   (C) 2022 Kevin Matthes.
-!>              This file is licensed GPL 2 as of June 1991.
-!> \date        2022
-!> \file        backupdestination.f
-!> \note        See `LICENSE' for full license.
-!>              See `README.md' for project details.
-!>
-!> This alias is used in order to configure a default backup remote repository
-!> named `backup-drive`.
+!> \file backupdestination.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
+!> \author      Kevin Matthes
+!> \copyright   GPL-2.0
+!> \date        2022
+!> \note        See `LICENSE' for full license.
+!>              See `README.md' for project details.
+!>
 !> \brief   Configure the default backup remote `backup-drive`.
 !>
 !> This alias is used in order to configure a default backup remote repository
 !> named `backup-drive`.
+!>
+!> When backing up the progress of a repository, not only pushing to the
+!> configured upstream branch(es) is helpful but also creating a further remote
+!> repository as another backup destination.  A use case therefore is, for
+!> instance, restoring a branch which is not available anymore in the upstream
+!> repository.
+!>
+!> By default, the backup remote repository will be named `backup-drive`.  It
+!> will be set to the given repository.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 

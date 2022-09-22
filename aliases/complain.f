@@ -20,30 +20,18 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \author      Kevin Matthes
-!> \brief       Search the repository for lines with more than 80 characters.
-!> \copyright   (C) 2022 Kevin Matthes.
-!>              This file is licensed GPL 2 as of June 1991.
-!> \date        2022
-!> \file        complain.f
-!> \note        See `LICENSE' for full license.
-!>              See `README.md' for project details.
-!>
-!> This alias is used in order to search all files in the current repository for
-!> lines with more than eighty characters.  At option, one can also provide an
-!> additional path to search only there.
-!>
-!> A maximum line length is often considered a reasonable design choice.  For
-!> historical reasons, a length of at most eighty characters per line is still
-!> common in many projects.
-!>
-!> This alias command helps finding the lines with more than eighty characters
-!> such that those lines can be adjusted and shortened, if required.
+!> \file complain.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
+!> \author      Kevin Matthes
+!> \copyright   GPL-2.0
+!> \date        2022
+!> \note        See `LICENSE' for full license.
+!>              See `README.md' for project details.
+!>
 !> \brief   Search the repository for lines with more than 80 characters.
 !>
 !> This alias is used in order to search all files in the current repository for
@@ -55,7 +43,7 @@
 !> common in many projects.
 !>
 !> This alias command helps finding the lines with more than eighty characters
-!> such that those lines can be adjusted and shortened, if required.
+!> such that those lines can be adjusted and shortened as required.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 

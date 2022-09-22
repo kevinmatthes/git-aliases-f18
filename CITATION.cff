@@ -22,8 +22,7 @@
 ##
 ##  AUTHOR      Kevin Matthes
 ##  BRIEF       Citation settings for the Git repository.
-##  COPYRIGHT   (C) 2022 Kevin Matthes.
-##              This file is licensed GPL 2 as of June 1991.
+##  COPYRIGHT   GPL-2.0
 ##  DATE        2022
 ##  FILE        CITATION.cff
 ##  NOTE        See `LICENSE' for full license.
@@ -40,7 +39,8 @@ message: Please cite this software using these meta data.
 #version: 0.1.0
 
 # Project information.
-abstract: Automatically configure Git alias commands with this Fortran 2018 application.
+abstract: >-
+  Automatically configure Git alias commands with this Fortran 2018 application.
 authors:
   - alias: kevinmatthes
     family-names: Matthes

@@ -20,25 +20,29 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
+!> \file libgaf18.f
+!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!
 !> \author      Kevin Matthes
-!> \brief       The business logic of `git-aliases-f18`.
-!> \copyright   (C) 2022 Kevin Matthes.
-!>              This file is licensed GPL 2 as of June 1991.
+!> \copyright   GPL-2.0
 !> \date        2022
-!> \file        libgaf18.f
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> This source file defines the library module containing the business logic of
-!> `git-aliases-f18`.
+!> \brief   The business logic of `git-aliases`.
+!>
+!> This is the library module containing the business logic of `git-aliases`.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
       module libgaf18
       implicit none
 
-      public    :: git
-      public    :: overview
+      public :: git
+      public :: overview
 
       contains
 

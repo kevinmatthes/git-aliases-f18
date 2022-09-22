@@ -20,21 +20,18 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \author      Kevin Matthes
-!> \brief       The invocation of Git.
-!> \copyright   (C) 2022 Kevin Matthes.
-!>              This file is licensed GPL 2 as of June 1991.
-!> \date        2022
-!> \file        git.f
-!> \note        See `LICENSE' for full license.
-!>              See `README.md' for project details.
-!>
-!> This source file defines how Git is called.
+!> \file git.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
+!> \author      Kevin Matthes
+!> \copyright   GPL-2.0
+!> \date        2022
+!> \note        See `LICENSE' for full license.
+!>              See `README.md' for project details.
+!>
 !> \brief   The Git invocation.
 !> \param   alias       The alias to be configured.
 !> \param   definition  How to configure the alias.
@@ -43,23 +40,25 @@
 !> This subroutine will configure a single alias for Git.  In order to show a
 !> brief information to the user, a short summary of the alias to be configured
 !> will be written to `stdout`.
+!>
+!> The Git call will be performed by a synchronous process invocation of `git
+!> config --global`.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
       subroutine git (alias, definition, comment)
       implicit none
 
-      character (*), intent (in)   :: alias
-      character (*), intent (in)   :: definition
-      character (*), intent (in)   :: comment
+      character (*), intent (in) :: alias
+      character (*), intent (in) :: definition
+      character (*), intent (in) :: comment
+
+      character (*), parameter :: config = 'git config --global alias.'
 
       intrinsic :: execute_command_line
 
       call execute_command_line
-     &(     'git config --global alias.' // alias
-     &//    ' "' // definition // '"'
-     &)
-
+     &     (config // alias // ' "' // definition // '"')
       call overview (alias, comment)
 
       end subroutine git

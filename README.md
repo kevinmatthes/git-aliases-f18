@@ -22,8 +22,7 @@
 --
 --  AUTHOR      Kevin Matthes
 --  BRIEF       Important information regarding this project.
---  COPYRIGHT   (C) 2022 Kevin Matthes.
---              This file is licensed GPL 2 as of June 1991.
+--  COPYRIGHT   GPL-2.0
 --  DATE        2022
 --  FILE        README.md
 --  NOTE        See `LICENSE' for full license.
@@ -126,6 +125,7 @@ features of Fortran 2018:
 
 * documentation of Fortran projects with Doxygen
 * Fortran's automatic memory management
+* Fortran's module system
 * string concatenation in subroutine calls
 * subroutine definition
 * synchronous invocation of external applications from a Fortran program

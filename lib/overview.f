@@ -20,36 +20,36 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \author      Kevin Matthes
-!> \brief       A brief summary of the command to configure.
-!> \copyright   (C) 2022 Kevin Matthes.
-!>              This file is licensed GPL 2 as of June 1991.
-!> \date        2022
-!> \file        overview.f
-!> \note        See `LICENSE' for full license.
-!>              See `README.md' for project details.
-!>
-!> This source file defines a service subroutine in order write information
-!> regarding the command to configure to `stdout`.
+!> \file overview.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
+!> \author      Kevin Matthes
+!> \copyright   GPL-2.0
+!> \date        2022
+!> \note        See `LICENSE' for full license.
+!>              See `README.md' for project details.
+!>
 !> \brief   A summary of the command to be configured.
 !> \param   alias   The alias to be configured.
 !> \param   comment A description of the alias to be configured.
 !>
 !> This subroutine will write information about the Git alias to be configured
-!> to `stdout`.
+!> to `stdout`.  Therefore, a table-like structure will be used in order to
+!> provide the information.
+!>
+!> The table will have two columns.  The left column will give the name of the
+!> alias to be configured, the right one will contain a short explanation.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
       subroutine overview (alias, comment)
       implicit none
 
-      character (*), intent (in)   :: alias
-      character (*), intent (in)   :: comment
+      character (*), intent (in) :: alias
+      character (*), intent (in) :: comment
 
       print '(a20, t24, a)', alias, comment
 

@@ -20,24 +20,30 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \author      Kevin Matthes
-!> \brief       Clean build artifacts and empty directories.
-!> \copyright   (C) 2022 Kevin Matthes.
-!>              This file is licensed GPL 2 as of June 1991.
-!> \date        2022
-!> \file        tidy.f
-!> \note        See `LICENSE' for full license.
-!>              See `README.md' for project details.
-!>
-!> This alias is used in order to remove obsolete artifacts from the repository.
+!> \file tidy.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
+!> \author      Kevin Matthes
+!> \copyright   GPL-2.0
+!> \date        2022
+!> \note        See `LICENSE' for full license.
+!>              See `README.md' for project details.
+!>
 !> \brief   Clean build artifacts and empty directories.
 !>
 !> This alias is used in order to remove obsolete artifacts from the repository.
+!> The selection of the artifacts to remove is controlled by the settings in the
+!> most local `.gitignore`.  By default, this command will also clean up empty
+!> directories.
+!>
+!> \warning This command will also remove untracked files, by default.  These
+!> are files which are not already versioned by Git in the current repository or
+!> at least staged.  It is, hence, highly recommended to stage all newly created
+!> source files before calling this alias command in order to prevent a loss of
+!> progress.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
