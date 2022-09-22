@@ -20,23 +20,24 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \author      Kevin Matthes
-!> \brief       Delete a branch.
-!> \copyright   GPL-2.0
-!> \date        2022
-!> \file        delbranch.f
-!> \note        See `LICENSE' for full license.
-!>              See `README.md' for project details.
-!>
-!> This alias is used in order to delete a branch.
+!> \file delbranch.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
+!> \author      Kevin Matthes
+!> \copyright   GPL-2.0
+!> \date        2022
+!> \note        See `LICENSE' for full license.
+!>              See `README.md' for project details.
+!>
 !> \brief   Delete a branch.
 !>
 !> This alias is used in order to delete a branch.
+!>
+!> A common use case for this Git alias command is the removal of a feature
+!> branch after merging it.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
