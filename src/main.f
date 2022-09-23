@@ -44,11 +44,11 @@
 !> summary of the aliases set up by it.
 !>
 !> The resulting program does not require any command line arguments.  If there
-!> should be some, however, they are going to be ignored.  The application is
-!> going to exit with code zero.  Another behaviour is not configured.
+!> should be some, however, they are going to be ignored.
 !>
-!> The exit code might vary in case that the call to Git should fail.  In this
-!> case, the exit code does not need to but still might be zero.
+!> The application is going to exit with code zero.  Another behaviour is not
+!> configured.  The exit code might vary in case that the call to Git should
+!> fail for some reasons.
 !>
 !> Recommended further readings are listed in the following.
 !>
