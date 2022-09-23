@@ -39,7 +39,7 @@
 !> When cloning from a remote repository with submodules non-recursively, these
 !> are not going to be initialised during the cloning process.  Hence, users
 !> need to initialise those themselves.  If one does not initialise submodules
-!> frequently, the commands therefore can be easily forgotten.  This Git alias
+!> frequently, the commands therefore can be forgotten easily.  This Git alias
 !> summarises the required commands in order to provide a useful abbreviation.
 !>
 !> This alias command requires the specification of the branch to checkout.  If

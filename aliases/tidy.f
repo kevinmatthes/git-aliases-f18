@@ -32,7 +32,7 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Clean build artifacts and empty directories.
+!> \brief   Clean up build artifacts and empty directories.
 !>
 !> This alias is used in order to remove obsolete artifacts from the repository.
 !> The selection of the artifacts to remove is controlled by the settings in the

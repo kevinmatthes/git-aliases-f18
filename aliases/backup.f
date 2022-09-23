@@ -40,9 +40,9 @@
 !>
 !> There are several development workflows with Git which require the creation
 !> and maintenance of branches.  When working on multiple branches at the same
-!> time, it is sometimes not easy to keep the overview which of them have not
-!> recently uploaded commits on them.  Then, the respective Git command `push
-!> --all` comes in handy.
+!> time, it is sometimes not easy to keep the overview which of these contain
+!> not recently uploaded changes.  Then, the Git command `push --all` is the
+!> appropriate solution for this use case.
 !>
 !> Since this Git command will upload every commit, this operation can also be
 !> thought as a backup of the current repository to the given remote repository.

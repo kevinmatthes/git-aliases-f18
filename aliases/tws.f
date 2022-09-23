@@ -47,7 +47,7 @@
 !> This alias command is intended to locate all occurences of those obsolete
 !> characters in order to be able to remove them easier.  In contrast to the Git
 !> hook for the same task, this command will also find all trailing whitespaces
-!> which cannot be found by this hook anymore, these are those ones which were
+!> which cannot be found by that hook anymore, these are those ones which were
 !> introduced before the hook was set up.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
