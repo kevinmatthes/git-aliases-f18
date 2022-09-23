@@ -47,8 +47,8 @@
 !> should be some, however, they are going to be ignored.
 !>
 !> The application is going to exit with code zero.  Another behaviour is not
-!> configured.  The exit code might vary in case that the call to Git should
-!> fail for some reasons.
+!> configured.  The exit code might vary, however, in case that the call to Git
+!> should fail for some reasons.
 !>
 !> Recommended further readings are listed in the following.
 !>
