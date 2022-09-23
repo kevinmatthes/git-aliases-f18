@@ -32,7 +32,7 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Print the Git alias command table header.
+!> \brief   Print the Git alias command table's header.
 !>
 !> This is a utility subroutine in order to write the Git alias command summary
 !> table's header to `stdout`.
