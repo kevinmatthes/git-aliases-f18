@@ -59,7 +59,7 @@
 
       call git
      &( 'checkin'
-     &, '!git preview . && git commit'
+     &, '!git preview && git commit'
      &, 'Create a new commit immediately.'
      &)
 
