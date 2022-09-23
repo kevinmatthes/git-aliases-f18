@@ -36,9 +36,10 @@
 !>
 !> This alias is used in order to explore the Git history in the terminal.
 !>
-!> \note This alias command will only fetch the commit's headlines as well as
+!> \note This alias command will only fetch the commits' headlines as well as
 !> the branch information.  For a full overview about the whole commit messages
-!> as well as the changes made to the tracked files, use `git verbose` instead.
+!> as well as the changes made to the tracked files, please use `git verbose`
+!> instead.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
