@@ -35,8 +35,7 @@
 !> \brief   Preview and stage all unstaged changes.
 !>
 !> This alias is used in order to show the introduced changes before they are
-!> staged.  This feedback is useful in order to avoid unintended mistakes being
-!> committed.
+!> staged.  This feedback is useful in order to avoid mistakes being committed.
 !>
 !> After showing the differences, all changes will be added to the staging area.
 !!
