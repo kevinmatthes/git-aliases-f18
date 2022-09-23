@@ -47,7 +47,7 @@
 
       call git
      &( 'preview'
-     &, '!git diff && git add'
+     &, '!git diff && git add .'
      &, 'Preview and stage all unstaged changes.'
      &)
 
