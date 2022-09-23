@@ -39,13 +39,13 @@
 !>
 !> Due to the naming convention of Git, this program can be integrated into it.
 !> Git will treat any applications prefixed with `git-` as associated commands
-!> \cite chacon.straub:git:2014.  Doing so with this program is also a benefit
-!> since one can not only configure all aliases with this tool but also request
-!> a summary of the aliases set up by it.
+!> \cite chacon.straub:git:2014.  Doing so with this program is a benefit since
+!> one can not only configure all aliases with this tool but also request a
+!> summary of the aliases set up by it.
 !>
 !> The resulting program does not require any command line arguments.  If there
-!> should be some, they are going to be ignored.  The application is going to
-!> exit with code zero.  Another behaviour is not configured.
+!> should be some, however, they are going to be ignored.  The application is
+!> going to exit with code zero.  Another behaviour is not configured.
 !>
 !> The exit code might vary in case that the call to Git should fail.  In this
 !> case, the exit code does not need to but still might be zero.
