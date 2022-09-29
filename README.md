@@ -81,14 +81,15 @@ required steps are defined in the `.justfile` and explained in the corresponding
 section below.
 
 The source code contains docstrings to be processed by *Doxygen*.  By default,
-both an HTML and a LaTeX manual will be compiled.  They are saved in dedicated
-directories in the repository's root.  The LaTeX manual needs to be finalised
-with according compilers.  Their invocation is managed by Doxygen itself by the
-provision of multiple build scripts.  Instead of relying on them, this project
-defines an equal finalisation routine based upon *Latexmk*.  This finalisation
-will be called automatically by Just.  Please note that the compilation of a
-LaTeX project requires the installation of a LaTeX distribution.  The
-recommended distribution is the *full* installation of *TeX Live*.
+both an HTML and a LaTeX manual as well as UNIX manual pages will be compiled.
+They are saved in dedicated directories in the repository's root.  The LaTeX
+manual needs to be finalised with according compilers.  Their invocation is
+managed by Doxygen itself by the provision of multiple build scripts.  Instead
+of relying on them, this project defines an equal finalisation routine based
+upon *Latexmk*.  This finalisation will be called automatically by Just.  Please
+note that the compilation of a LaTeX project requires the installation of a
+LaTeX distribution.  The recommended distribution is the *full* installation of
+*TeX Live*.
 
 In order to demonstrate the appropriate handling of memory allocations, a test
 therefore is configured as a Just recipe.  This test uses *Valgrind* and is
