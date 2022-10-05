@@ -37,7 +37,7 @@
 !> This alias is used in order to initialise all submodules configured in
 !> `.gitmodules`.
 !>
-!> When cloning from a remote repository with submodules non-recursively, those
+!> When cloning from a remote repository with submodules non-recursively, they
 !> are not going to be initialised during the cloning process.  Hence, users
 !> need to initialise those themselves.  If one does not initialise submodules
 !> frequently, the commands therefore can be forgotten easily.  This Git alias
@@ -48,8 +48,8 @@
 !> differs.  Hence, all submodules specified in `.gitmodules` will be fetched
 !> and initialised at once.
 !>
-!> \warning All submodules initialised by this Git alias command will be in the
-!> state of detached `HEAD`s.
+!> \warning Each submodule initialised by this Git alias command will have its
+!> respective `HEAD` detached.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
