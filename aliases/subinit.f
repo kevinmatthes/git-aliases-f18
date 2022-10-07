@@ -32,23 +32,24 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Set up the current submodule.
+!> \brief   Set up all configured submodules.
 !>
-!> This alias is used in order to initialise the current submodule.
+!> This alias is used in order to initialise all submodules configured in
+!> `.gitmodules`.
 !>
-!> When cloning from a remote repository with submodules non-recursively, these
+!> When cloning from a remote repository with submodules non-recursively, they
 !> are not going to be initialised during the cloning process.  Hence, users
 !> need to initialise those themselves.  If one does not initialise submodules
 !> frequently, the commands therefore can be forgotten easily.  This Git alias
 !> summarises the required commands in order to provide a useful abbreviation.
 !>
-!> This alias command requires the specification of the branch to checkout.  If
-!> no branch is given, however, the set up default branch of the respective
-!> submodule is assumed.
+!> \note When invoked, Git will assume the repository root as the current
+!> working directory.  It does not matter if the actual working directory
+!> differs.  Hence, all submodules specified in `.gitmodules` will be fetched
+!> and initialised at once.
 !>
-!> \note It is assumed that the current working directory is the root of the
-!> submodule to initialise.  Hence, one needs to `cd` into the submodule to
-!> initialise, at first.
+!> \warning Each submodule initialised by this Git alias command will have its
+!> respective `HEAD` detached.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -58,8 +59,8 @@
 
       call git
      &( 'subinit'
-     &, '!git submodule init && git submodule update && git goto'
-     &, 'Set up the current submodule.'
+     &, '!git submodule init && git submodule update'
+     &, 'Set up all configured submodules.'
      &)
 
       end subroutine subinit
