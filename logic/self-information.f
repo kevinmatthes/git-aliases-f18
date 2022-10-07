@@ -43,7 +43,7 @@
       implicit none
 
       print '(a / a / a / a, a / a)'
-     &, 'git-aliases, v0.1.0-rc1'
+     &, 'git-aliases, v0.1.0'
      &, 'Copyright (C) 2022 Kevin Matthes.'
      &, 'This is free software according to GPL-2.0.'
      &, 'THERE IS ABSOLUTELY NO WARRANTY, WITHOUT EVEN THE IMPLIED '
