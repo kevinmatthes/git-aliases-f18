@@ -67,6 +67,7 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * alias:  `whichremotes`
 * alias:  `withdraw`
 * basic citation meta data
+* `bump2version` settings
 * create `.gitignore`
 * create `.justfile`
 * create `.latexmkrc`
