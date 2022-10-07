@@ -36,7 +36,7 @@ message: Please cite this software using these meta data.
 
 # Version information.
 date-released: 2022-10-07
-version: v0.1.0-rc1
+version: v0.1.0
 
 # Project information.
 abstract: >-
