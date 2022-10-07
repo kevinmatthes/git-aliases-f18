@@ -61,6 +61,7 @@ version is as follows:
 
 | Requirement       | Type          | Role                                  |
 |:------------------|:-------------:|:--------------------------------------|
+| bump2version      | Python CLI    | automatic version increment           |
 | Doxygen           | application   | source code documentation             |
 | GFortran          | application   | Fortran 2018 compiler                 |
 | Git               | application   | application to configure              |
