@@ -191,6 +191,21 @@ The application itself will be compiled and saved in the directory `target/`.
 This directory will be created automatically during the build process and is
 situated in the repository's root.
 
+### Automatic Version Number Increment
+
+```
+just ver {{part}}
+just bump {{part}}
+```
+
+This project carries its current version number in multiple files.  In order to
+adjust all of them when preparing a new release, `bump2version` is employed to
+adjust all version numbers.
+
+The call of `bump2version` is incorporated into the build system with this
+maintenance recipe.  It takes one argument, `part`, which is handed over to
+`bump2version`.
+
 ### Removal of Build Artifacts
 
 ```
