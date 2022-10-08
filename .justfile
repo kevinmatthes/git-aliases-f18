@@ -38,6 +38,7 @@ alias d     := doxygen
 alias dirs  := directories
 alias i     := install
 alias v     := valgrind
+alias ver   := bump
 
 
 
@@ -62,6 +63,10 @@ library := 'libgaf18.a'
 # Compile the target application.
 @build: directories lib
     gfortran {{flags}} src/*.f -o target/git-aliases -I. -L. -lgaf18
+
+# Increment the version numbers.
+@bump part:
+    bump2version {{part}}
 
 # Remove build and documentation artifacts.
 @clear:
