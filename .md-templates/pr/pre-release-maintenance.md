@@ -32,16 +32,14 @@
 ################################################################################
 
 name: Pre-Release Maintenance
-description: A major maintenance of this project.
+about: A major maintenance of this project.
 title: '[Maintenance] Pre-Release Maintenance'
 labels:
   - 'maintenance'
 assignees:
   - kevinmatthes
-body:
-  - type: markdown
-    attributes:
-      value: These commits belong to a major maintenance of this project.
 
 ################################################################################
 ---
+
+These commits belong to a major maintenance of this project.
