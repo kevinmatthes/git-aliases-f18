@@ -62,6 +62,7 @@ references:
     isbn: 978-1-4842-0077-3
     languages:
       - en
+    pages: 426
     publisher:
       city: New York
       country: US
@@ -78,6 +79,7 @@ references:
     isbn: 978-3-030-09248-1
     languages:
       - en
+    pages: 956
     publisher:
       city: Cham
       country: CH
@@ -94,6 +96,7 @@ references:
     isbn: 978-3-486-22016-2
     languages:
       - de
+    pages: 248
     publisher:
       city: Munich
       country: DE
