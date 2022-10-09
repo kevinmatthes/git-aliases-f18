@@ -39,8 +39,14 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-* GitHub Pull Request Template:  enhancement
-* GitHub Pull Request Template:  pre-release maintenance
+* GitHub Pull Request Template:  enhancement (form)
+* GitHub Pull Request Template:  enhancement (template)
+* GitHub Pull Request Template:  pre-release maintenance (form)
+* GitHub Pull Request Template:  pre-release maintenance (template)
+
+### Changed
+
+* update CFF references
 
 ## [0.1.0] - 2022-10-08
 
