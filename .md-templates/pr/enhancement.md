@@ -32,16 +32,14 @@
 ################################################################################
 
 name: Enhancement
-description: New features are going to be introduced.
+about: New features are going to be introduced.
 title: '[Enhancement] New Feature'
 labels:
   - 'enhancement'
 assignees:
   - kevinmatthes
-body:
-  - type: markdown
-    attributes:
-      value: These commits belong to a new feature.
 
 ################################################################################
 ---
+
+These commits belong to a new feature.
