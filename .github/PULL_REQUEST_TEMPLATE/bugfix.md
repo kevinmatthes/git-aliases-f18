@@ -32,16 +32,12 @@
 ################################################################################
 
 name: Bugfix
-description: Mistakes are going to be corrected.
+about: Mistakes are going to be corrected.
 title: '[Bugfix] Fix Bug'
 labels:
   - 'bug'
 assignees:
   - kevinmatthes
-body:
-  - type: markdown
-    attributes:
-      value: These commits belong to the fix of a bug.
 
 ################################################################################
 ---
