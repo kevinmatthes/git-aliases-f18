@@ -39,12 +39,12 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-* GitHub Pull Request Form:  bugfix
-* GitHub Pull Request Form:  enhancement
-* GitHub Pull Request Form:  pre-release maintenance
-* GitHub Pull Request Template:  bugfix
-* GitHub Pull Request Template:  enhancement
-* GitHub Pull Request Template:  pre-release maintenance
+* GitHub Pull Request Form:  bugfix (disabled)
+* GitHub Pull Request Form:  enhancement (disabled)
+* GitHub Pull Request Form:  pre-release maintenance (disabled)
+* GitHub Pull Request Template:  bugfix (disabled)
+* GitHub Pull Request Template:  enhancement (disabled)
+* GitHub Pull Request Template:  pre-release maintenance (disabled)
 
 ### Changed
 
