@@ -39,6 +39,7 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
+* GitHub Pull Request Form:  bugfix
 * GitHub Pull Request Form:  enhancement
 * GitHub Pull Request Form:  pre-release maintenance
 * GitHub Pull Request Template:  bugfix
