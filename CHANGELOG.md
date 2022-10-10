@@ -39,15 +39,13 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-* GitHub Pull Request Form:  bugfix (disabled)
-* GitHub Pull Request Form:  enhancement (disabled)
-* GitHub Pull Request Form:  pre-release maintenance (disabled)
-* GitHub Pull Request Template:  bugfix (disabled)
-* GitHub Pull Request Template:  enhancement (disabled)
-* GitHub Pull Request Template:  pre-release maintenance (disabled)
+* GitHub Issue Form:  bug report (general)
+* GitHub Issue Form:  feature request (general)
+* GitHub Issue Form:  maintenance request
 
 ### Changed
 
+* GitHub Issue Template:  feature request (new alias)
 * update CFF references
 
 ## [0.1.0] - 2022-10-08
