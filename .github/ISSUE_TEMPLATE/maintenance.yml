@@ -24,15 +24,15 @@
 ##  BRIEF       The definition of a GitHub Issue Template.
 ##  COPYRIGHT   GPL-2.0
 ##  DATE        2022
-##  FILE        maintenance-pre-release.yml
+##  FILE        maintenance.yml
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-name: 'Maintenance:  Pre-Release Maintenance'
-description: Request a major maintenance of this project.
-title: '[Maintenance] Pre-Release Maintenance'
+name: 'Maintenance'
+description: Request a maintenance of this project.
+title: '[Maintenance] Maintenance Request'
 labels:
   - 'maintenance'
 assignees:
@@ -40,6 +40,38 @@ assignees:
 body:
   - type: markdown
     attributes:
-      value: With this issue, a new pre-release maintenance is requested.
+      value: With this issue, a new maintenance is requested.
+  - type: dropdown
+    attrobutes:
+      label: Type of the Maintenance
+      description: |
+        Please specify whether this is going to be a general or a pre-release
+        maintenance.
+      options:
+        - General Maintenance
+        - Pre-Release Maintenance
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Focus of the Maintenance
+      description: |
+        Which of the following features should be maintained in particular?
+      options:
+        - Everything.
+        - The configured aliases.
+        - The documentation of the aliases.
+        - The documentation of the business logic.
+        - The documentation of the repository.
+        - The issue templates.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Further Information
+      description: At option, one may specify further information briefly here.
+      placeholder: Is there anything to mind during the maintenance?
+    validations:
+      required: false
 
 ################################################################################
