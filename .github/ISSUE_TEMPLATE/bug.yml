@@ -45,7 +45,7 @@ body:
     attributes:
       label: Description
       description: Please describe the bug.
-      placegolder: Description of the bug
+      placeholder: Description of the bug
     validations:
       required: true
 
