@@ -41,6 +41,17 @@ body:
   - type: markdown
     attributes:
       value: With this issue, a new bug is reported.
+  - type: dropdown
+    attributes:
+      label: Version
+      description: |
+        Please specify the version of the software in which the bug occurred.
+      options:
+        - Nightly
+        - v0.1.0
+        - v0.1.0-rc1
+    validations:
+      required: true
   - type: textarea
     attributes:
       label: Description
