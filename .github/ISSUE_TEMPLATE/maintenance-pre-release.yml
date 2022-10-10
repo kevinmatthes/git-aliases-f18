@@ -21,17 +21,17 @@
 ################################################################################
 ##
 ##  AUTHOR      Kevin Matthes
-##  BRIEF       The definition of a GitHub Pull Request Template.
+##  BRIEF       The definition of a GitHub Issue Template.
 ##  COPYRIGHT   GPL-2.0
 ##  DATE        2022
-##  FILE        pre-release-maintenance.yml
+##  FILE        maintenance-pre-release.yml
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-name: Pre-Release Maintenance
-description: A major maintenance of this project.
+name: Maintenance:  Pre-Release Maintenance
+description: Request a major maintenance of this project.
 title: '[Maintenance] Pre-Release Maintenance'
 labels:
   - 'maintenance'
@@ -40,6 +40,6 @@ assignees:
 body:
   - type: markdown
     attributes:
-      value: These commits belong to a major maintenance of this project.
+      value: With this issue, a new pre-release maintenance is requested.
 
 ################################################################################
