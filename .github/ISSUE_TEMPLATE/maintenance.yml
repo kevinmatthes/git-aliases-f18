@@ -42,7 +42,7 @@ body:
     attributes:
       value: With this issue, a new maintenance is requested.
   - type: dropdown
-    attrobutes:
+    attributes:
       label: Type of the Maintenance
       description: |
         Please specify whether this is going to be a general or a pre-release
