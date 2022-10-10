@@ -53,6 +53,8 @@ body:
     validations:
       required: true
   - type: checkboxes
+    validations:
+      required: true
     attributes:
       label: Focus of the Maintenance
       description: |
@@ -64,8 +66,6 @@ body:
         - label: The documentation of the business logic.
         - label: The documentation of the repository.
         - label: The issue templates.
-    validations:
-      required: true
   - type: input
     attributes:
       label: Further Information
