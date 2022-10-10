@@ -30,7 +30,7 @@
 ##
 ################################################################################
 
-name: Maintenance:  Pre-Release Maintenance
+name: 'Maintenance:  Pre-Release Maintenance'
 description: Request a major maintenance of this project.
 title: '[Maintenance] Pre-Release Maintenance'
 labels:
