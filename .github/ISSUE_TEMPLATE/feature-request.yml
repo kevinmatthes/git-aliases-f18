@@ -45,7 +45,7 @@ body:
     attributes:
       label: Description
       description: Please describe the new feature.
-      placeholder: Description of the new feature.
+      placeholder: Description of the new feature
     validations:
       required: true
 
