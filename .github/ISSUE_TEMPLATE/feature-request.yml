@@ -21,7 +21,7 @@
 ################################################################################
 ##
 ##  AUTHOR      Kevin Matthes
-##  BRIEF       The definition of a GitHub Pull Request Template.
+##  BRIEF       The definition of a GitHub Issue Template.
 ##  COPYRIGHT   GPL-2.0
 ##  DATE        2022
 ##  FILE        enhancement.yml
@@ -30,9 +30,9 @@
 ##
 ################################################################################
 
-name: Enhancement
-description: New features are going to be introduced.
-title: '[Enhancement] New Feature'
+name: 'Feature Request:  General'
+description: Request a new feature.
+title: '[Feature Request] New Feature'
 labels:
   - 'enhancement'
 assignees:
@@ -40,6 +40,13 @@ assignees:
 body:
   - type: markdown
     attributes:
-      value: These commits belong to a new feature.
+      value: With this issue, a new feature is requested.
+  - type: textarea
+    attributes:
+      label: Description
+      description: Please describe the new feature.
+      placeholder: Description of the new feature.
+    validations:
+      required: true
 
 ################################################################################
