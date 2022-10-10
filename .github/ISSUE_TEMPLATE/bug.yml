@@ -21,18 +21,18 @@
 ################################################################################
 ##
 ##  AUTHOR      Kevin Matthes
-##  BRIEF       The definition of a GitHub Pull Request Template.
+##  BRIEF       The definition of a GitHub Issue Template.
 ##  COPYRIGHT   GPL-2.0
 ##  DATE        2022
-##  FILE        bugfix.yml
+##  FILE        bug.yml
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-name: Bugfix
-description: Mistakes are going to be corrected.
-title: '[Bugfix] Fix Bug'
+name: 'Bug Report:  General'
+description: Outline a bug.
+title: '[Bug] New Bug'
 labels:
   - 'bug'
 assignees:
@@ -40,6 +40,24 @@ assignees:
 body:
   - type: markdown
     attributes:
-      value: These commits belong to the fix of a bug.
+      value: With this issue, a new bug is reported.
+  - type: dropdown
+    attributes:
+      label: Version
+      description: |
+        Please specify the version of the software in which the bug occurred.
+      options:
+        - Nightly
+        - v0.1.0
+        - v0.1.0-rc1
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Description
+      description: Please describe the bug.
+      placeholder: Description of the bug
+    validations:
+      required: true
 
 ################################################################################

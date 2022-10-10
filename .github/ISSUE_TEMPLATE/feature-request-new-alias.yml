@@ -1,4 +1,3 @@
----
 ######################## GNU General Public License 2.0 ########################
 ##                                                                            ##
 ## Copyright (C) 2022 Kevin Matthes                                           ##
@@ -22,24 +21,48 @@
 ################################################################################
 ##
 ##  AUTHOR      Kevin Matthes
-##  BRIEF       The definition of a GitHub Pull Request Template.
+##  BRIEF       The definition of a GitHub Issue Template.
 ##  COPYRIGHT   GPL-2.0
 ##  DATE        2022
-##  FILE        pre-release-maintenance.md
+##  FILE        feature-request-new-alias.yml
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-name: Pre-Release Maintenance
-about: A major maintenance of this project.
-title: '[Maintenance] Pre-Release Maintenance'
+name: 'Feature Request:  New Alias'
+description: Request a new Git alias command.
+title: '[Feature Request] New Alias'
 labels:
-  - 'maintenance'
+  - 'enhancement'
 assignees:
   - kevinmatthes
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide the following information in order to request a new Git
+        alias command.
+  - type: input
+    attributes:
+      label: Command Name
+      description: Please suggest a name for the new alias.
+      placeholder: Suggested alias name
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Definition
+      description: Please specify how this alias shall be defined.
+      placeholder: Definition of the new alias
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Description
+      description: Please summarise briefly what this alias is supposed to do.
+      placeholder: Brief description of the purpose
+    validations:
+      required: true
 
 ################################################################################
----
-
-These commits belong to a major maintenance of this project.
