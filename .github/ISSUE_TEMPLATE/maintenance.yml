@@ -71,5 +71,7 @@ body:
       label: Further Information
       description: At option, one may specify further information briefly here.
       placeholder: Is there anything to mind during the maintenance?
+    validations:
+      required: false
 
 ################################################################################
