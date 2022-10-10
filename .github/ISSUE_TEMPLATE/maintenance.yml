@@ -58,12 +58,12 @@ body:
       description: |
         Which of the following features should be maintained in particular?
       options:
-        - Everything.
-        - The configured aliases.
-        - The documentation of the aliases.
-        - The documentation of the business logic.
-        - The documentation of the repository.
-        - The issue templates.
+        - label: Everything.
+        - label: The configured aliases.
+        - label: The documentation of the aliases.
+        - label: The documentation of the business logic.
+        - label: The documentation of the repository.
+        - label: The issue templates.
     validations:
       required: true
   - type: input
