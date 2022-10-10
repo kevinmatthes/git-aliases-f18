@@ -24,15 +24,15 @@
 ##  BRIEF       The definition of a GitHub Pull Request Template.
 ##  COPYRIGHT   GPL-2.0
 ##  DATE        2022
-##  FILE        bugfix.yml
+##  FILE        bug.yml
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-name: Bugfix
-description: Mistakes are going to be corrected.
-title: '[Bugfix] Fix Bug'
+name: 'Bug Report:  General'
+description: Outline a bug.
+title: '[Bug] New Bug'
 labels:
   - 'bug'
 assignees:
@@ -40,6 +40,13 @@ assignees:
 body:
   - type: markdown
     attributes:
-      value: These commits belong to the fix of a bug.
+      value: With this issue, a new bug is reported.
+  - type: textarea
+    attributes:
+      label: Description
+      description: Please describe the bug.
+      placegolder: Description of the bug
+    validations:
+      required: true
 
 ################################################################################
