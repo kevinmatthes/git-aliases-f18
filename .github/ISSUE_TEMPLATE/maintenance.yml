@@ -62,6 +62,7 @@ body:
         - label: The configured aliases.
         - label: The documentation of the aliases.
         - label: The documentation of the business logic.
+        - label: The documentation of the library.
         - label: The documentation of the repository.
         - label: The issue templates.
     validations:
