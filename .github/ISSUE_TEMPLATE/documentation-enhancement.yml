@@ -24,54 +24,41 @@
 ##  BRIEF       The definition of a GitHub Issue Template.
 ##  COPYRIGHT   GPL-2.0
 ##  DATE        2022
-##  FILE        maintenance.yml
+##  FILE        documentation-enhancement.yml
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-name: 'Maintenance'
-description: Request a maintenance of this project.
-title: '[Maintenance] Maintenance Request'
+name: 'Documentation:  Enhancement Request'
+description: Request a more detailed documentation.
+title: '[Documentation] Enhancement Request'
 labels:
-  - 'maintenance'
+  - 'documentation'
 assignees:
   - kevinmatthes
 body:
   - type: markdown
     attributes:
-      value: With this issue, a new maintenance is requested.
+      value: With this issue, a more detailed documentation is requested.
   - type: dropdown
     attributes:
-      label: Type of the Maintenance
+      label: Category
       description: |
-        Please specify whether this is going to be a general or a pre-release
-        maintenance.
+        Please specify which documentation shall be enriched with further
+        details.
       options:
-        - General Maintenance
-        - Pre-Release Maintenance
-    validations:
-      required: true
-  - type: checkboxes
-    attributes:
-      label: Focus of the Maintenance
-      description: |
-        Which of the following features should be maintained in particular?
-      options:
-        - label: Everything.
-        - label: The configured aliases.
-        - label: The documentation of the aliases.
-        - label: The documentation of the business logic.
-        - label: The documentation of the library.
-        - label: The documentation of the repository.
-        - label: The issue templates.
+        - alias commands
+        - business logic
+        - library
+        - repository
     validations:
       required: true
   - type: input
     attributes:
-      label: Further Information
-      description: At option, one may specify further information briefly here.
-      placeholder: Is there anything to mind during the maintenance?
+      label: File
+      description: Is there a special file which shall be modified?
+      placeholder: File name
     validations:
       required: false
 

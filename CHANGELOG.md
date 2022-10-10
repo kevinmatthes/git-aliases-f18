@@ -41,6 +41,7 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 * GitHub Issue Form:  bug report (general)
 * GitHub Issue Form:  bug report (outdated submodule)
+* GitHub Issue Form:  documentation (enhancement request)
 * GitHub Issue Form:  feature request (general)
 * GitHub Issue Form:  maintenance request
 
