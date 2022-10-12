@@ -45,17 +45,17 @@ Unreleased
 Added
 .....
 
-* GitHub Issue Form:  bug report (general)
-* GitHub Issue Form:  bug report (outdated submodule)
-* GitHub Issue Form:  documentation (enhancement request)
-* GitHub Issue Form:  feature request (general)
-* GitHub Issue Form:  maintenance request
+- GitHub Issue Form:  bug report (general)
+- GitHub Issue Form:  bug report (outdated submodule)
+- GitHub Issue Form:  documentation (enhancement request)
+- GitHub Issue Form:  feature request (general)
+- GitHub Issue Form:  maintenance request
 
 Changed
 .......
 
-* GitHub Issue Template:  feature request (new alias)
-* update CFF references
+- GitHub Issue Template:  feature request (new alias)
+- update CFF references
 
 .. scriv-insert-here
 
@@ -65,53 +65,53 @@ Changed
 Added
 .....
 
-* alias:  ``backup``
-* alias:  ``backupdestination``
-* alias:  ``bone``
-* alias:  ``bugfix``
-* alias:  ``checkin``
-* alias:  ``complain``
-* alias:  ``create``
-* alias:  ``delbranch``
-* alias:  ``ff``
-* alias:  ``goto``
-* alias:  ``grab``
-* alias:  ``graph``
-* alias:  ``newbranch``
-* alias:  ``noff``
-* alias:  ``preview``
-* alias:  ``rewind``
-* alias:  ``savetags``
-* alias:  ``store``
-* alias:  ``subinit``
-* alias:  ``tidy``
-* alias:  ``tws``
-* alias:  ``unconfigure``
-* alias:  ``verbose``
-* alias:  ``view``
-* alias:  ``whereami``
-* alias:  ``whichremotes``
-* alias:  ``withdraw``
-* basic citation meta data
-* ``bump2version`` settings
-* create ``.gitignore``
-* create ``.justfile``
-* create ``.latexmkrc``
-* create main source file
-* create repository README
-* create this changelog
-* create this repository
-* define Git invocation subroutine
-* define self information subroutine
-* define summary subroutine for aliases to be configured
-* define table header subroutine
-* Doxygen settings:  Fortran presets
-* Doxygen settings:  literature databases
-* GitHub Action:  CFF validation
-* GitHub Issue Template:  new alias
-* license:  GPL-2.0
-* module for project logic
-* submodule for alias commands
-* submodule for business logic
+- alias:  ``backup``
+- alias:  ``backupdestination``
+- alias:  ``bone``
+- alias:  ``bugfix``
+- alias:  ``checkin``
+- alias:  ``complain``
+- alias:  ``create``
+- alias:  ``delbranch``
+- alias:  ``ff``
+- alias:  ``goto``
+- alias:  ``grab``
+- alias:  ``graph``
+- alias:  ``newbranch``
+- alias:  ``noff``
+- alias:  ``preview``
+- alias:  ``rewind``
+- alias:  ``savetags``
+- alias:  ``store``
+- alias:  ``subinit``
+- alias:  ``tidy``
+- alias:  ``tws``
+- alias:  ``unconfigure``
+- alias:  ``verbose``
+- alias:  ``view``
+- alias:  ``whereami``
+- alias:  ``whichremotes``
+- alias:  ``withdraw``
+- basic citation meta data
+- ``bump2version`` settings
+- create ``.gitignore``
+- create ``.justfile``
+- create ``.latexmkrc``
+- create main source file
+- create repository README
+- create this changelog
+- create this repository
+- define Git invocation subroutine
+- define self information subroutine
+- define summary subroutine for aliases to be configured
+- define table header subroutine
+- Doxygen settings:  Fortran presets
+- Doxygen settings:  literature databases
+- GitHub Action:  CFF validation
+- GitHub Issue Template:  new alias
+- license:  GPL-2.0
+- module for project logic
+- submodule for alias commands
+- submodule for business logic
 
 .. -------------------------------------------------------------------------- ..
