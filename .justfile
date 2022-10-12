@@ -67,7 +67,7 @@ library := 'libgaf18.a'
 # Increment the version numbers.
 @bump part:
     bump2version {{part}}
-    scriv collect --version 0.1.0
+    just scriv
 
 # Remove build and documentation artifacts.
 @clear:
@@ -101,6 +101,10 @@ library := 'libgaf18.a'
     gfortran -c {{flags}} lib/logic.f
     ar rsv {{library}} *.o
     rm -rf *.o
+
+# Collect the pending changelog entries.
+@scriv:
+    scriv collect --version 0.1.0
 
 # Analyse the memory management of the target application.
 @valgrind: build
