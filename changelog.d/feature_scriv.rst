@@ -8,5 +8,6 @@ Added
 Changed
 .......
 
+- add Scriv as software requirement
 - optimise CHANGELOG for maintenance with Scriv
 - rename ``CHANGELOG.md`` to ``CHANGELOG.rst``
