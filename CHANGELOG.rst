@@ -82,7 +82,7 @@ Added
 - alias:  ``whichremotes``
 - alias:  ``withdraw``
 - basic citation meta data
-- ``bump2version`` settings
+- configuration file for bump2version
 - create ``.gitignore``
 - create ``.justfile``
 - create ``.latexmkrc``
