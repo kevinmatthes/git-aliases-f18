@@ -67,6 +67,7 @@ library := 'libgaf18.a'
 # Increment the version numbers.
 @bump part:
     bump2version {{part}}
+    scriv collect --version 0.1.0
 
 # Remove build and documentation artifacts.
 @clear:
