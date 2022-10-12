@@ -287,6 +287,16 @@ just logic
 This recipe will compile the library submodule containing the business logic.
 This is an internal recipe invoked by the build routine, if required.
 
+### Compile Changelog
+
+```
+just scriv
+```
+
+This project uses Scriv in order to maintain the changelog.  When preparing a
+release, this internal recipe is called in order to append all pending changelog
+entries to the changelog.
+
 ### Valgrind Memory Management Analysis
 
 ```
