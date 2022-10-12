@@ -67,6 +67,7 @@ version is as follows:
 | Git               | application   | application to configure              |
 | Just              | Rust binary   | execution of the build instructions   |
 | Latexmk           | application   | LaTeX compilation of Doxygen manual   |
+| Scriv             | Python CLI    | changelog maintenance                 |
 | TeX Live (full)   | package       | LaTeX environment for Doxygen manual  |
 | Valgrind          | application   | memory leak detection                 |
 
@@ -285,6 +286,16 @@ just logic
 
 This recipe will compile the library submodule containing the business logic.
 This is an internal recipe invoked by the build routine, if required.
+
+### Compile Changelog
+
+```
+just scriv
+```
+
+This project uses Scriv in order to maintain the changelog.  When preparing a
+release, this internal recipe is called in order to append all pending changelog
+entries to the changelog.
 
 ### Valgrind Memory Management Analysis
 
