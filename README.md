@@ -67,6 +67,7 @@ version is as follows:
 | Git               | application   | application to configure              |
 | Just              | Rust binary   | execution of the build instructions   |
 | Latexmk           | application   | LaTeX compilation of Doxygen manual   |
+| Scriv             | Python CLI    | changelog maintenance                 |
 | TeX Live (full)   | package       | LaTeX environment for Doxygen manual  |
 | Valgrind          | application   | memory leak detection                 |
 
