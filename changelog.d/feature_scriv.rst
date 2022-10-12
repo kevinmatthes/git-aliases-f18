@@ -1,6 +1,7 @@
 Added
 .....
 
+- add Scriv to build routine
 - directory:  ``changelog.d``
 - general configuration file ``setup.cfg``
 - settings for Scriv
