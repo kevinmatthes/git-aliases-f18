@@ -59,7 +59,10 @@ body:
         Which of the following features should be maintained in particular?
       options:
         - label: Everything.
+        - label: The business logic.
+        - label: The configuration files.
         - label: The configured aliases.
+        - label: The library as a whole.
         - label: The documentation of the aliases.
         - label: The documentation of the business logic.
         - label: The documentation of the library.
