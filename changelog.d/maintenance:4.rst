@@ -8,6 +8,8 @@ Added
 Changed
 .......
 
+- adjust bump2version settings
+
 - move all link targets of the CHANGELOG entries to the top of the CHANGELOG
 
 Removed
