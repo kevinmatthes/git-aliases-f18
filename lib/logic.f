@@ -43,6 +43,7 @@
       contains
 
       include '../logic/git.f'
+      include '../logic/header.f'
       include '../logic/overview.f'
       include '../logic/self-information.f'
       include '../logic/table-header.f'
