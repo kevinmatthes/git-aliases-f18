@@ -34,7 +34,7 @@
 !>
 !> \brief   The header information to be printed before the alias descriptions.
 !>
-!> This is a utility subroutine in order to call `self_information` and 
+!> This is a utility subroutine in order to call `self_information` and
 !> `table_header` subsequently.  This is useful in order to encapsulate the call
 !> to both subroutines for the C bindings of this library.
 !!
