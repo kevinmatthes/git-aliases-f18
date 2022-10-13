@@ -200,12 +200,12 @@ just bump {{part}}
 ```
 
 This project carries its current version number in multiple files.  In order to
-adjust all of them when preparing a new release, `bump2version` is employed to
-adjust all version numbers.
+adjust all of them when preparing a new release, bump2version is employed to
+increment all version numbers.
 
-The call of `bump2version` is incorporated into the build system with this
+The call of bump2version is incorporated into the build system with this
 maintenance recipe.  It takes one argument, `part`, which is handed over to
-`bump2version`.
+bump2version.
 
 ### Removal of Build Artifacts
 
