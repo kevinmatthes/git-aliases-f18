@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file project.f
+!> \file lib.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -49,6 +49,7 @@
       module libgaf18
       implicit none
 
+      private :: overview
       private :: self_information
       private :: table_header
 
@@ -68,7 +69,6 @@
       public :: header
       public :: newbranch
       public :: noff
-      public :: overview
       public :: preview
       public :: rewind_git
       public :: savetags

@@ -89,7 +89,7 @@ library := 'libgaf18.a'
 
 # Create the Fortran interfaces.
 @interfaces:
-    gfortran -c {{flags}} lib/project.f
+    gfortran -c {{flags}} src/lib.f
     ar rsv {{library}} *.o
     rm -rf *.o
 
