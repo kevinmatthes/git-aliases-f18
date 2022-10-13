@@ -71,15 +71,14 @@
       use libgaf18, only: goto_git
       use libgaf18, only: grab
       use libgaf18, only: graph
+      use libgaf18, only: header
       use libgaf18, only: newbranch
       use libgaf18, only: noff
       use libgaf18, only: preview
       use libgaf18, only: rewind_git
       use libgaf18, only: savetags
-      use libgaf18, only: self_information
       use libgaf18, only: store
       use libgaf18, only: subinit
-      use libgaf18, only: table_header
       use libgaf18, only: tidy
       use libgaf18, only: tws
       use libgaf18, only: unconfigure
@@ -90,8 +89,7 @@
       use libgaf18, only: withdraw
       implicit none
 
-      call self_information
-      call table_header
+      call header
 
       call backup
       call backupdestination

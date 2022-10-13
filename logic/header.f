@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file logic.f
+!> \file header.f
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,22 +32,20 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   The business logic of `git-aliases`.
+!> \brief   The header information to be printed before the alias descriptions.
 !>
-!> This is the library submodule containing the business logic of `git-aliases`.
+!> This is a utility subroutine in order to call `self_information` and
+!> `table_header` subsequently.  This is useful in order to encapsulate the call
+!> to both subroutines for the C bindings of this library.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      submodule (libgaf18) logic
+      subroutine header
       implicit none
-      contains
 
-      include '../logic/git.f'
-      include '../logic/header.f'
-      include '../logic/overview.f'
-      include '../logic/self-information.f'
-      include '../logic/table-header.f'
+      call self_information
+      call table_header
 
-      end submodule logic
+      end subroutine header
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
