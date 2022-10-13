@@ -49,6 +49,9 @@
       module libgaf18
       implicit none
 
+      private :: self_information
+      private :: table_header
+
       public :: backup
       public :: backupdestination
       public :: bone
@@ -62,16 +65,15 @@
       public :: goto_git
       public :: grab
       public :: graph
+      public :: header
       public :: newbranch
       public :: noff
       public :: overview
       public :: preview
       public :: rewind_git
       public :: savetags
-      public :: self_information
       public :: store
       public :: subinit
-      public :: table_header
       public :: tidy
       public :: tws
       public :: unconfigure
@@ -160,6 +162,12 @@
       module subroutine graph
       implicit none
       end subroutine graph
+      end interface
+
+      interface
+      module subroutine header
+      implicit none
+      end subroutine header
       end interface
 
       interface
