@@ -35,6 +35,14 @@
 !> \brief   The project logic of `git-aliases`.
 !>
 !> This is the library module containing the project logic of `git-aliases`.
+!>
+!> The library consists of the actual alias definitions as well as the utilities
+!> in order to configure them.  Both categories are separated into dedicated
+!> submodules, `aliases` and `logic`, respectively.  This separation simplifies
+!> the maintenance of the project.
+!>
+!> This module is used in order to provide a common interface to both
+!> submodules.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
