@@ -12,6 +12,12 @@ Changed
 
 - move all link targets of the CHANGELOG entries to the top of the CHANGELOG
 
+Fixed
+.....
+
+- unify naming style of bump2version ("bump2version" instead of
+  "``bump2version``")
+
 Removed
 .......
 
