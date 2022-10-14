@@ -14,8 +14,6 @@ Changed
 
 - add Scriv as software requirement
 
-- bump2version:  track build routine
-
 - optimise CHANGELOG for maintenance with Scriv
 
 - rename ``CHANGELOG.md`` to ``CHANGELOG.rst``
