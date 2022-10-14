@@ -201,11 +201,14 @@ just bump {{part}}
 
 This project carries its current version number in multiple files.  In order to
 adjust all of them when preparing a new release, bump2version is employed to
-increment all version numbers.
+increment all version numbers.  The call of bump2version is incorporated into
+the build system with this maintenance recipe.  It takes one argument, `part`,
+which is handed over to bump2version.
 
-The call of bump2version is incorporated into the build system with this
-maintenance recipe.  It takes one argument, `part`, which is handed over to
-bump2version.
+After the version increment is completed, the changelog will be composesd using
+the pending changelog entries in [`changelog.d/`](changelog.d/).  This project
+uses Scriv in order to maintain the changelog.  The call to it is hard coded
+into this recipe, as well.
 
 ### Removal of Build Artifacts
 
@@ -286,16 +289,6 @@ just logic
 
 This recipe will compile the library submodule containing the business logic.
 This is an internal recipe invoked by the build routine, if required.
-
-### Compile Changelog
-
-```
-just scriv
-```
-
-This project uses Scriv in order to maintain the changelog.  When preparing a
-release, this internal recipe is called in order to append all pending changelog
-entries to the changelog.
 
 ### Valgrind Memory Management Analysis
 
