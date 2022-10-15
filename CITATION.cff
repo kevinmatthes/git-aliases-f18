@@ -75,6 +75,7 @@ references:
         given-names: Ian
       - family-names: Sleightholme
         given-names: Jane
+    doi: 10.1007/978-3-319-75502-1
     edition: '4'
     isbn: 978-3-030-09248-1
     languages:
@@ -104,5 +105,26 @@ references:
     title: Die FORTRAN-Fibel
     type: book
     year: 1991
+  - abstract: Incorporating Fortran 2018
+    authors:
+      - family-names: Metcalf
+        given-names: Michael
+      - family-names: Reid
+        given-names: John
+      - family-names: Cohen
+        given-names: Malcolm
+    doi: 10.1093/oso/9780198811886.001.0001
+    edition: '8'
+    isbn: 978-0-19-881188-6
+    languages:
+      - en
+    pages: 522
+    publisher:
+      city: New York
+      country: US
+      name: Oxford University Press
+    title: Modern Fortran Explained
+    type: book
+    year: 2018
 
 ################################################################################
