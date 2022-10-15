@@ -39,7 +39,7 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
       subroutine whichremotes
-      use libgaf18, only: git
+      use, non_intrinsic :: libgaf18, only: git
       implicit none
 
       call git
