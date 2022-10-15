@@ -50,11 +50,12 @@
 !> configured.  The exit code might vary, however, in case that the call to Git
 !> should fail for some reasons.
 !>
-!> Recommended further readings are listed in the following.
+!> Recommended further readings and references are listed in the following.
 !>
 !> * \cite chacon.straub:git:2014
 !> * \cite chivers.sleightholme:fortran:2018
 !> * \cite kuhme.witschital:fortran:1991
+!> * \cite metcalf.reid.cohen:fortran:2018
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
