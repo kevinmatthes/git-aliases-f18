@@ -51,6 +51,91 @@ All pending changelog entries are stored in `changelog.d`_.
 
 .. scriv-insert-here
 
+.. _changelog-0.1.1:
+
+0.1.1 — 2022-10-15
+------------------
+
+Added
+.....
+
+- create ``header.f`` to encapsulate the calls to ``self_information`` and
+  ``table_header``
+
+- add Scriv to build routine
+
+- directory:  ``changelog.d``
+
+- general configuration file ``setup.cfg``
+
+- settings for Scriv
+
+- GitHub Issue Form:  bug report (general)
+
+- GitHub Issue Form:  bug report (outdated submodule)
+
+- GitHub Issue Form:  documentation (enhancement request)
+
+- GitHub Issue Form:  feature request (general)
+
+- GitHub Issue Form:  maintenance request
+
+- add link target to the section for v0.1.0 in CHANGELOG
+
+- add newlines between recent CHANGELOG entries
+
+Changed
+.......
+
+- bump2version:  track Scriv settings
+
+- description of the version increment recipe
+
+- enhance the documentation of the main library module
+
+- change visibility of subroutine ``self_information`` to private
+
+- change visibility of subroutine ``table_header`` to private
+
+- add Scriv as software requirement
+
+- optimise CHANGELOG for maintenance with Scriv
+
+- rename ``CHANGELOG.md`` to ``CHANGELOG.rst``
+
+- GitHub Issue Template:  feature request (new alias)
+
+- update CFF references
+
+- adjust bump2version settings
+
+- move all link targets of the CHANGELOG entries to the top of the CHANGELOG
+
+- change visibility of subroutine ``overview`` to private
+
+- move all alias definitions to ``lib/aliases/``
+
+- move all business logic symbols to ``lib/logic/``
+
+- rename ``lib/project.f`` to ``src/lib.f``
+
+- build routine:  compile only main source file
+
+- Doxygen settings:  adjust input directories
+
+- Doxygen settings:  beautify indentation of multiline settings
+
+Fixed
+.....
+
+- unify naming style of bump2version ("bump2version" instead of
+  "``bump2version``")
+
+Removed
+.......
+
+- version prefix (``v``) in ``CITATION.cff``
+
 .. _changelog-0.1.0:
 
 0.1.0 — 2022-10-08
