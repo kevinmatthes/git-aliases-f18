@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file bone.f
+!> \file bone.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -43,16 +43,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine bone
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'bone'
-     &, 'clone --bare'
-     &, 'Clone into a bare repository.'
-     &)
-
-      end subroutine bone
+subroutine bone
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'bone'                                                          &
+             , 'clone --bare'                                                  &
+             , 'Clone into a bare repository.'                                 &
+             )
+end subroutine bone
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
