@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file unconfigure.f
+!> \file unconfigure.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -39,16 +39,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine unconfigure
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'unconfigure'
-     &, 'config --global --unset'
-     &, 'Remove a configuration from this user''s Git settings.'
-     &)
-
-      end subroutine unconfigure
+subroutine unconfigure
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'unconfigure'                                                   &
+             , 'config --global --unset'                                       &
+             , 'Remove a configuration from this user''s Git settings.'        &
+             )
+end subroutine unconfigure
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
