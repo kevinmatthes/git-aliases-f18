@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file git.f
+!> \file git.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -46,21 +46,18 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine git (alias, definition, comment)
-      implicit none
+subroutine git (alias, definition, comment)
+implicit none
+    character (*), intent (in) :: alias
+    character (*), intent (in) :: definition
+    character (*), intent (in) :: comment
 
-      character (*), intent (in) :: alias
-      character (*), intent (in) :: definition
-      character (*), intent (in) :: comment
+    character (*), parameter :: config = 'git config --global alias.'
 
-      character (*), parameter :: config = 'git config --global alias.'
+    intrinsic :: execute_command_line
 
-      intrinsic :: execute_command_line
-
-      call execute_command_line
-     &     (config // alias // ' "' // definition // '"')
-      call overview (alias, comment)
-
-      end subroutine git
+    call execute_command_line (config // alias // ' "' // definition // '"')
+    call overview (alias, comment)
+end subroutine git
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
