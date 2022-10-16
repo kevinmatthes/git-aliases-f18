@@ -98,7 +98,7 @@ library := 'libgaf18.a'
 
 # Create the business logic submodule.
 @logic: interfaces
-    gfortran -c {{flags}} lib/logic.f
+    gfortran -c {{flags}} lib/logic.f08
     ar rsv {{library}} *.o
     rm -rf *.o
 
