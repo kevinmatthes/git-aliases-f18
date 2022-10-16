@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file rewind.f
+!> \file rewind-git.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -38,16 +38,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine rewind_git
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'rewind'
-     &, 'reset --hard'
-     &, 'Reset the history to the given revision.'
-     &)
-
-      end subroutine rewind_git
+subroutine rewind_git
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'rewind'                                                        &
+             , 'reset --hard'                                                  &
+             , 'Reset the history to the given revision.'                      &
+             )
+end subroutine rewind_git
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
