@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file delbranch.f
+!> \file delbranch.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -41,16 +41,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine delbranch
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'delbranch'
-     &, 'branch -d'
-     &, 'Delete a branch.'
-     &)
-
-      end subroutine delbranch
+subroutine delbranch
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'delbranch'                                                     &
+             , 'branch -d'                                                     &
+             , 'Delete a branch.'                                              &
+             )
+end subroutine delbranch
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
