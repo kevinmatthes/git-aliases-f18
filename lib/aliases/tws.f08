@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file tws.f
+!> \file tws.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -52,16 +52,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine tws
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'tws'
-     &, 'grep [[:blank:]]$'
-     &, 'Search the repository for trailing whitespaces.'
-     &)
-
-      end subroutine tws
+subroutine tws
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'tws'                                                           &
+             , 'grep [[:blank:]]$'                                             &
+             , 'Search the repository for trailing whitespaces.'               &
+             )
+end subroutine tws
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
