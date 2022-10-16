@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file bugfix.f
+!> \file bugfix.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -48,16 +48,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine bugfix
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'bugfix'
-     &, '!git commit -m Bugfix && git store'
-     &, 'Commit and backup the staged changes as a bugfix.'
-     &)
-
-      end subroutine bugfix
+subroutine bugfix
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'bugfix'                                                        &
+             , '!git commit -m Bugfix && git store'                            &
+             , 'Commit and backup the staged changes as a bugfix.'             &
+             )
+end subroutine bugfix
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
