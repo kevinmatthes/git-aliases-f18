@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file store.f
+!> \file store.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -39,16 +39,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine store
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'store'
-     &, '!git backup backup-drive && git savetags backup-drive'
-     &, 'Backup all changes and tags.'
-     &)
-
-      end subroutine store
+subroutine store
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'store'                                                         &
+             , '!git backup backup-drive && git savetags backup-drive'         &
+             , 'Backup all changes and tags.'                                  &
+             )
+end subroutine store
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
