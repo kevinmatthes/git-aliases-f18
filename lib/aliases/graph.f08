@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file graph.f
+!> \file graph.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -40,16 +40,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine graph
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'graph'
-     &, '!gitk --all &'
-     &, 'Launch the external repository inspection tool.'
-     &)
-
-      end subroutine graph
+subroutine graph
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'graph'                                                         &
+             , '!gitk --all &'                                                 &
+             , 'Launch the external repository inspection tool.'               &
+             )
+end subroutine graph
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
