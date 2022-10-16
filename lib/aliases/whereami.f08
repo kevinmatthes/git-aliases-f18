@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file whereami.f
+!> \file whereami.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -38,16 +38,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine whereami
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'whereami'
-     &, 'branch -vv'
-     &, 'Show the current branch.'
-     &)
-
-      end subroutine whereami
+subroutine whereami
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'whereami'                                                      &
+             , 'branch -vv'                                                    &
+             , 'Show the current branch.'                                      &
+             )
+end subroutine whereami
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
