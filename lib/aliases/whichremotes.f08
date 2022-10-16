@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file whichremotes.f
+!> \file whichremotes.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -38,16 +38,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine whichremotes
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'whichremotes'
-     &, 'remote -v'
-     &, 'Show the available remote repositories.'
-     &)
-
-      end subroutine whichremotes
+subroutine whichremotes
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'whichremotes'                                                  &
+             , 'remote -v'                                                     &
+             , 'Show the available remote repositories.'                       &
+             )
+end subroutine whichremotes
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
