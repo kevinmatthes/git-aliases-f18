@@ -49,8 +49,8 @@
 subroutine git (alias, definition, comment)
 implicit none
     character (*), intent (in) :: alias
-    character (*), intent (in) :: definition
     character (*), intent (in) :: comment
+    character (*), intent (in) :: definition
 
     character (*), parameter :: config = 'git config --global alias.'
 
