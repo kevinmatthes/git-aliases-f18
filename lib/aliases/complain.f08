@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file complain.f
+!> \file complain.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -47,16 +47,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine complain
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'complain'
-     &, 'grep -E ^.{81,}$'
-     &, 'Search the repository for lines longer than 80.'
-     &)
-
-      end subroutine complain
+subroutine complain
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'complain'                                                      &
+             , 'grep -E ^.{81,}$'                                              &
+             , 'Search the repository for lines longer than 80.'               &
+             )
+end subroutine complain
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
