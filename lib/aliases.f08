@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file aliases.f
+!> \file aliases.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -39,38 +39,36 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      submodule (libgaf18) aliases
-      implicit none
-      contains
-
-      include './aliases/backup.f'
-      include './aliases/backupdestination.f'
-      include './aliases/bone.f'
-      include './aliases/bugfix.f'
-      include './aliases/checkin.f'
-      include './aliases/complain.f'
-      include './aliases/create.f'
-      include './aliases/delbranch.f'
-      include './aliases/ff.f'
-      include './aliases/goto.f'
-      include './aliases/grab.f'
-      include './aliases/graph.f'
-      include './aliases/newbranch.f'
-      include './aliases/noff.f'
-      include './aliases/preview.f'
-      include './aliases/rewind.f'
-      include './aliases/savetags.f'
-      include './aliases/store.f'
-      include './aliases/subinit.f'
-      include './aliases/tidy.f'
-      include './aliases/tws.f'
-      include './aliases/unconfigure.f'
-      include './aliases/verbose.f'
-      include './aliases/view.f'
-      include './aliases/whereami.f'
-      include './aliases/whichremotes.f'
-      include './aliases/withdraw.f'
-
-      end submodule aliases
+submodule (libgaf18) aliases
+implicit none
+contains
+    include './aliases/backup.f08'
+    include './aliases/backupdestination.f08'
+    include './aliases/bone.f08'
+    include './aliases/bugfix.f08'
+    include './aliases/checkin.f08'
+    include './aliases/complain.f08'
+    include './aliases/create.f08'
+    include './aliases/delbranch.f08'
+    include './aliases/ff.f08'
+    include './aliases/goto-git.f08'
+    include './aliases/grab.f08'
+    include './aliases/graph.f08'
+    include './aliases/newbranch.f08'
+    include './aliases/noff.f08'
+    include './aliases/preview.f08'
+    include './aliases/rewind-git.f08'
+    include './aliases/savetags.f08'
+    include './aliases/store.f08'
+    include './aliases/subinit.f08'
+    include './aliases/tidy.f08'
+    include './aliases/tws.f08'
+    include './aliases/unconfigure.f08'
+    include './aliases/verbose.f08'
+    include './aliases/view.f08'
+    include './aliases/whereami.f08'
+    include './aliases/whichremotes.f08'
+    include './aliases/withdraw.f08'
+end submodule aliases
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
