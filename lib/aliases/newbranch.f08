@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file newbranch.f
+!> \file newbranch.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -39,16 +39,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine newbranch
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'newbranch'
-     &, 'checkout -b'
-     &, 'Create a branch.'
-     &)
-
-      end subroutine newbranch
+subroutine newbranch
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'newbranch'                                                     &
+             , 'checkout -b'                                                   &
+             , 'Create a branch.'                                              &
+             )
+end subroutine newbranch
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
