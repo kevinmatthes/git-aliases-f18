@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file noff.f
+!> \file noff.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -39,16 +39,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine noff
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'noff'
-     &, 'merge --no-ff'
-     &, 'Merge without the fast-forward strategy.'
-     &)
-
-      end subroutine noff
+subroutine noff
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'noff'                                                          &
+             , 'merge --no-ff'                                                 &
+             , 'Merge without the fast-forward strategy.'                      &
+             )
+end subroutine noff
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
