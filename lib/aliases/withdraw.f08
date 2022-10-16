@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file withdraw.f
+!> \file withdraw.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -38,16 +38,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine withdraw
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'withdraw'
-     &, 'reset HEAD --'
-     &, 'Remove the given files from the staging area.'
-     &)
-
-      end subroutine withdraw
+subroutine withdraw
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'withdraw'                                                      &
+             , 'reset HEAD --'                                                 &
+             , 'Remove the given files from the staging area.'                 &
+             )
+end subroutine withdraw
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
