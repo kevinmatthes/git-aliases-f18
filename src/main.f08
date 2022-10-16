@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file main.f
+!> \file main.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -59,67 +59,65 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      program git_aliases
-      use, non_intrinsic :: libgaf18, only: backup
-      use, non_intrinsic :: libgaf18, only: backupdestination
-      use, non_intrinsic :: libgaf18, only: bone
-      use, non_intrinsic :: libgaf18, only: bugfix
-      use, non_intrinsic :: libgaf18, only: checkin
-      use, non_intrinsic :: libgaf18, only: complain
-      use, non_intrinsic :: libgaf18, only: create
-      use, non_intrinsic :: libgaf18, only: delbranch
-      use, non_intrinsic :: libgaf18, only: ff
-      use, non_intrinsic :: libgaf18, only: goto_git
-      use, non_intrinsic :: libgaf18, only: grab
-      use, non_intrinsic :: libgaf18, only: graph
-      use, non_intrinsic :: libgaf18, only: header
-      use, non_intrinsic :: libgaf18, only: newbranch
-      use, non_intrinsic :: libgaf18, only: noff
-      use, non_intrinsic :: libgaf18, only: preview
-      use, non_intrinsic :: libgaf18, only: rewind_git
-      use, non_intrinsic :: libgaf18, only: savetags
-      use, non_intrinsic :: libgaf18, only: store
-      use, non_intrinsic :: libgaf18, only: subinit
-      use, non_intrinsic :: libgaf18, only: tidy
-      use, non_intrinsic :: libgaf18, only: tws
-      use, non_intrinsic :: libgaf18, only: unconfigure
-      use, non_intrinsic :: libgaf18, only: verbose
-      use, non_intrinsic :: libgaf18, only: view
-      use, non_intrinsic :: libgaf18, only: whereami
-      use, non_intrinsic :: libgaf18, only: whichremotes
-      use, non_intrinsic :: libgaf18, only: withdraw
-      implicit none
+program git_aliases
+    use, non_intrinsic :: libgaf18, only: backup
+    use, non_intrinsic :: libgaf18, only: backupdestination
+    use, non_intrinsic :: libgaf18, only: bone
+    use, non_intrinsic :: libgaf18, only: bugfix
+    use, non_intrinsic :: libgaf18, only: checkin
+    use, non_intrinsic :: libgaf18, only: complain
+    use, non_intrinsic :: libgaf18, only: create
+    use, non_intrinsic :: libgaf18, only: delbranch
+    use, non_intrinsic :: libgaf18, only: ff
+    use, non_intrinsic :: libgaf18, only: goto_git
+    use, non_intrinsic :: libgaf18, only: grab
+    use, non_intrinsic :: libgaf18, only: graph
+    use, non_intrinsic :: libgaf18, only: header
+    use, non_intrinsic :: libgaf18, only: newbranch
+    use, non_intrinsic :: libgaf18, only: noff
+    use, non_intrinsic :: libgaf18, only: preview
+    use, non_intrinsic :: libgaf18, only: rewind_git
+    use, non_intrinsic :: libgaf18, only: savetags
+    use, non_intrinsic :: libgaf18, only: store
+    use, non_intrinsic :: libgaf18, only: subinit
+    use, non_intrinsic :: libgaf18, only: tidy
+    use, non_intrinsic :: libgaf18, only: tws
+    use, non_intrinsic :: libgaf18, only: unconfigure
+    use, non_intrinsic :: libgaf18, only: verbose
+    use, non_intrinsic :: libgaf18, only: view
+    use, non_intrinsic :: libgaf18, only: whereami
+    use, non_intrinsic :: libgaf18, only: whichremotes
+    use, non_intrinsic :: libgaf18, only: withdraw
+implicit none
+    call header
 
-      call header
-
-      call backup
-      call backupdestination
-      call bone
-      call bugfix
-      call checkin
-      call complain
-      call create
-      call delbranch
-      call ff
-      call goto_git
-      call grab
-      call graph
-      call newbranch
-      call noff
-      call preview
-      call rewind_git
-      call savetags
-      call store
-      call subinit
-      call tidy
-      call tws
-      call unconfigure
-      call verbose
-      call view
-      call whereami
-      call whichremotes
-      call withdraw
-
-      end program git_aliases
+    call backup
+    call backupdestination
+    call bone
+    call bugfix
+    call checkin
+    call complain
+    call create
+    call delbranch
+    call ff
+    call goto_git
+    call grab
+    call graph
+    call newbranch
+    call noff
+    call preview
+    call rewind_git
+    call savetags
+    call store
+    call subinit
+    call tidy
+    call tws
+    call unconfigure
+    call verbose
+    call view
+    call whereami
+    call whichremotes
+    call withdraw
+end program git_aliases
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
