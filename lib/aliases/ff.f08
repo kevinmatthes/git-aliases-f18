@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file ff.f
+!> \file ff.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -38,16 +38,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine ff
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'ff'
-     &, 'merge --ff'
-     &, 'Merge with the fast-forward strategy.'
-     &)
-
-      end subroutine ff
+subroutine ff
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'ff'                                                            &
+             , 'merge --ff'                                                    &
+             , 'Merge with the fast-forward strategy.'                         &
+             )
+end subroutine ff
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
