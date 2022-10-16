@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file grab.f
+!> \file grab.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -44,16 +44,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine grab
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'grab'
-     &, '!git pull --all && git store'
-     &, 'Download and backup all latest changes.'
-     &)
-
-      end subroutine grab
+subroutine grab
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'grab'                                                          &
+             , '!git pull --all && git store'                                  &
+             , 'Download and backup all latest changes.'                       &
+             )
+end subroutine grab
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
