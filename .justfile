@@ -62,7 +62,7 @@ library := 'libgaf18.a'
 
 # Compile the target application.
 @build: directories lib
-    gfortran {{flags}} src/main.f -o target/git-aliases -I. -L. -lgaf18
+    gfortran {{flags}} src/main.f08 -o target/git-aliases -I. -L. -lgaf18
 
 # Increment the version numbers.
 @bump part:
