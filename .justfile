@@ -53,7 +53,7 @@ library := 'libgaf18.a'
 
 # Create the alias command submodule.
 @aliases: interfaces logic
-    gfortran -c {{flags}} lib/aliases.f
+    gfortran -c {{flags}} lib/aliases.f08
     ar rsv {{library}} *.o
     rm -rf *.o
 
@@ -62,7 +62,7 @@ library := 'libgaf18.a'
 
 # Compile the target application.
 @build: directories lib
-    gfortran {{flags}} src/main.f -o target/git-aliases -I. -L. -lgaf18
+    gfortran {{flags}} src/main.f08 -o target/git-aliases -I. -L. -lgaf18
 
 # Increment the version numbers.
 @bump part:
@@ -89,7 +89,7 @@ library := 'libgaf18.a'
 
 # Create the Fortran interfaces.
 @interfaces:
-    gfortran -c {{flags}} src/lib.f
+    gfortran -c {{flags}} src/lib.f08
     ar rsv {{library}} *.o
     rm -rf *.o
 
@@ -98,7 +98,7 @@ library := 'libgaf18.a'
 
 # Create the business logic submodule.
 @logic: interfaces
-    gfortran -c {{flags}} lib/logic.f
+    gfortran -c {{flags}} lib/logic.f08
     ar rsv {{library}} *.o
     rm -rf *.o
 
