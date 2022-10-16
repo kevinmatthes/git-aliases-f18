@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file checkin.f
+!> \file checkin.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -53,16 +53,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine checkin
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'checkin'
-     &, '!git preview && git commit'
-     &, 'Create a new commit immediately.'
-     &)
-
-      end subroutine checkin
+subroutine checkin
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'checkin'                                                       &
+             , '!git preview && git commit'                                    &
+             , 'Create a new commit immediately.'                              &
+             )
+end subroutine checkin
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
