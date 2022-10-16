@@ -53,7 +53,7 @@ library := 'libgaf18.a'
 
 # Create the alias command submodule.
 @aliases: interfaces logic
-    gfortran -c {{flags}} lib/aliases.f
+    gfortran -c {{flags}} lib/aliases.f08
     ar rsv {{library}} *.o
     rm -rf *.o
 
