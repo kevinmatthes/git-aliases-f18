@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file preview.f
+!> \file preview.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -41,16 +41,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine preview
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'preview'
-     &, '!git diff && git add .'
-     &, 'Preview and stage all unstaged changes.'
-     &)
-
-      end subroutine preview
+subroutine preview
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'preview'                                                       &
+             , '!git diff && git add .'                                        &
+             , 'Preview and stage all unstaged changes.'                       &
+             )
+end subroutine preview
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
