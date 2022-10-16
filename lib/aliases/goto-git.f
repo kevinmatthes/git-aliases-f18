@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file goto.f
+!> \file goto-git.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -39,16 +39,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine goto_git
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'goto'
-     &, 'checkout'
-     &, 'Go to another branch.'
-     &)
-
-      end subroutine goto_git
+subroutine goto_git
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'goto'                                                          &
+             , 'checkout'                                                      &
+             , 'Go to another branch.'                                         &
+             )
+end subroutine goto_git
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
