@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file backup.f
+!> \file backup.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -55,16 +55,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine backup
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'backup'
-     &, 'push --all'
-     &, 'Backup all commits to the given remote repository.'
-     &)
-
-      end subroutine backup
+subroutine backup
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'backup'                                                        &
+             , 'push --all'                                                    &
+             , 'Backup all commits to the given remote repository.'            &
+             )
+end subroutine backup
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
