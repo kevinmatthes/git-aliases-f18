@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file verbose.f
+!> \file verbose.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -39,16 +39,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine verbose
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'verbose'
-     &, 'log --graph --stat --pretty=fuller --decorate --all -p'
-     &, 'Explore the complete Git history in the terminal.'
-     &)
-
-      end subroutine verbose
+subroutine verbose
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'verbose'                                                       &
+             , 'log --graph --stat --pretty=fuller --decorate --all -p'        &
+             , 'Explore the complete Git history in the terminal.'             &
+             )
+end subroutine verbose
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
