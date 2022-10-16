@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file savetags.f
+!> \file savetags.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -39,16 +39,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine savetags
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'savetags'
-     &, 'push --tags -f'
-     &, 'Backup all tags.'
-     &)
-
-      end subroutine savetags
+subroutine savetags
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'savetags'                                                      &
+             , 'push --tags -f'                                                &
+             , 'Backup all tags.'                                              &
+             )
+end subroutine savetags
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
