@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file tidy.f
+!> \file tidy.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -47,16 +47,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine tidy
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'tidy'
-     &, 'clean -dfx'
-     &, 'Clean build artifacts and empty directories.'
-     &)
-
-      end subroutine tidy
+subroutine tidy
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'tidy'                                                          &
+             , 'clean -dfx'                                                    &
+             , 'Clean build artifacts and empty directories.'                  &
+             )
+end subroutine tidy
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
