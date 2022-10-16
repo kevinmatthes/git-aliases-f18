@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file backupdestination.f
+!> \file backupdestination.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -48,16 +48,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine backupdestination
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'backupdestination'
-     &, 'remote add backup-drive'
-     &, 'Configure the default backup remote `backup-drive`.'
-     &)
-
-      end subroutine backupdestination
+subroutine backupdestination
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'backupdestination'                                             &
+             , 'remote add backup-drive'                                       &
+             , 'Configure the default backup remote `backup-drive`.'           &
+             )
+end subroutine backupdestination
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
