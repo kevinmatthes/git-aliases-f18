@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file logic.f
+!> \file logic.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -38,16 +38,14 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      submodule (libgaf18) logic
-      implicit none
-      contains
-
-      include './logic/git.f'
-      include './logic/header.f'
-      include './logic/overview.f'
-      include './logic/self-information.f'
-      include './logic/table-header.f'
-
-      end submodule logic
+submodule (libgaf18) logic
+implicit none
+contains
+    include './logic/git.f08'
+    include './logic/header.f08'
+    include './logic/overview.f08'
+    include './logic/self-information.f08'
+    include './logic/table-header.f08'
+end submodule logic
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
