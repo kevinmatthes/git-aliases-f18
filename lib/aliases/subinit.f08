@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file subinit.f
+!> \file subinit.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -53,16 +53,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine subinit
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'subinit'
-     &, '!git submodule init && git submodule update'
-     &, 'Set up all configured submodules.'
-     &)
-
-      end subroutine subinit
+subroutine subinit
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'subinit'                                                       &
+             , '!git submodule init && git submodule update'                   &
+             , 'Set up all configured submodules.'                             &
+             )
+end subroutine subinit
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
