@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file view.f
+!> \file view.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -43,16 +43,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-      subroutine view
-      use, non_intrinsic :: libgaf18, only: git
-      implicit none
-
-      call git
-     &( 'view'
-     &, 'log --graph --pretty=oneline --decorate --all'
-     &, 'Explore the Git history in the terminal.'
-     &)
-
-      end subroutine view
+subroutine view
+    use, non_intrinsic :: libgaf18, only: git
+implicit none
+    call git ( 'view'                                                          &
+             , 'log --graph --pretty=oneline --decorate --all'                 &
+             , 'Explore the Git history in the terminal.'                      &
+             )
+end subroutine view
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
