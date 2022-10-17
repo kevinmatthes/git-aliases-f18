@@ -58,6 +58,7 @@ implicit none
     public :: bugfix
     public :: checkin
     public :: complain
+    public :: configure
     public :: create
     public :: delbranch
     public :: ff
@@ -116,6 +117,12 @@ implicit none
         module subroutine complain
         implicit none
         end subroutine complain
+    end interface
+
+    interface
+        module subroutine configure
+        implicit none
+        end subroutine configure
     end interface
 
     interface

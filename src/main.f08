@@ -53,71 +53,30 @@
 !> Recommended further readings and references are listed in the following.
 !>
 !> * \cite chacon.straub:git:2014
+!>   Scott Chacon, and Ben Straub.  *Pro Git.  Everything you need to know about
+!>   Git.*  2nd Edition.  New York:  Apress, 2014.  ISBN:  978-1-4842-0077-3.
+!>
 !> * \cite chivers.sleightholme:fortran:2018
+!>   Ian Chivers, and Jane Sleightholme.  *Introduction to Programming with
+!>   Fortran.*  4th Edition.  Cham:  Springer, 2018.  ISBN:  978-3-030-09248-1.
+!>
 !> * \cite kuhme.witschital:fortran:1991
+!>   Thomas Kühme, and Peter Witschital.  *Die FORTRAN-Fibel.*  3rd Edition.
+!>   Munich:  Oldenbourg, 1991.  ISBN:  978-3-486-22016-2.
+!>
 !> * \cite metcalf.reid.cohen:fortran:2018
+!>   Michael Metcalf, John Reid, and Malcolm Cohen.  *Modern Fortran Explained.
+!>   Incorporating Fortran 2018.*  2nd Edition.  Oxford:  Oxford University
+!>   Press, 2018.  ISBN:  978-0-19-881188-6.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 program git_aliases
-    use, non_intrinsic :: libgaf18, only: backup
-    use, non_intrinsic :: libgaf18, only: backupdestination
-    use, non_intrinsic :: libgaf18, only: bone
-    use, non_intrinsic :: libgaf18, only: bugfix
-    use, non_intrinsic :: libgaf18, only: checkin
-    use, non_intrinsic :: libgaf18, only: complain
-    use, non_intrinsic :: libgaf18, only: create
-    use, non_intrinsic :: libgaf18, only: delbranch
-    use, non_intrinsic :: libgaf18, only: ff
-    use, non_intrinsic :: libgaf18, only: goto_git
-    use, non_intrinsic :: libgaf18, only: grab
-    use, non_intrinsic :: libgaf18, only: graph
+    use, non_intrinsic :: libgaf18, only: configure
     use, non_intrinsic :: libgaf18, only: header
-    use, non_intrinsic :: libgaf18, only: newbranch
-    use, non_intrinsic :: libgaf18, only: noff
-    use, non_intrinsic :: libgaf18, only: preview
-    use, non_intrinsic :: libgaf18, only: rewind_git
-    use, non_intrinsic :: libgaf18, only: savetags
-    use, non_intrinsic :: libgaf18, only: store
-    use, non_intrinsic :: libgaf18, only: subinit
-    use, non_intrinsic :: libgaf18, only: tidy
-    use, non_intrinsic :: libgaf18, only: tws
-    use, non_intrinsic :: libgaf18, only: unconfigure
-    use, non_intrinsic :: libgaf18, only: verbose
-    use, non_intrinsic :: libgaf18, only: view
-    use, non_intrinsic :: libgaf18, only: whereami
-    use, non_intrinsic :: libgaf18, only: whichremotes
-    use, non_intrinsic :: libgaf18, only: withdraw
 implicit none
     call header
-
-    call backup
-    call backupdestination
-    call bone
-    call bugfix
-    call checkin
-    call complain
-    call create
-    call delbranch
-    call ff
-    call goto_git
-    call grab
-    call graph
-    call newbranch
-    call noff
-    call preview
-    call rewind_git
-    call savetags
-    call store
-    call subinit
-    call tidy
-    call tws
-    call unconfigure
-    call verbose
-    call view
-    call whereami
-    call whichremotes
-    call withdraw
+    call configure
 end program git_aliases
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

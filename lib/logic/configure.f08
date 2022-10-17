@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file logic.f08
+!> \file configure.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,21 +32,69 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   The business logic of `git-aliases`.
+!> \brief   The configuration of the Git alias commands.
 !>
-!> This is the library submodule containing the business logic of `git-aliases`.
+!> This utility subroutine controls which Git alias commands will be configured
+!> when the main program is called.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-submodule (libgaf18) logic
+subroutine configure
+    use, non_intrinsic :: libgaf18, only: backup
+    use, non_intrinsic :: libgaf18, only: backupdestination
+    use, non_intrinsic :: libgaf18, only: bone
+    use, non_intrinsic :: libgaf18, only: bugfix
+    use, non_intrinsic :: libgaf18, only: checkin
+    use, non_intrinsic :: libgaf18, only: complain
+    use, non_intrinsic :: libgaf18, only: create
+    use, non_intrinsic :: libgaf18, only: delbranch
+    use, non_intrinsic :: libgaf18, only: ff
+    use, non_intrinsic :: libgaf18, only: goto_git
+    use, non_intrinsic :: libgaf18, only: grab
+    use, non_intrinsic :: libgaf18, only: graph
+    use, non_intrinsic :: libgaf18, only: newbranch
+    use, non_intrinsic :: libgaf18, only: noff
+    use, non_intrinsic :: libgaf18, only: preview
+    use, non_intrinsic :: libgaf18, only: rewind_git
+    use, non_intrinsic :: libgaf18, only: savetags
+    use, non_intrinsic :: libgaf18, only: store
+    use, non_intrinsic :: libgaf18, only: subinit
+    use, non_intrinsic :: libgaf18, only: tidy
+    use, non_intrinsic :: libgaf18, only: tws
+    use, non_intrinsic :: libgaf18, only: unconfigure
+    use, non_intrinsic :: libgaf18, only: verbose
+    use, non_intrinsic :: libgaf18, only: view
+    use, non_intrinsic :: libgaf18, only: whereami
+    use, non_intrinsic :: libgaf18, only: whichremotes
+    use, non_intrinsic :: libgaf18, only: withdraw
 implicit none
-contains
-    include 'logic/configure.f08'
-    include 'logic/git.f08'
-    include 'logic/header.f08'
-    include 'logic/overview.f08'
-    include 'logic/self-information.f08'
-    include 'logic/table-header.f08'
-end submodule logic
+    call backup
+    call backupdestination
+    call bone
+    call bugfix
+    call checkin
+    call complain
+    call create
+    call delbranch
+    call ff
+    call goto_git
+    call grab
+    call graph
+    call newbranch
+    call noff
+    call preview
+    call rewind_git
+    call savetags
+    call store
+    call subinit
+    call tidy
+    call tws
+    call unconfigure
+    call verbose
+    call view
+    call whereami
+    call whichremotes
+    call withdraw
+end subroutine configure
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
