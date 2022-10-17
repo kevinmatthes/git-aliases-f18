@@ -53,9 +53,21 @@
 !> Recommended further readings and references are listed in the following.
 !>
 !> * \cite chacon.straub:git:2014
+!>   Scott Chacon, and Ben Straub.  *Pro Git.  Everything you need to know about
+!>   Git.*  2nd Edition.  New York:  Apress, 2014.  ISBN:  978-1-4842-0077-3.
+!>
 !> * \cite chivers.sleightholme:fortran:2018
+!>   Ian Chivers, and Jane Sleightholme.  *Introduction to Programming with
+!>   Fortran.*  4th Edition.  Cham:  Springer, 2018.  ISBN:  978-3-030-09248-1.
+!>
 !> * \cite kuhme.witschital:fortran:1991
+!>   Thomas Kühme, and Peter Witschital.  *Die FORTRAN-Fibel.*  3rd Edition.
+!>   Munich:  Oldenbourg, 1991.  ISBN:  978-3-486-22016-2.
+!>
 !> * \cite metcalf.reid.cohen:fortran:2018
+!>   Michael Metcalf, John Reid, and Malcolm Cohen.  *Modern Fortran Explained.
+!>   Incorporating Fortran 2018.*  2nd Edition.  Oxford:  Oxford University
+!>   Press, 2018.  ISBN:  978-0-19-881188-6.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
