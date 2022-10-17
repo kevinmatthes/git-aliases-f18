@@ -41,6 +41,7 @@
 submodule (libgaf18) logic
 implicit none
 contains
+    include './logic/configure.f08'
     include './logic/git.f08'
     include './logic/header.f08'
     include './logic/overview.f08'
