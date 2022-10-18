@@ -84,37 +84,37 @@ implicit none
     public :: withdraw
 
     interface
-        module subroutine backup
+        module subroutine backup () bind (c)
         implicit none
         end subroutine backup
     end interface
 
     interface
-        module subroutine backupdestination
+        module subroutine backupdestination () bind (c)
         implicit none
         end subroutine backupdestination
     end interface
 
     interface
-        module subroutine bone
+        module subroutine bone () bind (c)
         implicit none
         end subroutine bone
     end interface
 
     interface
-        module subroutine bugfix
+        module subroutine bugfix () bind (c)
         implicit none
         end subroutine bugfix
     end interface
 
     interface
-        module subroutine checkin
+        module subroutine checkin () bind (c)
         implicit none
         end subroutine checkin
     end interface
 
     interface
-        module subroutine complain
+        module subroutine complain () bind (c)
         implicit none
         end subroutine complain
     end interface
@@ -126,19 +126,19 @@ implicit none
     end interface
 
     interface
-        module subroutine create
+        module subroutine create () bind (c)
         implicit none
         end subroutine create
     end interface
 
     interface
-        module subroutine delbranch
+        module subroutine delbranch () bind (c)
         implicit none
         end subroutine delbranch
     end interface
 
     interface
-        module subroutine ff
+        module subroutine ff () bind (c)
         implicit none
         end subroutine ff
     end interface
@@ -153,19 +153,19 @@ implicit none
     end interface
 
     interface
-        module subroutine goto_git
+        module subroutine goto_git () bind (c)
         implicit none
         end subroutine goto_git
     end interface
 
     interface
-        module subroutine grab
+        module subroutine grab () bind (c)
         implicit none
         end subroutine grab
     end interface
 
     interface
-        module subroutine graph
+        module subroutine graph () bind (c)
         implicit none
         end subroutine graph
     end interface
@@ -177,13 +177,13 @@ implicit none
     end interface
 
     interface
-        module subroutine newbranch
+        module subroutine newbranch () bind (c)
         implicit none
         end subroutine newbranch
     end interface
 
     interface
-        module subroutine noff
+        module subroutine noff () bind (c)
         implicit none
         end subroutine noff
     end interface
@@ -197,19 +197,19 @@ implicit none
     end interface
 
     interface
-        module subroutine preview
+        module subroutine preview () bind (c)
         implicit none
         end subroutine preview
     end interface
 
     interface
-        module subroutine rewind_git
+        module subroutine rewind_git () bind (c)
         implicit none
         end subroutine rewind_git
     end interface
 
     interface
-        module subroutine savetags
+        module subroutine savetags () bind (c)
         implicit none
         end subroutine savetags
     end interface
@@ -221,13 +221,13 @@ implicit none
     end interface
 
     interface
-        module subroutine store
+        module subroutine store () bind (c)
         implicit none
         end subroutine store
     end interface
 
     interface
-        module subroutine subinit
+        module subroutine subinit () bind (c)
         implicit none
         end subroutine subinit
     end interface
@@ -239,49 +239,49 @@ implicit none
     end interface
 
     interface
-        module subroutine tidy
+        module subroutine tidy () bind (c)
         implicit none
         end subroutine tidy
     end interface
 
     interface
-        module subroutine tws
+        module subroutine tws () bind (c)
         implicit none
         end subroutine tws
     end interface
 
     interface
-        module subroutine unconfigure
+        module subroutine unconfigure () bind (c)
         implicit none
         end subroutine unconfigure
     end interface
 
     interface
-        module subroutine verbose
+        module subroutine verbose () bind (c)
         implicit none
         end subroutine verbose
     end interface
 
     interface
-        module subroutine view
+        module subroutine view () bind (c)
         implicit none
         end subroutine view
     end interface
 
     interface
-        module subroutine whereami
+        module subroutine whereami () bind (c)
         implicit none
         end subroutine whereami
     end interface
 
     interface
-        module subroutine whichremotes
+        module subroutine whichremotes () bind (c)
         implicit none
         end subroutine whichremotes
     end interface
 
     interface
-        module subroutine withdraw
+        module subroutine withdraw () bind (c)
         implicit none
         end subroutine withdraw
     end interface
