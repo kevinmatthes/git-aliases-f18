@@ -62,7 +62,7 @@ library := 'libgaf18.a'
 
 # Compile the target application.
 @build: directories lib
-    gfortran {{flags}} src/main.f08 -o target/git-aliases -I. -L. -lgaf18
+    gfortran {{flags}} src/main.f08 -o target/git-aliases-f18 -I. -L. -lgaf18
 
 # Increment the version numbers.
 @bump part:
@@ -85,7 +85,7 @@ library := 'libgaf18.a'
 
 # Copy the target application to this user's path.
 @install: build
-    cp target/git-aliases ~/.local/bin/
+    cp target/git-aliases-f18 ~/.local/bin/git-aliases
 
 # Create the Fortran interfaces.
 @interfaces:
