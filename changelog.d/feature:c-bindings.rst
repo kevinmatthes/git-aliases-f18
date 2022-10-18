@@ -9,3 +9,5 @@ Changed
 .......
 
 - add language and standard suffix to main build target
+
+- adjust documentation of ``src/main.f08``
