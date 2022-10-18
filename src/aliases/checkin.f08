@@ -54,7 +54,6 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 subroutine checkin
-    use, non_intrinsic :: libgaf18, only: git
 implicit none
     call git ( 'checkin'                                                       &
              , '!git preview && git commit'                                    &
