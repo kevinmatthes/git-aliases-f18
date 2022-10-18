@@ -39,7 +39,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine goto_git
+subroutine goto_git () bind (c)
 implicit none
     call git ( 'goto'                                                          &
              , 'checkout'                                                      &

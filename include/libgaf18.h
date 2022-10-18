@@ -61,6 +61,34 @@
 extern void configure   (void);
 extern void header      (void);
 
+extern void backup            (void);
+extern void backupdestination (void);
+extern void bone              (void);
+extern void bugfix            (void);
+extern void checkin           (void);
+extern void complain          (void);
+extern void create            (void);
+extern void delbranch         (void);
+extern void ff                (void);
+extern void goto_git          (void);
+extern void grab              (void);
+extern void graph             (void);
+extern void newbranch         (void);
+extern void noff              (void);
+extern void preview           (void);
+extern void rewind_git        (void);
+extern void savetags          (void);
+extern void store             (void);
+extern void subinit           (void);
+extern void tidy              (void);
+extern void tws               (void);
+extern void unconfigure       (void);
+extern void verbose           (void);
+extern void view              (void);
+extern void whereami          (void);
+extern void whichremotes      (void);
+extern void withdraw          (void);
+
 
 
 /*

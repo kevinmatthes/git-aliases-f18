@@ -47,7 +47,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine tidy
+subroutine tidy () bind (c)
 implicit none
     call git ( 'tidy'                                                          &
              , 'clean -dfx'                                                    &

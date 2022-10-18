@@ -39,7 +39,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine unconfigure
+subroutine unconfigure () bind (c)
 implicit none
     call git ( 'unconfigure'                                                   &
              , 'config --global --unset'                                       &

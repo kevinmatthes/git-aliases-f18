@@ -52,7 +52,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine tws
+subroutine tws () bind (c)
 implicit none
     call git ( 'tws'                                                           &
              , 'grep [[:blank:]]$'                                             &

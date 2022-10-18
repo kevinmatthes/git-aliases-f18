@@ -38,7 +38,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine whichremotes
+subroutine whichremotes () bind (c)
 implicit none
     call git ( 'whichremotes'                                                  &
              , 'remote -v'                                                     &

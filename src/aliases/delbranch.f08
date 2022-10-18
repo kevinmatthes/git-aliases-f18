@@ -41,7 +41,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine delbranch
+subroutine delbranch () bind (c)
 implicit none
     call git ( 'delbranch'                                                     &
              , 'branch -d'                                                     &

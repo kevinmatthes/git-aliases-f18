@@ -53,7 +53,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine subinit
+subroutine subinit () bind (c)
 implicit none
     call git ( 'subinit'                                                       &
              , '!git submodule init && git submodule update'                   &

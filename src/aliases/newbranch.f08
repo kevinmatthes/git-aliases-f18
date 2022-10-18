@@ -39,7 +39,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine newbranch
+subroutine newbranch () bind (c)
 implicit none
     call git ( 'newbranch'                                                     &
              , 'checkout -b'                                                   &

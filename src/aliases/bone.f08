@@ -43,7 +43,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine bone
+subroutine bone () bind (c)
 implicit none
     call git ( 'bone'                                                          &
              , 'clone --bare'                                                  &

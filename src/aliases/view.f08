@@ -43,7 +43,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine view
+subroutine view () bind (c)
 implicit none
     call git ( 'view'                                                          &
              , 'log --graph --pretty=oneline --decorate --all'                 &

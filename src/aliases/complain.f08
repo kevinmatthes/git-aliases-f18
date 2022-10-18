@@ -47,7 +47,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine complain
+subroutine complain () bind (c)
 implicit none
     call git ( 'complain'                                                      &
              , 'grep -E ^.{81,}$'                                              &
