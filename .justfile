@@ -42,9 +42,43 @@ alias ver   := bump
 
 
 
-# Settings for the recipes.
-flags   := '-std=f2018 -Wall -Werror -Wextra -Wpedantic'
-library := 'libgaf18.a'
+# Compiler flags.
+c99     := '-std=c99'
+exe     := '-fPIE'
+f18     := '-std=f2018'
+flags   := '-Wall -Werror -Wextra -Wpedantic'
+lib     := '-c -fPIC'
+
+c99-exe := c99 + ' ' + exe + ' ' + flags
+c99-lib := c99 + ' ' + lib + ' ' + flags
+f18-exe := f18 + ' ' + exe + ' ' + flags
+f18-lib := f18 + ' ' + lib + ' ' + flags
+
+
+
+# Linker flags.
+lflags  := '-L. -lgaf18'
+
+lnk-c99 := lflags + ' -lgfortran'
+lnk-f18 := '-I. ' + lflags
+
+
+
+# Main source files.
+source  := 'src/main.'
+
+src-c99 := source + 'c'
+src-f18 := source + 'f08'
+
+
+
+# Targets.
+application := 'git-aliases'
+library     := 'libgaf18.a'
+target      := 'target/' + application
+
+exe-c99  := target + '-c99'
+exe-f18  := target + '-f18'
 
 
 
@@ -53,7 +87,7 @@ library := 'libgaf18.a'
 
 # Create the alias command submodule.
 @aliases: interfaces logic
-    gfortran -c {{flags}} lib/aliases.f08
+    gfortran {{f18-lib}} lib/aliases.f08
     ar rsv {{library}} *.o
     rm -rf *.o
 
@@ -62,7 +96,8 @@ library := 'libgaf18.a'
 
 # Compile the target application.
 @build: directories lib
-    gfortran {{flags}} src/main.f08 -o target/git-aliases-f18 -I. -L. -lgaf18
+    gfortran {{f18-exe}} {{src-f18}} -o {{exe-f18}} {{lnk-f18}}
+    gcc      {{c99-exe}} {{src-c99}} -o {{exe-c99}} {{lnk-c99}}
 
 # Increment the version numbers.
 @bump part:
@@ -85,11 +120,11 @@ library := 'libgaf18.a'
 
 # Copy the target application to this user's path.
 @install: build
-    cp target/git-aliases-f18 ~/.local/bin/git-aliases
+    cp {{exe-f18}} ~/.local/bin/{{application}}
 
 # Create the Fortran interfaces.
 @interfaces:
-    gfortran -c {{flags}} src/lib.f08
+    gfortran {{f18-lib}} src/lib.f08
     ar rsv {{library}} *.o
     rm -rf *.o
 
@@ -98,14 +133,13 @@ library := 'libgaf18.a'
 
 # Create the business logic submodule.
 @logic: interfaces
-    gfortran -c {{flags}} lib/logic.f08
+    gfortran {{f18-lib}} lib/logic.f08
     ar rsv {{library}} *.o
     rm -rf *.o
 
 # Analyse the memory management of the target application.
 @valgrind: build
-    valgrind \
-        --leak-check=full --redzone-size=512 --show-leak-kinds=all \
-        ./target/git-aliases-f18
+    valgrind --leak-check=full --redzone-size=512 --show-leak-kinds=all \
+        ./{{exe-f18}}
 
 ################################################################################
