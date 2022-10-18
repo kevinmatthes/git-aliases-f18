@@ -40,7 +40,6 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 subroutine goto_git
-    use, non_intrinsic :: libgaf18, only: git
 implicit none
     call git ( 'goto'                                                          &
              , 'checkout'                                                      &
