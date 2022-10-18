@@ -48,6 +48,7 @@
 
 module libgaf18
 implicit none
+    private :: git
     private :: overview
     private :: self_information
     private :: table_header
@@ -62,7 +63,6 @@ implicit none
     public :: create
     public :: delbranch
     public :: ff
-    public :: git
     public :: goto_git
     public :: grab
     public :: graph
