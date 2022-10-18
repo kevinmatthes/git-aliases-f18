@@ -39,7 +39,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine store
+subroutine store () bind (c)
 implicit none
     call git ( 'store'                                                         &
              , '!git backup backup-drive && git savetags backup-drive'         &
