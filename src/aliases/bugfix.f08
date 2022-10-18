@@ -49,7 +49,6 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 subroutine bugfix
-    use, non_intrinsic :: libgaf18, only: git
 implicit none
     call git ( 'bugfix'                                                        &
              , '!git commit -m Bugfix && git store'                            &
