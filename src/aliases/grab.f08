@@ -45,7 +45,6 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 subroutine grab
-    use, non_intrinsic :: libgaf18, only: git
 implicit none
     call git ( 'grab'                                                          &
              , '!git pull --all && git store'                                  &
