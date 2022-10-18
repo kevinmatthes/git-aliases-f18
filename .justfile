@@ -60,6 +60,9 @@ application := 'git-aliases'
 library     := 'libgaf18.a'
 target      := 'target/' + application
 
+# Valgrind settings.
+vflags  := '--leak-check=full --redzone-size=512 --show-leak-kinds=all'
+
 # Settings for the supported language modes.
 c99-exe := c99 + ' ' + exe + ' ' + flags
 c99-lib := c99 + ' ' + lib + ' ' + flags
@@ -131,7 +134,7 @@ src-f18 := source + 'f08'
 
 # Analyse the memory management of the target application.
 @valgrind: build
-    valgrind --leak-check=full --redzone-size=512 --show-leak-kinds=all \
-        ./{{exe-f18}}
+    valgrind {{vflags}} ./{{exe-c99}}
+    valgrind {{vflags}} ./{{exe-f18}}
 
 ################################################################################
