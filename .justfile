@@ -49,36 +49,28 @@ f18     := '-std=f2018'
 flags   := '-Wall -Werror -Wextra -Wpedantic'
 lib     := '-c -fPIC'
 
-c99-exe := c99 + ' ' + exe + ' ' + flags
-c99-lib := c99 + ' ' + lib + ' ' + flags
-f18-exe := f18 + ' ' + exe + ' ' + flags
-f18-lib := f18 + ' ' + lib + ' ' + flags
-
-
-
 # Linker flags.
 lflags  := '-L. -lgaf18'
 
-lnk-c99 := lflags + ' -lgfortran'
-lnk-f18 := '-I. ' + lflags
-
-
-
 # Main source files.
 source  := 'src/main.'
-
-src-c99 := source + 'c'
-src-f18 := source + 'f08'
-
-
 
 # Targets.
 application := 'git-aliases'
 library     := 'libgaf18.a'
 target      := 'target/' + application
 
-exe-c99  := target + '-c99'
-exe-f18  := target + '-f18'
+# Settings for the supported language modes.
+c99-exe := c99 + ' ' + exe + ' ' + flags
+c99-lib := c99 + ' ' + lib + ' ' + flags
+exe-c99 := target + '-c99'
+exe-f18 := target + '-f18'
+f18-exe := f18 + ' ' + exe + ' ' + flags
+f18-lib := f18 + ' ' + lib + ' ' + flags
+lnk-c99 := lflags + ' -lgfortran'
+lnk-f18 := '-I. ' + lflags
+src-c99 := source + 'c'
+src-f18 := source + 'f08'
 
 
 
