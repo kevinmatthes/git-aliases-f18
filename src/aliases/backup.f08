@@ -56,7 +56,6 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 subroutine backup
-    use, non_intrinsic :: libgaf18, only: git
 implicit none
     call git ( 'backup'                                                        &
              , 'push --all'                                                    &
