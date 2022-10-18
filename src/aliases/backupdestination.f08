@@ -49,7 +49,6 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 subroutine backupdestination
-    use, non_intrinsic :: libgaf18, only: git
 implicit none
     call git ( 'backupdestination'                                             &
              , 'remote add backup-drive'                                       &
