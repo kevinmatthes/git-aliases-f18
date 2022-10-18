@@ -1,3 +1,8 @@
+Added
+.....
+
+- C bindings for subroutine ``header``
+
 Changed
 .......
 
