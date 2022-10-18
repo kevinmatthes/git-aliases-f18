@@ -106,6 +106,6 @@ library := 'libgaf18.a'
 @valgrind: build
     valgrind \
         --leak-check=full --redzone-size=512 --show-leak-kinds=all \
-        ./target/git-aliases
+        ./target/git-aliases-f18
 
 ################################################################################
