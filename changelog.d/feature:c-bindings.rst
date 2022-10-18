@@ -5,6 +5,12 @@ Added
 
 - C bindings for subroutine ``header``
 
+- language mode:  C99
+
+- position independant code compilation (library)
+
+- position independant executable compilation (application)
+
 Changed
 .......
 
