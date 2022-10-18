@@ -5,6 +5,10 @@ Added
 
 - C bindings for subroutine ``header``
 
+- C header file
+
+- C main source file
+
 - language mode:  C99
 
 - position independant code compilation (library)
