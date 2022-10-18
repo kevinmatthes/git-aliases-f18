@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file subinit.f08
+!> \file preview.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,34 +32,21 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Set up all configured submodules.
+!> \brief   Preview and stage all unstaged changes.
 !>
-!> This alias is used in order to initialise all submodules configured in
-!> `.gitmodules`.
+!> This alias is used in order to show the introduced changes before they are
+!> staged.  This feedback is useful in order to avoid mistakes being committed.
 !>
-!> When cloning from a remote repository with submodules non-recursively, they
-!> are not going to be initialised during the cloning process.  Hence, users
-!> need to initialise those themselves.  If one does not initialise submodules
-!> frequently, the commands therefore can be forgotten easily.  This Git alias
-!> summarises the required commands in order to provide a useful abbreviation.
-!>
-!> \note When invoked, Git will assume the repository root as the current
-!> working directory.  It does not matter if the actual working directory
-!> differs.  Hence, all submodules specified in `.gitmodules` will be fetched
-!> and initialised at once.
-!>
-!> \warning Each submodule initialised by this Git alias command will have its
-!> respective `HEAD` detached.
+!> After showing the differences, all changes will be added to the staging area.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine subinit
-    use, non_intrinsic :: libgaf18, only: git
+subroutine preview
 implicit none
-    call git ( 'subinit'                                                       &
-             , '!git submodule init && git submodule update'                   &
-             , 'Set up all configured submodules.'                             &
+    call git ( 'preview'                                                       &
+             , '!git diff && git add .'                                        &
+             , 'Preview and stage all unstaged changes.'                       &
              )
-end subroutine subinit
+end subroutine preview
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

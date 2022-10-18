@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file bone.f08
+!> \file store.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,24 +32,19 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Clone into a bare repository.
+!> \brief   Backup all changes and tags.
 !>
-!> This alias is used in order to clone the given repository as a bare one.
-!>
-!> In order to create a new backup remote repository, one needs to create a bare
-!> clone, at first.  This bare clone can then be moved to the backup destination
-!> and be bound as backup remote.  This Git alias command provides a semantic
-!> abbreviation for this operation.
+!> This alias is used in order to backup all changes and tags.  These are
+!> written to the configured default backup remote repository, `backup-drive`.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine bone
-    use, non_intrinsic :: libgaf18, only: git
+subroutine store
 implicit none
-    call git ( 'bone'                                                          &
-             , 'clone --bare'                                                  &
-             , 'Clone into a bare repository.'                                 &
+    call git ( 'store'                                                         &
+             , '!git backup backup-drive && git savetags backup-drive'         &
+             , 'Backup all changes and tags.'                                  &
              )
-end subroutine bone
+end subroutine store
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

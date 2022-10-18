@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file grab.f08
+!> \file unconfigure.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,25 +32,19 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Download and backup all latest changes.
+!> \brief   Remove a configuration entry from this user's Git settings.
 !>
-!> This alias is used in order to fetch, merge and backup all recent changes
-!> from all remote repositories.  The current branch will also be fast-forwarded
-!> to the latest revision of the respective upstream branch automatically.  Each
-!> other branch with pending changes needs to be fast-forwarded manually.
-!>
-!> The backup is written to the configured default backup remote repository,
-!> `backup-drive`.
+!> This alias is used in order to unset a configuration entry from this user's
+!> Git settings.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine grab
-    use, non_intrinsic :: libgaf18, only: git
+subroutine unconfigure
 implicit none
-    call git ( 'grab'                                                          &
-             , '!git pull --all && git store'                                  &
-             , 'Download and backup all latest changes.'                       &
+    call git ( 'unconfigure'                                                   &
+             , 'config --global --unset'                                       &
+             , 'Remove a configuration from this user''s Git settings.'        &
              )
-end subroutine grab
+end subroutine unconfigure
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

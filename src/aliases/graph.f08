@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file withdraw.f08
+!> \file graph.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,19 +32,20 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Remove the given files from the staging area.
+!> \brief   Launch the external repository inspection tool.
 !>
-!> This alias is used in order to remove the given files from the staging area.
+!> This alias is used in order to launch the external repository inspection
+!> application.  By default, this is `gitk`.  It will be invoked as a process on
+!> its own.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine withdraw
-    use, non_intrinsic :: libgaf18, only: git
+subroutine graph
 implicit none
-    call git ( 'withdraw'                                                      &
-             , 'reset HEAD --'                                                 &
-             , 'Remove the given files from the staging area.'                 &
+    call git ( 'graph'                                                         &
+             , '!gitk --all &'                                                 &
+             , 'Launch the external repository inspection tool.'               &
              )
-end subroutine withdraw
+end subroutine graph
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

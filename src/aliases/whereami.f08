@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file preview.f08
+!> \file whereami.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,22 +32,18 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Preview and stage all unstaged changes.
+!> \brief   Show the current branch.
 !>
-!> This alias is used in order to show the introduced changes before they are
-!> staged.  This feedback is useful in order to avoid mistakes being committed.
-!>
-!> After showing the differences, all changes will be added to the staging area.
+!> This alias will list all configured branches and highlight the active one.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine preview
-    use, non_intrinsic :: libgaf18, only: git
+subroutine whereami
 implicit none
-    call git ( 'preview'                                                       &
-             , '!git diff && git add .'                                        &
-             , 'Preview and stage all unstaged changes.'                       &
+    call git ( 'whereami'                                                      &
+             , 'branch -vv'                                                    &
+             , 'Show the current branch.'                                      &
              )
-end subroutine preview
+end subroutine whereami
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

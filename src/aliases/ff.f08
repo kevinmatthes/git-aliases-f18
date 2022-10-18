@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file tidy.f08
+!> \file ff.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,28 +32,18 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Clean up build artifacts and empty directories.
+!> \brief   Merge with the fast-forward strategy.
 !>
-!> This alias is used in order to remove obsolete artifacts from the repository.
-!> The selection of the artifacts to remove is controlled by the settings in the
-!> most local `.gitignore`.  By default, this command will also clean up empty
-!> directories.
-!>
-!> \warning This command will also remove untracked files, by default.  These
-!> are files which are not already versioned by Git in the current repository or
-!> at least staged.  It is, hence, highly recommended to stage all newly created
-!> source files before calling this alias command in order to prevent a loss of
-!> progress.
+!> This alias is used in order to fast-forward a branch.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine tidy
-    use, non_intrinsic :: libgaf18, only: git
+subroutine ff
 implicit none
-    call git ( 'tidy'                                                          &
-             , 'clean -dfx'                                                    &
-             , 'Clean build artifacts and empty directories.'                  &
+    call git ( 'ff'                                                            &
+             , 'merge --ff'                                                    &
+             , 'Merge with the fast-forward strategy.'                         &
              )
-end subroutine tidy
+end subroutine ff
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

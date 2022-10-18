@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file store.f08
+!> \file grab.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,20 +32,24 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Backup all changes and tags.
+!> \brief   Download and backup all latest changes.
 !>
-!> This alias is used in order to backup all changes and tags.  These are
-!> written to the configured default backup remote repository, `backup-drive`.
+!> This alias is used in order to fetch, merge and backup all recent changes
+!> from all remote repositories.  The current branch will also be fast-forwarded
+!> to the latest revision of the respective upstream branch automatically.  Each
+!> other branch with pending changes needs to be fast-forwarded manually.
+!>
+!> The backup is written to the configured default backup remote repository,
+!> `backup-drive`.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine store
-    use, non_intrinsic :: libgaf18, only: git
+subroutine grab
 implicit none
-    call git ( 'store'                                                         &
-             , '!git backup backup-drive && git savetags backup-drive'         &
-             , 'Backup all changes and tags.'                                  &
+    call git ( 'grab'                                                          &
+             , '!git pull --all && git store'                                  &
+             , 'Download and backup all latest changes.'                       &
              )
-end subroutine store
+end subroutine grab
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

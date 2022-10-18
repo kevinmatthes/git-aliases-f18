@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file delbranch.f08
+!> \file backupdestination.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,22 +32,28 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Delete a branch.
+!> \brief   Configure the default backup remote `backup-drive`.
 !>
-!> This alias is used in order to delete a branch.
+!> This alias is used in order to configure a default backup remote repository
+!> named `backup-drive`.
 !>
-!> A common use case for this Git alias command is the removal of a feature
-!> branch after merging it.
+!> When backing up the progress of a repository, not only pushing to the
+!> configured upstream branch(es) is helpful but also creating a further remote
+!> repository as another backup destination.  A use case therefore is, for
+!> instance, restoring a branch which is not available anymore in the upstream
+!> repository.
+!>
+!> By default, the backup remote repository will be named `backup-drive`.  It
+!> will be set to the given repository.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine delbranch
-    use, non_intrinsic :: libgaf18, only: git
+subroutine backupdestination
 implicit none
-    call git ( 'delbranch'                                                     &
-             , 'branch -d'                                                     &
-             , 'Delete a branch.'                                              &
+    call git ( 'backupdestination'                                             &
+             , 'remote add backup-drive'                                       &
+             , 'Configure the default backup remote `backup-drive`.'           &
              )
-end subroutine delbranch
+end subroutine backupdestination
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file rewind-git.f08
+!> \file noff.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,19 +32,19 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Reset the history to the given revision.
+!> \brief   Merge without the fast-forward strategy.
 !>
-!> This alias is used in order to reset the Git history to the given revision.
+!> This alias is used in order to not fast-forward a branch during a merge.  A
+!> dedicated merge commit will be created.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine rewind_git
-    use, non_intrinsic :: libgaf18, only: git
+subroutine noff
 implicit none
-    call git ( 'rewind'                                                        &
-             , 'reset --hard'                                                  &
-             , 'Reset the history to the given revision.'                      &
+    call git ( 'noff'                                                          &
+             , 'merge --no-ff'                                                 &
+             , 'Merge without the fast-forward strategy.'                      &
              )
-end subroutine rewind_git
+end subroutine noff
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

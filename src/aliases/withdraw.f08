@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file backup.f08
+!> \file withdraw.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,36 +32,18 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Backup all commits to the given remote repository.
+!> \brief   Remove the given files from the staging area.
 !>
-!> This alias is used in order to push all commits to the given remote
-!> repository.  This is especially useful when there are multiple branches with
-!> changes to be uploaded to the respective remote repository.
-!>
-!> There are several development workflows with Git which require the creation
-!> and maintenance of branches.  When working on multiple branches at the same
-!> time, it is sometimes not easy to keep the overview which of these contain
-!> not recently uploaded changes.  Then, the Git command `push --all` is the
-!> appropriate solution for this use case.
-!>
-!> Since this Git command will upload every commit, this operation can also be
-!> thought as a backup of the current repository to the given remote repository.
-!> This Git alias command is intended to provide a semantic abbreviation for
-!> this operation in order to avoid the loss of progress due to unsynchronised
-!> changes with a remote repository.
-!>
-!> Due to this command being an abbreviation for an already existing Git
-!> instruction, all available options can be freely combined with this alias.
+!> This alias is used in order to remove the given files from the staging area.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine backup
-    use, non_intrinsic :: libgaf18, only: git
+subroutine withdraw
 implicit none
-    call git ( 'backup'                                                        &
-             , 'push --all'                                                    &
-             , 'Backup all commits to the given remote repository.'            &
+    call git ( 'withdraw'                                                      &
+             , 'reset HEAD --'                                                 &
+             , 'Remove the given files from the staging area.'                 &
              )
-end subroutine backup
+end subroutine withdraw
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

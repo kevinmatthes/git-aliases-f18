@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file noff.f08
+!> \file delbranch.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,20 +32,21 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Merge without the fast-forward strategy.
+!> \brief   Delete a branch.
 !>
-!> This alias is used in order to not fast-forward a branch during a merge.  A
-!> dedicated merge commit will be created.
+!> This alias is used in order to delete a branch.
+!>
+!> A common use case for this Git alias command is the removal of a feature
+!> branch after merging it.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine noff
-    use, non_intrinsic :: libgaf18, only: git
+subroutine delbranch
 implicit none
-    call git ( 'noff'                                                          &
-             , 'merge --no-ff'                                                 &
-             , 'Merge without the fast-forward strategy.'                      &
+    call git ( 'delbranch'                                                     &
+             , 'branch -d'                                                     &
+             , 'Delete a branch.'                                              &
              )
-end subroutine noff
+end subroutine delbranch
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

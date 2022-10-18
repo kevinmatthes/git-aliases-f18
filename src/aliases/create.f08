@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file graph.f08
+!> \file create.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,21 +32,28 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Launch the external repository inspection tool.
+!> \brief   Create a new repository.
 !>
-!> This alias is used in order to launch the external repository inspection
-!> application.  By default, this is `gitk`.  It will be invoked as a process on
-!> its own.
+!> This alias is used in order to immediately create a new repository.
+!>
+!> A common use case for this Git alias command is to create a Git versioned
+!> repository from a directory containing some basic files.  Hence, this alias
+!> provides the functionality to create a repository including the base commit
+!> from only a `.gitignore`, for instance.
+!>
+!> \note It is assumed that the current working directory is the directory going
+!> to be intialised as a Git repository.  Thus, changing into the directory to
+!> be set up as a repository is a mandatory requirement for executing this alias
+!> command.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine graph
-    use, non_intrinsic :: libgaf18, only: git
+subroutine create
 implicit none
-    call git ( 'graph'                                                         &
-             , '!gitk --all &'                                                 &
-             , 'Launch the external repository inspection tool.'               &
+    call git ( 'create'                                                        &
+             , '!git init && git checkin -m ''This is the initial commit.'''   &
+             , 'Create a new repository.'                                      &
              )
-end subroutine graph
+end subroutine create
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file ff.f08
+!> \file view.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,19 +32,23 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Merge with the fast-forward strategy.
+!> \brief   Explore the Git history in the terminal.
 !>
-!> This alias is used in order to fast-forward a branch.
+!> This alias is used in order to explore the Git history in the terminal.
+!>
+!> \note This alias command will only fetch the commits' headlines as well as
+!> the branch information.  For a full overview about the whole commit messages
+!> as well as the changes made to the tracked files, please use `git verbose`
+!> instead.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine ff
-    use, non_intrinsic :: libgaf18, only: git
+subroutine view
 implicit none
-    call git ( 'ff'                                                            &
-             , 'merge --ff'                                                    &
-             , 'Merge with the fast-forward strategy.'                         &
+    call git ( 'view'                                                          &
+             , 'log --graph --pretty=oneline --decorate --all'                 &
+             , 'Explore the Git history in the terminal.'                      &
              )
-end subroutine ff
+end subroutine view
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

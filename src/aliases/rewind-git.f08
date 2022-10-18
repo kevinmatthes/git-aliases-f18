@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file whichremotes.f08
+!> \file rewind-git.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,19 +32,18 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Show the available remote repositories.
+!> \brief   Reset the history to the given revision.
 !>
-!> This alias is used in order to visualise the configured remote repositories.
+!> This alias is used in order to reset the Git history to the given revision.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine whichremotes
-    use, non_intrinsic :: libgaf18, only: git
+subroutine rewind_git
 implicit none
-    call git ( 'whichremotes'                                                  &
-             , 'remote -v'                                                     &
-             , 'Show the available remote repositories.'                       &
+    call git ( 'rewind'                                                        &
+             , 'reset --hard'                                                  &
+             , 'Reset the history to the given revision.'                      &
              )
-end subroutine whichremotes
+end subroutine rewind_git
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

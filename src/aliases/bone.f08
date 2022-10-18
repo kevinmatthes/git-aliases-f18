@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file tws.f08
+!> \file bone.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,33 +32,23 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Search the repository for trailing whitespaces.
+!> \brief   Clone into a bare repository.
 !>
-!> This alias is used in order to search all files in the current repository for
-!> trailing whitespaces.  At option, one can also provide an additional path to
-!> search only there.
+!> This alias is used in order to clone the given repository as a bare one.
 !>
-!> Trailing whitespaces do not fulfill any meaningful task in most cases such
-!> that they require storage without any reason.  Furthermore, they are often
-!> considered very annoying during the development of projects.  In the worst
-!> case, trailing whitespaces are also able of changing the actual meaning of
-!> the respective lines.
-!>
-!> This alias command is intended to locate all occurences of those obsolete
-!> characters in order to be able to remove them easier.  In contrast to the Git
-!> hook for the same task, this command will also find all trailing whitespaces
-!> which cannot be found by that hook anymore, these are those ones which were
-!> introduced before the hook was set up.
+!> In order to create a new backup remote repository, one needs to create a bare
+!> clone, at first.  This bare clone can then be moved to the backup destination
+!> and be bound as backup remote.  This Git alias command provides a semantic
+!> abbreviation for this operation.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine tws
-    use, non_intrinsic :: libgaf18, only: git
+subroutine bone
 implicit none
-    call git ( 'tws'                                                           &
-             , 'grep [[:blank:]]$'                                             &
-             , 'Search the repository for trailing whitespaces.'               &
+    call git ( 'bone'                                                          &
+             , 'clone --bare'                                                  &
+             , 'Clone into a bare repository.'                                 &
              )
-end subroutine tws
+end subroutine bone
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

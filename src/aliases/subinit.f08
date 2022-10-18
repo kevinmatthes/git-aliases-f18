@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file goto-git.f08
+!> \file subinit.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,20 +32,33 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Go to another branch.
+!> \brief   Set up all configured submodules.
 !>
-!> This alias is used in order to switch the active branch.  It is easiest to
-!> think of Git branches as places.
+!> This alias is used in order to initialise all submodules configured in
+!> `.gitmodules`.
+!>
+!> When cloning from a remote repository with submodules non-recursively, they
+!> are not going to be initialised during the cloning process.  Hence, users
+!> need to initialise those themselves.  If one does not initialise submodules
+!> frequently, the commands therefore can be forgotten easily.  This Git alias
+!> summarises the required commands in order to provide a useful abbreviation.
+!>
+!> \note When invoked, Git will assume the repository root as the current
+!> working directory.  It does not matter if the actual working directory
+!> differs.  Hence, all submodules specified in `.gitmodules` will be fetched
+!> and initialised at once.
+!>
+!> \warning Each submodule initialised by this Git alias command will have its
+!> respective `HEAD` detached.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine goto_git
-    use, non_intrinsic :: libgaf18, only: git
+subroutine subinit
 implicit none
-    call git ( 'goto'                                                          &
-             , 'checkout'                                                      &
-             , 'Go to another branch.'                                         &
+    call git ( 'subinit'                                                       &
+             , '!git submodule init && git submodule update'                   &
+             , 'Set up all configured submodules.'                             &
              )
-end subroutine goto_git
+end subroutine subinit
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

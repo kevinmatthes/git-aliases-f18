@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file view.f08
+!> \file bugfix.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,24 +32,28 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Explore the Git history in the terminal.
+!> \brief   Commit and backup the currently staged changes as a bugfix.
 !>
-!> This alias is used in order to explore the Git history in the terminal.
+!> This alias is used in order to commit and backup all currently staged
+!> changes.
 !>
-!> \note This alias command will only fetch the commits' headlines as well as
-!> the branch information.  For a full overview about the whole commit messages
-!> as well as the changes made to the tracked files, please use `git verbose`
-!> instead.
+!> When working on a project, there is sometimes the need of an urgent fix to an
+!> important bug.  Then, one does not focus on a very descriptive commit message
+!> but instead on the source code to edit.
+!>
+!> This Git alias command helps in these situations to immediately persist the
+!> staged changes as a new commit with a descriptive message for this use case.
+!> Furthermore, the introduced changes are also backed up to the configured
+!> backup remote repository `backup-drive`.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine view
-    use, non_intrinsic :: libgaf18, only: git
+subroutine bugfix
 implicit none
-    call git ( 'view'                                                          &
-             , 'log --graph --pretty=oneline --decorate --all'                 &
-             , 'Explore the Git history in the terminal.'                      &
+    call git ( 'bugfix'                                                        &
+             , '!git commit -m Bugfix && git store'                            &
+             , 'Commit and backup the staged changes as a bugfix.'             &
              )
-end subroutine view
+end subroutine bugfix
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

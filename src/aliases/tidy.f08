@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file complain.f08
+!> \file tidy.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,28 +32,27 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Search the repository for lines with more than 80 characters.
+!> \brief   Clean up build artifacts and empty directories.
 !>
-!> This alias is used in order to search all files in the current repository for
-!> lines with more than eighty characters.  At option, one can also provide an
-!> additional path to search only there.
+!> This alias is used in order to remove obsolete artifacts from the repository.
+!> The selection of the artifacts to remove is controlled by the settings in the
+!> most local `.gitignore`.  By default, this command will also clean up empty
+!> directories.
 !>
-!> A maximum line length is often considered a reasonable design choice.  For
-!> historical reasons, a length of at most eighty characters per line is still
-!> common in many projects.
-!>
-!> This alias command helps finding the lines with more than eighty characters
-!> such that those lines can be adjusted and shortened as required.
+!> \warning This command will also remove untracked files, by default.  These
+!> are files which are not already versioned by Git in the current repository or
+!> at least staged.  It is, hence, highly recommended to stage all newly created
+!> source files before calling this alias command in order to prevent a loss of
+!> progress.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine complain
-    use, non_intrinsic :: libgaf18, only: git
+subroutine tidy
 implicit none
-    call git ( 'complain'                                                      &
-             , 'grep -E ^.{81,}$'                                              &
-             , 'Search the repository for lines longer than 80.'               &
+    call git ( 'tidy'                                                          &
+             , 'clean -dfx'                                                    &
+             , 'Clean build artifacts and empty directories.'                  &
              )
-end subroutine complain
+end subroutine tidy
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

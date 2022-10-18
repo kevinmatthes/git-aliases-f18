@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file verbose.f08
+!> \file goto-git.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,20 +32,19 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Explore the complete Git history in the terminal.
+!> \brief   Go to another branch.
 !>
-!> This alias is used in order to explore the complete Git history in the
-!> terminal.
+!> This alias is used in order to switch the active branch.  It is easiest to
+!> think of Git branches as places.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine verbose
-    use, non_intrinsic :: libgaf18, only: git
+subroutine goto_git
 implicit none
-    call git ( 'verbose'                                                       &
-             , 'log --graph --stat --pretty=fuller --decorate --all -p'        &
-             , 'Explore the complete Git history in the terminal.'             &
+    call git ( 'goto'                                                          &
+             , 'checkout'                                                      &
+             , 'Go to another branch.'                                         &
              )
-end subroutine verbose
+end subroutine goto_git
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

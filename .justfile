@@ -82,7 +82,7 @@ src-f18 := source + 'f08'
 
 # Create the alias command submodule.
 @aliases: interfaces logic
-    gfortran {{f18-lib}} lib/aliases.f08
+    gfortran {{f18-lib}} src/aliases.f08
     ar rsv {{library}} *.o
     rm -rf *.o
 
@@ -128,7 +128,7 @@ src-f18 := source + 'f08'
 
 # Create the business logic submodule.
 @logic: interfaces
-    gfortran {{f18-lib}} lib/logic.f08
+    gfortran {{f18-lib}} src/logic.f08
     ar rsv {{library}} *.o
     rm -rf *.o
 

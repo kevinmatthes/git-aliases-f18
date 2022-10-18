@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file newbranch.f08
+!> \file whichremotes.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,20 +32,18 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Create a branch.
+!> \brief   Show the available remote repositories.
 !>
-!> This alias is used in order to create a branch.  Furthermore, one will also
-!> switch immediately to this new branch.
+!> This alias is used in order to visualise the configured remote repositories.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine newbranch
-    use, non_intrinsic :: libgaf18, only: git
+subroutine whichremotes
 implicit none
-    call git ( 'newbranch'                                                     &
-             , 'checkout -b'                                                   &
-             , 'Create a branch.'                                              &
+    call git ( 'whichremotes'                                                  &
+             , 'remote -v'                                                     &
+             , 'Show the available remote repositories.'                       &
              )
-end subroutine newbranch
+end subroutine whichremotes
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

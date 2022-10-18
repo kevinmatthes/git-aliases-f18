@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file whereami.f08
+!> \file newbranch.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,19 +32,19 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Show the current branch.
+!> \brief   Create a branch.
 !>
-!> This alias will list all configured branches and highlight the active one.
+!> This alias is used in order to create a branch.  Furthermore, one will also
+!> switch immediately to this new branch.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine whereami
-    use, non_intrinsic :: libgaf18, only: git
+subroutine newbranch
 implicit none
-    call git ( 'whereami'                                                      &
-             , 'branch -vv'                                                    &
-             , 'Show the current branch.'                                      &
+    call git ( 'newbranch'                                                     &
+             , 'checkout -b'                                                   &
+             , 'Create a branch.'                                              &
              )
-end subroutine whereami
+end subroutine newbranch
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

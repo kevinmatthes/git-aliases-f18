@@ -20,7 +20,7 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!
-!> \file bugfix.f08
+!> \file complain.f08
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -32,29 +32,27 @@
 !> \note        See `LICENSE' for full license.
 !>              See `README.md' for project details.
 !>
-!> \brief   Commit and backup the currently staged changes as a bugfix.
+!> \brief   Search the repository for lines with more than 80 characters.
 !>
-!> This alias is used in order to commit and backup all currently staged
-!> changes.
+!> This alias is used in order to search all files in the current repository for
+!> lines with more than eighty characters.  At option, one can also provide an
+!> additional path to search only there.
 !>
-!> When working on a project, there is sometimes the need of an urgent fix to an
-!> important bug.  Then, one does not focus on a very descriptive commit message
-!> but instead on the source code to edit.
+!> A maximum line length is often considered a reasonable design choice.  For
+!> historical reasons, a length of at most eighty characters per line is still
+!> common in many projects.
 !>
-!> This Git alias command helps in these situations to immediately persist the
-!> staged changes as a new commit with a descriptive message for this use case.
-!> Furthermore, the introduced changes are also backed up to the configured
-!> backup remote repository `backup-drive`.
+!> This alias command helps finding the lines with more than eighty characters
+!> such that those lines can be adjusted and shortened as required.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine bugfix
-    use, non_intrinsic :: libgaf18, only: git
+subroutine complain
 implicit none
-    call git ( 'bugfix'                                                        &
-             , '!git commit -m Bugfix && git store'                            &
-             , 'Commit and backup the staged changes as a bugfix.'             &
+    call git ( 'complain'                                                      &
+             , 'grep -E ^.{81,}$'                                              &
+             , 'Search the repository for lines longer than 80.'               &
              )
-end subroutine bugfix
+end subroutine complain
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
