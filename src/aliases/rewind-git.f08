@@ -39,7 +39,6 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 subroutine rewind_git
-    use, non_intrinsic :: libgaf18, only: git
 implicit none
     call git ( 'rewind'                                                        &
              , 'reset --hard'                                                  &
