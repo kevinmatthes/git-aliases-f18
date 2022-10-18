@@ -38,7 +38,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine rewind_git
+subroutine rewind_git () bind (c)
 implicit none
     call git ( 'rewind'                                                        &
              , 'reset --hard'                                                  &
