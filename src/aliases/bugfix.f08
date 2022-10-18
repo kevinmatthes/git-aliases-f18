@@ -48,7 +48,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine bugfix
+subroutine bugfix () bind (c)
 implicit none
     call git ( 'bugfix'                                                        &
              , '!git commit -m Bugfix && git store'                            &
