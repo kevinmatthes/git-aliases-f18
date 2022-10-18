@@ -48,7 +48,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine create
+subroutine create () bind (c)
 implicit none
     call git ( 'create'                                                        &
              , '!git init && git checkin -m ''This is the initial commit.'''   &
