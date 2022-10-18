@@ -54,7 +54,6 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 subroutine subinit
-    use, non_intrinsic :: libgaf18, only: git
 implicit none
     call git ( 'subinit'                                                       &
              , '!git submodule init && git submodule update'                   &
