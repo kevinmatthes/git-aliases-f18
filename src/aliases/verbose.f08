@@ -40,7 +40,6 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 subroutine verbose
-    use, non_intrinsic :: libgaf18, only: git
 implicit none
     call git ( 'verbose'                                                       &
              , 'log --graph --stat --pretty=fuller --decorate --all -p'        &
