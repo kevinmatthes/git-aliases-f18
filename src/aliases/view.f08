@@ -44,7 +44,6 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 subroutine view
-    use, non_intrinsic :: libgaf18, only: git
 implicit none
     call git ( 'view'                                                          &
              , 'log --graph --pretty=oneline --decorate --all'                 &
