@@ -48,7 +48,6 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 subroutine complain
-    use, non_intrinsic :: libgaf18, only: git
 implicit none
     call git ( 'complain'                                                      &
              , 'grep -E ^.{81,}$'                                              &
