@@ -39,7 +39,6 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 subroutine ff
-    use, non_intrinsic :: libgaf18, only: git
 implicit none
     call git ( 'ff'                                                            &
              , 'merge --ff'                                                    &
