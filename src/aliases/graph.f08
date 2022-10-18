@@ -40,7 +40,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine graph
+subroutine graph () bind (c)
 implicit none
     call git ( 'graph'                                                         &
              , '!gitk --all &'                                                 &
