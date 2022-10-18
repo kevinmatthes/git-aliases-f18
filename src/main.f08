@@ -33,7 +33,7 @@
 !>              See `README.md' for project details.
 !>
 !> \brief   The Git alias configuration program.
-!> \return  This program will return with exit code zero, by default.
+!> \return  Exit code zero.
 !>
 !> This program will invoke the configuration of the defined Git alias commands.
 !>
@@ -44,11 +44,8 @@
 !> summary of the aliases set up by it.
 !>
 !> The resulting program does not require any command line arguments.  If there
-!> should be some, however, they are going to be ignored.
-!>
-!> The application is going to exit with code zero.  Another behaviour is not
-!> configured.  The exit code might vary, however, in case that the call to Git
-!> should fail for some reasons.
+!> should be some, however, they are going to be ignored.  The application is
+!> configured to exit with code zero.
 !>
 !> Recommended further readings and references are listed in the following.
 !>
