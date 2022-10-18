@@ -1,6 +1,8 @@
 Added
 .....
 
+- C bindings for subroutine ``configure``
+
 - C bindings for subroutine ``header``
 
 Changed
