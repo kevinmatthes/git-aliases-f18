@@ -40,7 +40,6 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 subroutine unconfigure
-    use, non_intrinsic :: libgaf18, only: git
 implicit none
     call git ( 'unconfigure'                                                   &
              , 'config --global --unset'                                       &
