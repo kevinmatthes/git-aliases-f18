@@ -20,19 +20,27 @@
 
 /**
  * \author      Kevin Matthes
- * \brief       The C interface for `git-aliases`.
  * \copyright   GPL-2.0
  * \date        2022
  * \file        libgaf18.h
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
- * This file introduces all exported symbols `libgaf18.a`.
+ * \brief   The C interface for `git-aliases`.
+ *
+ * This file declares all symbols exported by `libgaf18.a` for usage in C
+ * applications.
  */
 
 /******************************************************************************/
 
 /**
+ * \author      Kevin Matthes
+ * \copyright   GPL-2.0
+ * \date        2022
+ * \note        See `LICENSE' for full license.
+ *              See `README.md' for project details.
+ *
  * \brief   Prevent this header from being included twice.
  *
  * In case this header file should be included more than just once, unexpected
