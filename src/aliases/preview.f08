@@ -42,7 +42,6 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 subroutine preview
-    use, non_intrinsic :: libgaf18, only: git
 implicit none
     call git ( 'preview'                                                       &
              , '!git diff && git add .'                                        &
