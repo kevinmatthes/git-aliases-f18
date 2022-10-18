@@ -49,7 +49,6 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 subroutine create
-    use, non_intrinsic :: libgaf18, only: git
 implicit none
     call git ( 'create'                                                        &
              , '!git init && git checkin -m ''This is the initial commit.'''   &
