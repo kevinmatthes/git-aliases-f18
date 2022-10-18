@@ -39,7 +39,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine verbose
+subroutine verbose () bind (c)
 implicit none
     call git ( 'verbose'                                                       &
              , 'log --graph --stat --pretty=fuller --decorate --all -p'        &
