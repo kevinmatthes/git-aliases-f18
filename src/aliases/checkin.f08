@@ -53,7 +53,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine checkin
+subroutine checkin () bind (c)
 implicit none
     call git ( 'checkin'                                                       &
              , '!git preview && git commit'                                    &
