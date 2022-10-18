@@ -1,4 +1,4 @@
-/*!!!!!!!!!!!!!!!!!!!!!! GNU General Public License 2.0 !!!!!!!!!!!!!!!!!!!!!!*\
+/*********************** GNU General Public License 2.0 ***********************\
 |                                                                              |
 |  Copyright (C) 2022 Kevin Matthes                                            |
 |                                                                              |
@@ -16,7 +16,7 @@
 |  with this program; if not, write to the Free Software Foundation, Inc.,     |
 |  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.                 |
 |                                                                              |
-\*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+\******************************************************************************/
 
 /**
  * \author      Kevin Matthes
