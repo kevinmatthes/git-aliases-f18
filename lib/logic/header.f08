@@ -40,7 +40,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine header
+subroutine header () bind (c)
 implicit none
     call self_information
     call table_header

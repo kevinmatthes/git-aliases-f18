@@ -120,7 +120,7 @@ implicit none
     end interface
 
     interface
-        module subroutine configure
+        module subroutine configure () bind (c)
         implicit none
         end subroutine configure
     end interface
@@ -171,7 +171,7 @@ implicit none
     end interface
 
     interface
-        module subroutine header
+        module subroutine header () bind (c)
         implicit none
         end subroutine header
     end interface

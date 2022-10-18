@@ -39,7 +39,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine configure
+subroutine configure () bind (c)
     use, non_intrinsic :: libgaf18, only: backup
     use, non_intrinsic :: libgaf18, only: backupdestination
     use, non_intrinsic :: libgaf18, only: bone
