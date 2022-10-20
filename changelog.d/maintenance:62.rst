@@ -5,6 +5,8 @@ Added
 
 - Doxygen settings:  comment footer
 
+- software requirement:  GCC
+
 Fixed
 .....
 
