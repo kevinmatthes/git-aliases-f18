@@ -63,6 +63,7 @@ version is as follows:
 |:------------------|:-------------:|:--------------------------------------|
 | bump2version      | Python CLI    | automatic version increment           |
 | Doxygen           | application   | source code documentation             |
+| GCC               | application   | C99 compiler                          |
 | GFortran          | application   | Fortran 2018 compiler                 |
 | Git               | application   | application to configure              |
 | Just              | Rust binary   | execution of the build instructions   |
