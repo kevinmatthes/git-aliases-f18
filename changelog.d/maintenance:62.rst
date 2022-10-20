@@ -1,6 +1,8 @@
 Added
 .....
 
+- create Doxygen docstring container for referenced literature
+
 - Doxygen settings:  comment footer
 
 Fixed
