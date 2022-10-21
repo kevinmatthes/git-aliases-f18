@@ -7,6 +7,11 @@ Added
 
 - software requirement:  GCC
 
+Changed
+.......
+
+- description of Scriv in the software requirements table
+
 Fixed
 .....
 
