@@ -1,3 +1,5 @@
+.. _[CS14]: CITATION.cff#L55
+
 Added
 .....
 
@@ -14,5 +16,7 @@ Changed
 
 Fixed
 .....
+
+- make link to `[CS14]`_ point to the correct CFF line
 
 - sort Fortran subroutine interfaces by visibility and category
