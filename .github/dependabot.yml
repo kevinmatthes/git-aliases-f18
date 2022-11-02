@@ -21,38 +21,37 @@
 ################################################################################
 ##
 ##  AUTHOR      Kevin Matthes
-##  BRIEF       The definition of a GitHub Action.
+##  BRIEF       The configuration of Dependabot.
 ##  COPYRIGHT   GPL-2.0
 ##  DATE        2022
-##  FILE        cffconvert.yml
+##  FILE        dependabot.yml
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-name: cffconvert
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+    assignees:
+      - kevinmatthes
+    commit-message:
+      prefix: Dependabot
+      include: scope
+    milestone: 2
 
-on:
-  push:
-    paths:
-      - CITATION.cff
-
-permissions:
-  contents: read
-
-jobs:
-  validation:
-    name: validate
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v3.0.2
-        with:
-          persist-credentials: false
-
-      - name: cffconvert
-        uses: citation-file-format/cffconvert-github-action@2.0.0
-        with:
-          args: --validate
+  - package-ecosystem: gitsubmodule
+    directory: /
+    schedule:
+      interval: daily
+    assignees:
+      - kevinmatthes
+    commit-message:
+      prefix: Dependabot
+      include: scope
+    milestone: 2
 
 ################################################################################
