@@ -1,0 +1,4 @@
+Fixed
+.....
+
+- redundant build instructions
