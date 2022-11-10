@@ -20,3 +20,8 @@ Fixed
 - make link to `[CS14]`_ point to the correct CFF line
 
 - sort Fortran subroutine interfaces by visibility and category
+
+Removed
+.......
+
+- GitHub Issue Form:  bug report (outdated submodule)
