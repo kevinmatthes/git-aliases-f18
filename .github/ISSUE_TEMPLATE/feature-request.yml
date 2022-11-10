@@ -34,7 +34,7 @@ name: 'Feature Request:  General'
 description: Request a new feature.
 title: '[Feature Request] New Feature'
 labels:
-  - 'enhancement'
+  - enhancement
 assignees:
   - kevinmatthes
 body:
@@ -44,9 +44,12 @@ body:
   - type: textarea
     attributes:
       label: Description
-      description: Please describe the new feature.
+      description: |
+        Please describe the new feature.  This is only required if the issue
+        title is not alredy descriptive enough.  However, further details may be
+        given by additional comments on this issue after its creation.
       placeholder: Description of the new feature
     validations:
-      required: true
+      required: false
 
 ################################################################################
