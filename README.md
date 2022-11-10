@@ -33,6 +33,10 @@
 
 ## Summary
 
+[![](https://github.com/kevinmatthes/git-aliases-f18/workflows/bump2version/badge.svg)](https://github.com/kevinmatthes/git-aliases-f18/workflows/bump2version)
+[![](https://github.com/kevinmatthes/git-aliases-f18/workflows/cffconvert/badge.svg)](https://github.com/kevinmatthes/git-aliases-f18/workflows/cffconvert)
+[![](https://github.com/kevinmatthes/git-aliases-f18/workflows/valgrind/badge.svg)](https://github.com/kevinmatthes/git-aliases-f18/workflows/valgrind)
+
 Automatically configure Git alias commands with this Fortran 2018 application.
 
 1. [License](#license)
@@ -41,6 +45,8 @@ Automatically configure Git alias commands with this Fortran 2018 application.
 4. [Build](#build)
 
 ## License
+
+[![](https://img.shields.io/github/license/kevinmatthes/git-aliases-f18)](https://github.com/kevinmatthes/git-aliases-f18)
 
 This project's license is **GPL-2.0** (as of June 1991).  The whole license text
 can be found in `LICENSE` in the main directory of this repository.  The brief
