@@ -37,6 +37,7 @@
 .. _Scriv: https://github.com/nedbat/scriv
 ..
 .. _[CS14]: CITATION.cff#L55
+.. _[MRC18]: CITATION.cff#L108
 ..
 .. -------------------------------------------------------------------------- ..
 
