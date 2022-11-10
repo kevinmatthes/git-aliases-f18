@@ -55,10 +55,10 @@ body:
         - The issue templates.
     validations:
       required: true
-  - type: input
+  - type: textarea
     attributes:
       label: Further Information
-      description: At option, please specify further information briefly here.
+      description: At option, please specify further information here.
       placeholder: Is there anything to mind during the maintenance?
     validations:
       required: false
