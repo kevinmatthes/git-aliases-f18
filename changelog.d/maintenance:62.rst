@@ -1,5 +1,3 @@
-.. _[CS14]: CITATION.cff#L55
-
 Added
 .....
 
