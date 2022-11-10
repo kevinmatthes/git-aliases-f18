@@ -35,10 +35,8 @@ alias a     := all
 alias b     := build
 alias clr   := clear
 alias d     := doxygen
-alias dirs  := directories
 alias i     := install
 alias v     := valgrind
-alias ver   := bump
 
 
 
@@ -61,7 +59,11 @@ library     := 'libgaf18.a'
 target      := 'target/' + application
 
 # Valgrind settings.
-vflags  := '--leak-check=full --redzone-size=512 --show-leak-kinds=all'
+vall    := '--show-leak-kinds=all'
+verror  := '--error-exitcode=42'
+vfull   := '--leak-check=full'
+vred    := '--redzone-size=512'
+vflags  := verror + ' ' + vfull + ' ' + vred + ' ' + vall
 
 # Settings for the supported language modes.
 c99-exe := c99 + ' ' + exe + ' ' + flags
@@ -81,18 +83,16 @@ src-f18 := source + 'f08'
 @default: valgrind
 
 # Create the alias command submodule.
-@aliases: interfaces logic
-    gfortran {{f18-lib}} src/aliases.f08
-    ar rsv {{library}} *.o
-    rm -rf *.o
+@aliases: logic
+    just compile src/aliases.f08
 
 # Execute all configured recipes.
 @all: clear doxygen valgrind
 
-# Compile the target application.
-@build: directories lib
-    gfortran {{f18-exe}} {{src-f18}} -o {{exe-f18}} {{lnk-f18}}
+# Compile the target applications.
+@build: directories library
     gcc      {{c99-exe}} {{src-c99}} -o {{exe-c99}} {{lnk-c99}}
+    gfortran {{f18-exe}} {{src-f18}} -o {{exe-f18}} {{lnk-f18}}
 
 # Increment the version numbers.
 @bump part:
@@ -102,6 +102,12 @@ src-f18 := source + 'f08'
 # Remove build and documentation artifacts.
 @clear:
     git clean -dfx
+
+# Compile the given source file and add it to the library.
+@compile source_file:
+    gfortran {{f18-lib}} {{source_file}}
+    ar rsv {{library}} *.o
+    rm -rf *.o
 
 # Create the required directories for the other recipes.
 @directories:
@@ -119,22 +125,22 @@ src-f18 := source + 'f08'
 
 # Create the Fortran interfaces.
 @interfaces:
-    gfortran {{f18-lib}} src/lib.f08
-    ar rsv {{library}} *.o
-    rm -rf *.o
+    just compile src/lib.f08
 
 # Create the project library.
-@lib: aliases interfaces logic
+@library: aliases
 
 # Create the business logic submodule.
 @logic: interfaces
-    gfortran {{f18-lib}} src/logic.f08
-    ar rsv {{library}} *.o
-    rm -rf *.o
+    just compile src/logic.f08
+
+# Test the memory management of the given executable.
+@test name: build
+    valgrind {{vflags}} {{name}}
 
 # Analyse the memory management of the target application.
 @valgrind: build
-    valgrind {{vflags}} ./{{exe-c99}}
-    valgrind {{vflags}} ./{{exe-f18}}
+    just test {{exe-c99}}
+    just test {{exe-f18}}
 
 ################################################################################
