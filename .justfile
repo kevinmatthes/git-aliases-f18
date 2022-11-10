@@ -80,7 +80,7 @@ src-f18 := source + 'f08'
 
 
 # The default recipe to execute.
-@default: valgrind
+@default: all
 
 # Create the alias command submodule.
 @aliases: logic
@@ -133,6 +133,18 @@ src-f18 := source + 'f08'
 # Create the business logic submodule.
 @logic: interfaces
     just compile src/logic.f08
+
+# Increment the major version.
+@major:
+    just bump major
+
+# Increment the minor version.
+@minor:
+    just bump minor
+
+# Increment the patch level.
+@patch:
+    just bump patch
 
 # Test the memory management of the given executable.
 @test name: build
