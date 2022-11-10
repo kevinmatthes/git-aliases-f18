@@ -46,6 +46,10 @@
 !> The resulting program does not require any command line arguments.  If there
 !> should be some, however, they are going to be ignored.  The application is
 !> configured to exit with code zero.
+!>
+!> As a language reference, \cite chivers.sleightholme:fortran:2018,
+!> \cite kuhme.witschital:fortran:1991, and
+!> \cite metcalf.reid.cohen:fortran:2018 were consulted.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
