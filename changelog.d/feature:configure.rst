@@ -7,5 +7,3 @@ Changed
 .......
 
 - let main program call ``configure`` instead of calling every alias one by one
-
-- references are now named in UNIX manual pages

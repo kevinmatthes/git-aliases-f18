@@ -63,11 +63,12 @@ version is as follows:
 |:------------------|:-------------:|:--------------------------------------|
 | bump2version      | Python CLI    | automatic version increment           |
 | Doxygen           | application   | source code documentation             |
+| GCC               | application   | C99 compiler                          |
 | GFortran          | application   | Fortran 2018 compiler                 |
 | Git               | application   | application to configure              |
 | Just              | Rust binary   | execution of the build instructions   |
 | Latexmk           | application   | LaTeX compilation of Doxygen manual   |
-| Scriv             | Python CLI    | changelog maintenance                 |
+| Scriv             | Python CLI    | changelog management                  |
 | TeX Live (full)   | package       | LaTeX environment for Doxygen manual  |
 | Valgrind          | application   | memory leak detection                 |
 
@@ -110,7 +111,7 @@ of this repository.
 
 This tool can be integrated into Git, at option.  Due to its naming convention,
 Git will consider all applications prefixed with `git-` associated commands.
-See [the book by Chacon and Straub](CITATION.cff) for details.  This feature
+See [the book by Chacon and Straub](CITATION.cff#L55) for details.  This feature
 offers two benefits.  One can not only configure all desired alias commands with
 this tool but also request a summary for the aliases set up by this application
 with Git itself.

@@ -53,20 +53,66 @@ implicit none
     private :: self_information
     private :: table_header
 
+    interface
+        module subroutine git (alias, definition, comment)
+        implicit none
+            character (*), intent (in) :: alias
+            character (*), intent (in) :: comment
+            character (*), intent (in) :: definition
+        end subroutine git
+    end interface
+
+    interface
+        module subroutine overview (alias, comment)
+        implicit none
+            character (*), intent (in) :: alias
+            character (*), intent (in) :: comment
+        end subroutine overview
+    end interface
+
+    interface
+        module subroutine self_information
+        implicit none
+        end subroutine self_information
+    end interface
+
+    interface
+        module subroutine table_header
+        implicit none
+        end subroutine table_header
+    end interface
+
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+    public :: configure
+    public :: header
+
+    interface
+        module subroutine configure () bind (c)
+        implicit none
+        end subroutine configure
+    end interface
+
+    interface
+        module subroutine header () bind (c)
+        implicit none
+        end subroutine header
+    end interface
+
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
     public :: backup
     public :: backupdestination
     public :: bone
     public :: bugfix
     public :: checkin
     public :: complain
-    public :: configure
     public :: create
     public :: delbranch
     public :: ff
     public :: goto_git
     public :: grab
     public :: graph
-    public :: header
     public :: newbranch
     public :: noff
     public :: preview
@@ -120,12 +166,6 @@ implicit none
     end interface
 
     interface
-        module subroutine configure () bind (c)
-        implicit none
-        end subroutine configure
-    end interface
-
-    interface
         module subroutine create () bind (c)
         implicit none
         end subroutine create
@@ -141,15 +181,6 @@ implicit none
         module subroutine ff () bind (c)
         implicit none
         end subroutine ff
-    end interface
-
-    interface
-        module subroutine git (alias, definition, comment)
-        implicit none
-            character (*), intent (in) :: alias
-            character (*), intent (in) :: comment
-            character (*), intent (in) :: definition
-        end subroutine git
     end interface
 
     interface
@@ -171,12 +202,6 @@ implicit none
     end interface
 
     interface
-        module subroutine header () bind (c)
-        implicit none
-        end subroutine header
-    end interface
-
-    interface
         module subroutine newbranch () bind (c)
         implicit none
         end subroutine newbranch
@@ -186,14 +211,6 @@ implicit none
         module subroutine noff () bind (c)
         implicit none
         end subroutine noff
-    end interface
-
-    interface
-        module subroutine overview (alias, comment)
-        implicit none
-            character (*), intent (in) :: alias
-            character (*), intent (in) :: comment
-        end subroutine overview
     end interface
 
     interface
@@ -215,12 +232,6 @@ implicit none
     end interface
 
     interface
-        module subroutine self_information
-        implicit none
-        end subroutine self_information
-    end interface
-
-    interface
         module subroutine store () bind (c)
         implicit none
         end subroutine store
@@ -230,12 +241,6 @@ implicit none
         module subroutine subinit () bind (c)
         implicit none
         end subroutine subinit
-    end interface
-
-    interface
-        module subroutine table_header
-        implicit none
-        end subroutine table_header
     end interface
 
     interface
