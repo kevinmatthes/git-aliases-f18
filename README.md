@@ -35,6 +35,11 @@
 
 Automatically configure Git alias commands with this Fortran 2018 application.
 
+1. [License](#license)
+2. [Software Requirements](#software-requirements)
+3. [Description](#description)
+4. [Build](#build)
+
 ## License
 
 This project's license is **GPL-2.0** (as of June 1991).  The whole license text
@@ -135,170 +140,42 @@ features of Fortran 2018:
 * subroutine definition
 * synchronous invocation of external applications from a Fortran program
 
-## Build Instructions
+## Build
 
-All build instructions are configured as Just recipes in the `.justfile` located
-in the repository root.  An overview about all defined recipes can be requested
-by calling the following command in a terminal.
+The build routine is organised by Just and defined in the `.justfile` in the
+repository root.  To build the applications, one of the following instructions
+can be executed.
 
-```
-just --list
-```
-
-### Default Recipe
-
-```
-just
-```
-
-When calling Just without any recipe, the default recipe will be executed.  This
-is the Valgrind check for memory leaks.
-
-### Alias Submodule Compilation
-
-```
-just aliases
-```
-
-This recipe will compile the library submodule containing the provided alias
-commands.  This is an internal recipe invoked by the build routine, if required.
-
-### All Recipes
-
-```
-just a
-just all
-```
-
-This recipe is designed to invoke all meaningful other recipes.  This utility
-recipe is intended as an abbreviation during the development of this project.
-All meaningful recipes are executed in the following order.  The purposes of
-the recipes are explained in subsequent sections.
-
-1. `just clear`
-2. `just doxygen`
-3. `just valgrind`
-
-Thereby, all required directories as well as the target application itself will
-be created automatically.
-
-### Build of the Application
-
-```
+```bash
 just b
 just build
 ```
 
-The application itself will be compiled and saved in the directory `target/`.
-This directory will be created automatically during the build process and is
-situated in the repository's root.
+In addition, an automatic source code documentation with Doxygen is configured.
+One of the following commands will invoke the compilation.
 
-### Automatic Version Number Increment
-
-```
-just ver {{part}}
-just bump {{part}}
-```
-
-This project carries its current version number in multiple files.  In order to
-adjust all of them when preparing a new release, bump2version is employed to
-increment all version numbers.  The call of bump2version is incorporated into
-the build system with this maintenance recipe.  It takes one argument, `part`,
-which is handed over to bump2version.
-
-After the version increment is completed, the changelog will be composesd using
-the pending changelog entries in [`changelog.d/`](changelog.d/).  This project
-uses Scriv in order to maintain the changelog.  The call to it is hard coded
-into this recipe, as well.
-
-### Removal of Build Artifacts
-
-```
-just clr
-just clear
-```
-
-All build artifacts will be removed from the whole repository.  The selection of
-the files and directories to remove is controlled by the `.gitignore` as the
-respective Git command is invoked by this recipe.
-
-### Creation of Directories
-
-```
-just dirs
-just directories
-```
-
-For both the compilation and the installation, several directories are required.
-They are created automatically when the respective commands are invoked.
-
-This is an internal utility recipe.  It will be invoked automatically by other
-recipes, if required.
-
-### Doxygen Manual
-
-```
+```bash
 just d
 just doxygen
 ```
 
-All source files are equipped with docstrings in order to explain the code.
-Doxygen will compile these docstrings to manuals in the following formats:
+The correctness of the applications' memory management is ensured by Valgrind.
+The following instructions are synonymous for calling the memory management
+analysis.
 
-* HTML
-* PDF
-* UNIX manual pages
-
-The finalisation of the LaTeX manual is defined as a hard coded part of this
-recipe.  The compiled LaTeX manual will be copied to the repository root.
-
-### Installation
-
-```
-just i
-just install
-```
-
-The compiled application is copied to the user's home directory's storage for
-user defined binary executables.  This is `~/.local/bin/`.  If it should not
-already exist, it will be created.
-
-### Interface Compilation
-
-```
-just interfaces
-```
-
-This recipe will create the Fortran interfaces in order to compile the library
-submodules.  This is an internal recipe invoked by the build routine, if
-required.
-
-### Library Module Compilation
-
-```
-just lib
-```
-
-This recipe will compile the library module containing the logic of this project
-project.  This is an internal recipe invoked by the build routine, if required.
-
-### Logic Submodule Compilation
-
-```
-just logic
-```
-
-This recipe will compile the library submodule containing the business logic.
-This is an internal recipe invoked by the build routine, if required.
-
-### Valgrind Memory Management Analysis
-
-```
+```bash
 just v
 just valgrind
 ```
 
-This an optional recipe to ensure that the memory allocations are handled
-appropriately by the target application.
+If the compilation of both the applications and its documentation is wished, the
+following instructions can be executed.  This will also run the memory
+management analysis.
+
+```bash
+just
+just a
+just all
+```
 
 <!----------------------------------------------------------------------------->
