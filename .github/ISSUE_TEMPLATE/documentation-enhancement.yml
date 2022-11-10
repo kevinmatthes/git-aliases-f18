@@ -30,7 +30,7 @@
 ##
 ################################################################################
 
-name: 'Documentation:  Enhancement Request'
+name: Documentation Enhancement Request
 description: Request a more detailed documentation.
 title: '[Documentation] Enhancement Request'
 labels:
