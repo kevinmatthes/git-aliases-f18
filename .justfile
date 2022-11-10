@@ -155,4 +155,13 @@ src-f18 := source + 'f08'
     just test {{exe-c99}}
     just test {{exe-f18}}
 
+# Test whether the automatic version increment is still possible.
+@versions:
+    just major
+    git checkout .
+    just minor
+    git checkout .
+    just patch
+    git checkout .
+
 ################################################################################
