@@ -15,6 +15,8 @@ Fixed
 
 - redundant build instructions
 
+- Valgrind now exits non-zero on error
+
 Removed
 .......
 
