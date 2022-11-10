@@ -10,6 +10,8 @@ Changed
 
 - make ``all`` the default recipe
 
+- shorten description of build instructions
+
 Fixed
 .....
 
