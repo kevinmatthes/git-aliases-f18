@@ -116,16 +116,10 @@ When compiled, it will configure the hard coded Git alias commands.  A common
 use case of this application is hence the initialisation of Git in a new user
 account.
 
-`git-aliases` can be freely expanded with further commands.  The procedure in
-order to do so is illustrated by the source files in the `aliases/` directory
-of this repository.
-
-This tool can be integrated into Git, at option.  Due to its naming convention,
-Git will consider all applications prefixed with `git-` associated commands.
-See [the book by Chacon and Straub](CITATION.cff#L55) for details.  This feature
-offers two benefits.  One can not only configure all desired alias commands with
-this tool but also request a summary for the aliases set up by this application
-with Git itself.
+`git-aliases` can be freely expanded with further commands.  Furthermore, this
+tool can be integrated into Git, at option.  Due to its naming convention, Git
+will consider all applications prefixed with `git-` associated commands.  See
+[the book by Chacon and Straub](CITATION.cff#L55) for details.
 
 When calling the application, it will show some default information about itself
 in the first five lines.  These information are about the application's name and
@@ -135,16 +129,6 @@ On the left-hand side, there are the names of the aliases listed, whereas on the
 right-hand side, there is a short description about what this alias command is
 supposed to do.  The writing of a line indicates that the respective alias was
 configured successfully.
-
-Despite the actual functionality, this project also demonstrates the following
-features of Fortran 2018:
-
-* documentation of Fortran projects with Doxygen
-* Fortran's automatic memory management
-* Fortran's module system, including submodules
-* string concatenation in subroutine calls
-* subroutine definition
-* synchronous invocation of external applications from a Fortran program
 
 ## Build
 
