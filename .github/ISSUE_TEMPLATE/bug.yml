@@ -30,11 +30,11 @@
 ##
 ################################################################################
 
-name: 'Bug Report:  General'
+name: Bug Report
 description: Outline a bug.
 title: '[Bug] New Bug'
 labels:
-  - 'bug'
+  - bug
 assignees:
   - kevinmatthes
 body:
@@ -53,12 +53,27 @@ body:
         - v0.1.0-rc1
     validations:
       required: true
-  - type: textarea
+  - type: dropdown
     attributes:
-      label: Description
-      description: Please describe the bug.
-      placeholder: Description of the bug
+      label: Category
+      description: |
+        Please choose the category which describes best the bug to be reported.
+      options:
+        - Major — The software does not fulfill the task it is designed for.
+        - Minor — The software basically does what it should do but there might
+          be improvements.
+        - Typo — There is a spelling mistake or something similar.
     validations:
       required: true
+  - type: textarea
+    attributes:
+      label: Detailed Description
+      description: |
+        Please describe the bug in detail.  This is only required if the issue
+        title is not alredy descriptive enough.  However, further details may be
+        given by additional comments on this issue after its creation.
+      placeholder: Detailed description of the bug
+    validations:
+      required: false
 
 ################################################################################

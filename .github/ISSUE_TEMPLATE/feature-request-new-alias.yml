@@ -34,7 +34,7 @@ name: 'Feature Request:  New Alias'
 description: Request a new Git alias command.
 title: '[Feature Request] New Alias'
 labels:
-  - 'enhancement'
+  - enhancement
 assignees:
   - kevinmatthes
 body:

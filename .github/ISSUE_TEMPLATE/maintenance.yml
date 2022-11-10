@@ -30,11 +30,11 @@
 ##
 ################################################################################
 
-name: 'Maintenance'
+name: Maintenance
 description: Request a maintenance of this project.
 title: '[Maintenance] Maintenance Request'
 labels:
-  - 'maintenance'
+  - maintenance
 assignees:
   - kevinmatthes
 body:
@@ -43,37 +43,22 @@ body:
       value: With this issue, a new maintenance is requested.
   - type: dropdown
     attributes:
-      label: Type of the Maintenance
-      description: |
-        Please specify whether this is going to be a general or a pre-release
-        maintenance.
-      options:
-        - General Maintenance
-        - Pre-Release Maintenance
-    validations:
-      required: true
-  - type: checkboxes
-    attributes:
       label: Focus of the Maintenance
       description: |
         Which of the following features should be maintained in particular?
       options:
-        - label: Everything.
-        - label: The business logic.
-        - label: The configuration files.
-        - label: The configured aliases.
-        - label: The library as a whole.
-        - label: The documentation of the aliases.
-        - label: The documentation of the business logic.
-        - label: The documentation of the library.
-        - label: The documentation of the repository.
-        - label: The issue templates.
+        - Everything.
+        - The business logic.
+        - The C interfaces.
+        - The configuration files.
+        - The configured aliases.
+        - The issue templates.
     validations:
       required: true
-  - type: input
+  - type: textarea
     attributes:
       label: Further Information
-      description: At option, one may specify further information briefly here.
+      description: At option, please specify further information here.
       placeholder: Is there anything to mind during the maintenance?
     validations:
       required: false

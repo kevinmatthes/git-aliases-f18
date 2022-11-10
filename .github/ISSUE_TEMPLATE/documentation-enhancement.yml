@@ -30,35 +30,25 @@
 ##
 ################################################################################
 
-name: 'Documentation:  Enhancement Request'
+name: Documentation Enhancement Request
 description: Request a more detailed documentation.
 title: '[Documentation] Enhancement Request'
 labels:
-  - 'documentation'
+  - documentation
 assignees:
   - kevinmatthes
 body:
   - type: markdown
     attributes:
       value: With this issue, a more detailed documentation is requested.
-  - type: dropdown
+  - type: textarea
     attributes:
-      label: Category
+      label: Additional Information
       description: |
-        Please specify which documentation shall be enriched with further
-        details.
-      options:
-        - alias commands
-        - business logic
-        - library
-        - repository
-    validations:
-      required: true
-  - type: input
-    attributes:
-      label: File
-      description: Is there a special file which shall be modified?
-      placeholder: File name
+        Is there anything special to keep in mind?  This is only required if the
+        issue title is not alredy descriptive enough.  However, further details
+        may be given by additional comments on this issue after its creation.
+      placeholder: Further information to take into account
     validations:
       required: false
 
