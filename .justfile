@@ -139,7 +139,7 @@ src-f18 := source + 'f08'
     valgrind {{vflags}} {{name}}
 
 # Analyse the memory management of the target application.
-@valgrind: build
+@valgrind:
     just test {{exe-c99}}
     just test {{exe-f18}}
 
