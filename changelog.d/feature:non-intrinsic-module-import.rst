@@ -1,5 +1,3 @@
-.. _[MRC18]: CITATION.cff#L108
-
 Added
 .....
 
