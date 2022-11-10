@@ -168,8 +168,8 @@ just v
 just valgrind
 ```
 
-If the compilation of both the applications and its documentation is wished, the
-following instructions can be executed.  This will also run the memory
+If the compilation of both the applications and their documentation is wished,
+the following instructions can be executed.  This will also invoke the memory
 management analysis.
 
 ```bash
