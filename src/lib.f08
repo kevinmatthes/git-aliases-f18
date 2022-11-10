@@ -48,6 +48,7 @@
 
 module libgaf18
 implicit none
+private
     private :: git
     private :: overview
     private :: self_information
