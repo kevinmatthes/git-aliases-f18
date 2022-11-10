@@ -45,7 +45,7 @@ body:
     attributes:
       label: Additional Information
       description: |
-        Is there anything special to keep in mind?  This is only required if the 
+        Is there anything special to keep in mind?  This is only required if the
         issue title is not alredy descriptive enough.  However, further details
         may be given by additional comments on this issue after its creation.
       placeholder: Further information to take into account
