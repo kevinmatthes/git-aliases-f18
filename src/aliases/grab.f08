@@ -44,7 +44,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine grab () bind (c)
+impure subroutine grab () bind (c)
 implicit none
     call git ( 'grab'                                                          &
              , '!git pull --all && git store'                                  &
