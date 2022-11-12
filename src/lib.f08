@@ -55,7 +55,7 @@ private
     private :: table_header
 
     interface
-        module subroutine git (alias, definition, comment)
+        impure module subroutine git (alias, definition, comment)
         implicit none
             character (*), intent (in) :: alias
             character (*), intent (in) :: comment
@@ -64,7 +64,7 @@ private
     end interface
 
     interface
-        module subroutine overview (alias, comment)
+        impure module subroutine overview (alias, comment)
         implicit none
             character (*), intent (in) :: alias
             character (*), intent (in) :: comment
@@ -72,13 +72,13 @@ private
     end interface
 
     interface
-        module subroutine self_information
+        impure module subroutine self_information
         implicit none
         end subroutine self_information
     end interface
 
     interface
-        module subroutine table_header
+        impure module subroutine table_header
         implicit none
         end subroutine table_header
     end interface
@@ -89,13 +89,13 @@ private
     public :: header
 
     interface
-        module subroutine configure () bind (c)
+        impure module subroutine configure () bind (c)
         implicit none
         end subroutine configure
     end interface
 
     interface
-        module subroutine header () bind (c)
+        impure module subroutine header () bind (c)
         implicit none
         end subroutine header
     end interface
@@ -131,163 +131,163 @@ private
     public :: withdraw
 
     interface
-        module subroutine backup () bind (c)
+        impure module subroutine backup () bind (c)
         implicit none
         end subroutine backup
     end interface
 
     interface
-        module subroutine backupdestination () bind (c)
+        impure module subroutine backupdestination () bind (c)
         implicit none
         end subroutine backupdestination
     end interface
 
     interface
-        module subroutine bone () bind (c)
+        impure module subroutine bone () bind (c)
         implicit none
         end subroutine bone
     end interface
 
     interface
-        module subroutine bugfix () bind (c)
+        impure module subroutine bugfix () bind (c)
         implicit none
         end subroutine bugfix
     end interface
 
     interface
-        module subroutine checkin () bind (c)
+        impure module subroutine checkin () bind (c)
         implicit none
         end subroutine checkin
     end interface
 
     interface
-        module subroutine complain () bind (c)
+        impure module subroutine complain () bind (c)
         implicit none
         end subroutine complain
     end interface
 
     interface
-        module subroutine create () bind (c)
+        impure module subroutine create () bind (c)
         implicit none
         end subroutine create
     end interface
 
     interface
-        module subroutine delbranch () bind (c)
+        impure module subroutine delbranch () bind (c)
         implicit none
         end subroutine delbranch
     end interface
 
     interface
-        module subroutine ff () bind (c)
+        impure module subroutine ff () bind (c)
         implicit none
         end subroutine ff
     end interface
 
     interface
-        module subroutine goto_git () bind (c)
+        impure module subroutine goto_git () bind (c)
         implicit none
         end subroutine goto_git
     end interface
 
     interface
-        module subroutine grab () bind (c)
+        impure module subroutine grab () bind (c)
         implicit none
         end subroutine grab
     end interface
 
     interface
-        module subroutine graph () bind (c)
+        impure module subroutine graph () bind (c)
         implicit none
         end subroutine graph
     end interface
 
     interface
-        module subroutine newbranch () bind (c)
+        impure module subroutine newbranch () bind (c)
         implicit none
         end subroutine newbranch
     end interface
 
     interface
-        module subroutine noff () bind (c)
+        impure module subroutine noff () bind (c)
         implicit none
         end subroutine noff
     end interface
 
     interface
-        module subroutine preview () bind (c)
+        impure module subroutine preview () bind (c)
         implicit none
         end subroutine preview
     end interface
 
     interface
-        module subroutine rewind_git () bind (c)
+        impure module subroutine rewind_git () bind (c)
         implicit none
         end subroutine rewind_git
     end interface
 
     interface
-        module subroutine savetags () bind (c)
+        impure module subroutine savetags () bind (c)
         implicit none
         end subroutine savetags
     end interface
 
     interface
-        module subroutine store () bind (c)
+        impure module subroutine store () bind (c)
         implicit none
         end subroutine store
     end interface
 
     interface
-        module subroutine subinit () bind (c)
+        impure module subroutine subinit () bind (c)
         implicit none
         end subroutine subinit
     end interface
 
     interface
-        module subroutine tidy () bind (c)
+        impure module subroutine tidy () bind (c)
         implicit none
         end subroutine tidy
     end interface
 
     interface
-        module subroutine tws () bind (c)
+        impure module subroutine tws () bind (c)
         implicit none
         end subroutine tws
     end interface
 
     interface
-        module subroutine unconfigure () bind (c)
+        impure module subroutine unconfigure () bind (c)
         implicit none
         end subroutine unconfigure
     end interface
 
     interface
-        module subroutine verbose () bind (c)
+        impure module subroutine verbose () bind (c)
         implicit none
         end subroutine verbose
     end interface
 
     interface
-        module subroutine view () bind (c)
+        impure module subroutine view () bind (c)
         implicit none
         end subroutine view
     end interface
 
     interface
-        module subroutine whereami () bind (c)
+        impure module subroutine whereami () bind (c)
         implicit none
         end subroutine whereami
     end interface
 
     interface
-        module subroutine whichremotes () bind (c)
+        impure module subroutine whichremotes () bind (c)
         implicit none
         end subroutine whichremotes
     end interface
 
     interface
-        module subroutine withdraw () bind (c)
+        impure module subroutine withdraw () bind (c)
         implicit none
         end subroutine withdraw
     end interface
