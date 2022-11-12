@@ -38,7 +38,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine ff () bind (c)
+impure subroutine ff () bind (c)
 implicit none
     call git ( 'ff'                                                            &
              , 'merge --ff'                                                    &
