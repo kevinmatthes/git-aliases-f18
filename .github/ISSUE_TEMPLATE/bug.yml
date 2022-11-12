@@ -48,6 +48,7 @@ body:
         Please specify the version of the software in which the bug occurred.
       options:
         - Nightly
+        - v0.1.2
         - v0.1.1
         - v0.1.0
         - v0.1.0-rc1
