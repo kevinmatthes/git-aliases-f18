@@ -39,7 +39,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine noff () bind (c)
+impure subroutine noff () bind (c)
 implicit none
     call git ( 'noff'                                                          &
              , 'merge --no-ff'                                                 &

@@ -39,7 +39,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine self_information
+impure subroutine self_information
 implicit none
     print '(a / a / a / a, a / a)'                                             &
         , 'git-aliases, v0.1.2'                                                &

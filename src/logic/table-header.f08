@@ -39,7 +39,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine table_header
+impure subroutine table_header
 implicit none
     print '(/// a20, t24, a /)', 'ALIAS', 'DESCRIPTION'
 end subroutine table_header

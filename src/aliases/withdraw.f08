@@ -38,7 +38,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine withdraw () bind (c)
+impure subroutine withdraw () bind (c)
 implicit none
     call git ( 'withdraw'                                                      &
              , 'reset HEAD --'                                                 &

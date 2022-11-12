@@ -41,7 +41,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine preview () bind (c)
+impure subroutine preview () bind (c)
 implicit none
     call git ( 'preview'                                                       &
              , '!git diff && git add .'                                        &

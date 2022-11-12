@@ -55,7 +55,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine backup () bind (c)
+impure subroutine backup () bind (c)
 implicit none
     call git ( 'backup'                                                        &
              , 'push --all'                                                    &

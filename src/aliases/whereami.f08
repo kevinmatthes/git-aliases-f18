@@ -38,7 +38,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine whereami () bind (c)
+impure subroutine whereami () bind (c)
 implicit none
     call git ( 'whereami'                                                      &
              , 'branch -vv'                                                    &

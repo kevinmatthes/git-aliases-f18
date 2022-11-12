@@ -39,34 +39,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine configure () bind (c)
-    use, non_intrinsic :: libgaf18, only: backup
-    use, non_intrinsic :: libgaf18, only: backupdestination
-    use, non_intrinsic :: libgaf18, only: bone
-    use, non_intrinsic :: libgaf18, only: bugfix
-    use, non_intrinsic :: libgaf18, only: checkin
-    use, non_intrinsic :: libgaf18, only: complain
-    use, non_intrinsic :: libgaf18, only: create
-    use, non_intrinsic :: libgaf18, only: delbranch
-    use, non_intrinsic :: libgaf18, only: ff
-    use, non_intrinsic :: libgaf18, only: goto_git
-    use, non_intrinsic :: libgaf18, only: grab
-    use, non_intrinsic :: libgaf18, only: graph
-    use, non_intrinsic :: libgaf18, only: newbranch
-    use, non_intrinsic :: libgaf18, only: noff
-    use, non_intrinsic :: libgaf18, only: preview
-    use, non_intrinsic :: libgaf18, only: rewind_git
-    use, non_intrinsic :: libgaf18, only: savetags
-    use, non_intrinsic :: libgaf18, only: store
-    use, non_intrinsic :: libgaf18, only: subinit
-    use, non_intrinsic :: libgaf18, only: tidy
-    use, non_intrinsic :: libgaf18, only: tws
-    use, non_intrinsic :: libgaf18, only: unconfigure
-    use, non_intrinsic :: libgaf18, only: verbose
-    use, non_intrinsic :: libgaf18, only: view
-    use, non_intrinsic :: libgaf18, only: whereami
-    use, non_intrinsic :: libgaf18, only: whichremotes
-    use, non_intrinsic :: libgaf18, only: withdraw
+impure subroutine configure () bind (c)
 implicit none
     call backup
     call backupdestination

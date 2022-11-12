@@ -46,15 +46,13 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine git (alias, definition, comment)
+impure subroutine git (alias, definition, comment)
 implicit none
-    character (*), intent (in) :: alias
-    character (*), intent (in) :: comment
-    character (*), intent (in) :: definition
-
-    character (*), parameter :: config = 'git config --global alias.'
-
-    intrinsic :: execute_command_line
+    character (*), intent (in)  :: alias
+    character (*), intent (in)  :: comment
+    character (*), intent (in)  :: definition
+    character (*), parameter    :: config = 'git config --global alias.'
+    intrinsic                   :: execute_command_line
 
     call execute_command_line (config // alias // ' "' // definition // '"')
     call overview (alias, comment)

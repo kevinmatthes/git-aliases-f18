@@ -45,10 +45,10 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine overview (alias, comment)
+impure subroutine overview (alias, comment)
 implicit none
-    character (*), intent (in) :: alias
-    character (*), intent (in) :: comment
+    character (*), intent (in)  :: alias
+    character (*), intent (in)  :: comment
 
     print '(a20, t24, a)', alias, comment
 end subroutine overview
