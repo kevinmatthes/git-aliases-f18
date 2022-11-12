@@ -48,7 +48,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine backupdestination () bind (c)
+impure subroutine backupdestination () bind (c)
 implicit none
     call git ( 'backupdestination'                                             &
              , 'remote add backup-drive'                                       &
