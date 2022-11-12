@@ -53,6 +53,14 @@ private
     private :: overview
     private :: self_information
     private :: table_header
+    public  :: configure
+    public  :: header
+
+    interface
+        impure module subroutine configure () bind (c)
+        implicit none
+        end subroutine configure
+    end interface
 
     interface
         impure module subroutine git (alias, definition, comment)
@@ -61,6 +69,12 @@ private
             character (*), intent (in) :: comment
             character (*), intent (in) :: definition
         end subroutine git
+    end interface
+
+    interface
+        impure module subroutine header () bind (c)
+        implicit none
+        end subroutine header
     end interface
 
     interface
@@ -85,50 +99,33 @@ private
 
     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-    public :: configure
-    public :: header
-
-    interface
-        impure module subroutine configure () bind (c)
-        implicit none
-        end subroutine configure
-    end interface
-
-    interface
-        impure module subroutine header () bind (c)
-        implicit none
-        end subroutine header
-    end interface
-
-    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-    public :: backup
-    public :: backupdestination
-    public :: bone
-    public :: bugfix
-    public :: checkin
-    public :: complain
-    public :: create
-    public :: delbranch
-    public :: ff
-    public :: goto_git
-    public :: grab
-    public :: graph
-    public :: newbranch
-    public :: noff
-    public :: preview
-    public :: rewind_git
-    public :: savetags
-    public :: store
-    public :: subinit
-    public :: tidy
-    public :: tws
-    public :: unconfigure
-    public :: verbose
-    public :: view
-    public :: whereami
-    public :: whichremotes
-    public :: withdraw
+    public  :: backup
+    public  :: backupdestination
+    public  :: bone
+    public  :: bugfix
+    public  :: checkin
+    public  :: complain
+    public  :: create
+    public  :: delbranch
+    public  :: ff
+    public  :: goto_git
+    public  :: grab
+    public  :: graph
+    public  :: newbranch
+    public  :: noff
+    public  :: preview
+    public  :: rewind_git
+    public  :: savetags
+    public  :: store
+    public  :: subinit
+    public  :: tidy
+    public  :: tws
+    public  :: unconfigure
+    public  :: verbose
+    public  :: view
+    public  :: whereami
+    public  :: whichremotes
+    public  :: withdraw
 
     interface
         impure module subroutine backup () bind (c)
