@@ -39,7 +39,7 @@
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-subroutine savetags () bind (c)
+impure subroutine savetags () bind (c)
 implicit none
     call git ( 'savetags'                                                      &
              , 'push --tags -f'                                                &
