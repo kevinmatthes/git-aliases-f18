@@ -40,6 +40,7 @@ alias v     := valgrind
 
 
 # Compiler flags.
+cpp11   := '-std=c++11'
 c99     := '-std=c99'
 exe     := '-fPIE'
 f18     := '-std=f2018'
@@ -65,16 +66,21 @@ vred    := '--redzone-size=512'
 vflags  := verror + ' ' + vfull + ' ' + vred + ' ' + vall
 
 # Settings for the supported language modes.
-c99-exe := c99 + ' ' + exe + ' ' + flags
-c99-lib := c99 + ' ' + lib + ' ' + flags
-exe-c99 := target + '-c99'
-exe-f18 := target + '-f18'
-f18-exe := f18 + ' ' + exe + ' ' + flags
-f18-lib := f18 + ' ' + lib + ' ' + flags
-lnk-c99 := lflags + ' -lgfortran'
-lnk-f18 := '-I. ' + lflags
-src-c99 := source + 'c'
-src-f18 := source + 'f08'
+c99-exe     := c99 + ' ' + exe + ' ' + flags
+c99-lib     := c99 + ' ' + lib + ' ' + flags
+cpp11-exe   := cpp11 + ' ' + exe + ' ' + flags
+cpp11-lib   := cpp11 + ' ' + lib + ' ' + flags
+exe-c99     := target + '-c99'
+exe-cpp11   := target + '-cpp11'
+exe-f18     := target + '-f18'
+f18-exe     := f18 + ' ' + exe + ' ' + flags
+f18-lib     := f18 + ' ' + lib + ' ' + flags
+lnk-c99     := lflags + ' -lgfortran'
+lnk-cpp11   := lflags + ' -lgfortran'
+lnk-f18     := '-I. ' + lflags
+src-c99     := source + 'c'
+src-cpp11   := source + 'cpp'
+src-f18     := source + 'f08'
 
 
 
@@ -90,8 +96,9 @@ src-f18 := source + 'f08'
 
 # Compile the target applications.
 @build: directories library
-    gcc      {{c99-exe}} {{src-c99}} -o {{exe-c99}} {{lnk-c99}}
-    gfortran {{f18-exe}} {{src-f18}} -o {{exe-f18}} {{lnk-f18}}
+    g++      {{cpp11-exe}} {{src-cpp11}} -o {{exe-cpp11}} {{lnk-cpp11}}
+    gcc      {{c99-exe}}   {{src-c99}}   -o {{exe-c99}}   {{lnk-c99}}
+    gfortran {{f18-exe}}   {{src-f18}}   -o {{exe-f18}}   {{lnk-f18}}
 
 # Increment the version numbers.
 @bump part:
@@ -152,6 +159,7 @@ src-f18 := source + 'f08'
 # Analyse the memory management of the target application.
 @valgrind:
     just test {{exe-c99}}
+    just test {{exe-cpp11}}
     just test {{exe-f18}}
 
 # Test whether the automatic version increment is still possible.
