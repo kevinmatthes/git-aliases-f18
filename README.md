@@ -72,6 +72,7 @@ follows:
 |:------------------|:-------------:|:--------------------------------------|
 | bump2version      | Python CLI    | automatic version increment           |
 | Doxygen           | application   | source code documentation             |
+| G++               | application   | C++11 compiler                        |
 | GCC               | application   | C99 compiler                          |
 | GFortran          | application   | Fortran 2018 compiler                 |
 | Git               | application   | application to configure              |
@@ -83,8 +84,8 @@ follows:
 
 This project is written in Fortran 2018 such that its build requires a compiler
 supporting this standard.  This project relies on **GFortran** therefore.  The
-business logic also has C bindings which can be compiled to a C99 version using
-**GCC**.
+business logic also has C and C++ bindings which can be compiled to a C99 and
+C++11 version using **GCC** and **G++**, respectively.
 
 The purpose of this application is to configure alias commands for **Git**.
 Thus, an installation of Git needs to be ensured.  Furthermore, Git is employed
