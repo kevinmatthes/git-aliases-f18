@@ -13,6 +13,8 @@ Added
 
 - C++ bindings for subroutine ``complain``
 
+- C++ bindings for subroutine ``configure``
+
 - C++ bindings for subroutine ``create``
 
 - C++ bindings for subroutine ``delbranch``
@@ -24,6 +26,8 @@ Added
 - C++ bindings for subroutine ``grab``
 
 - C++ bindings for subroutine ``graph``
+
+- C++ bindings for subroutine ``header``
 
 - C++ bindings for subroutine ``newbranch``
 
@@ -54,10 +58,6 @@ Added
 - C++ bindings for subroutine ``whichremotes``
 
 - C++ bindings for subroutine ``withdraw``
-
-- C++ bindings for subroutine ``configure``
-
-- C++ bindings for subroutine ``header``
 
 - C++ header file for Fortran symbols with C bindings
 
