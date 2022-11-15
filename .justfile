@@ -40,8 +40,8 @@ alias v     := valgrind
 
 
 # Compiler flags.
-cpp11   := '-std=c++11'
 c99     := '-std=c99'
+cpp11   := '-std=c++11'
 exe     := '-fPIE'
 f18     := '-std=f2018'
 flags   := '-Wall -Werror -Wextra -Wpedantic'
