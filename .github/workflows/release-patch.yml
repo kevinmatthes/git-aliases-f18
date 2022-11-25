@@ -33,13 +33,23 @@ name: release-patch
 
 on:
   workflow_dispatch:
+    inputs:
+      type:
+        description: Release type
+        required: true
+        default: patch
+        type: choice
+        options:
+        - major
+        - minor
+        - release 
 
 permissions:
   contents: write
 
 jobs:
-  release:
-    name: patch
+  init:
+    name: init
     runs-on: ubuntu-latest
     steps:
       - name: just
@@ -58,14 +68,56 @@ jobs:
       - name: dependencies
         uses: py-actions/py-dependency-install@v4.0.0
 
-      - name: bump2version
-        run: just patch
-
       - name: user
         uses: fregante/setup-git-user@v1.1.0
 
+  major:
+    name: major
+    runs-on: ubuntu-latest
+    if: ${{ inputs.type == major }}
+    needs: init
+    steps:
+      - name: bump2version
+        run: just major
+
       - name: commit
-        run: git commit -am 'Increment version'
+        run: git commit -am 'Increment major version'
+
+      - name: push
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+
+  minor:
+    name: minor
+    runs-on: ubuntu-latest
+    if: ${{ inputs.type == minor }}
+    needs: init
+    steps:
+      - name: bump2version
+        run: just minor
+
+      - name: commit
+        run: git commit -am 'Increment minor version'
+
+      - name: push
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+
+  patch:
+    name: patch
+    runs-on: ubuntu-latest
+    if: ${{ inputs.type == patch }}
+    needs: init
+    steps:
+      - name: bump2version
+        run: just patch
+
+      - name: commit
+        run: git commit -am 'Increment patch version'
 
       - name: push
         uses: ad-m/github-push-action@v0.6.0
