@@ -23,13 +23,13 @@
 ##  BRIEF       The definition of a GitHub Action.
 ##  COPYRIGHT   GPL-3.0
 ##  DATE        2022
-##  FILE        release.yml
+##  FILE        release-patch.yml
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-name: release
+name: release-patch
 
 on:
   #workflow_dispatch:
@@ -39,10 +39,10 @@ permissions:
   contents: read
 
 jobs:
-  init:
-    name: Version information
+  release:
+    name: patch
     runs-on: ubuntu-latest
     steps:
-      - run: git config --list
+      - run: git --version
 
 ################################################################################
