@@ -42,7 +42,7 @@ on:
         options:
         - major
         - minor
-        - release 
+        - patch 
 
 permissions:
   contents: write
