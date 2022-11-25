@@ -75,6 +75,13 @@ jobs:
       - name: bump2version
         run: just ${{ inputs.release }}
 
+      - name: cff
+        run: |
+          sed \
+            's/date-released: ....-..-../date-released: '`date +%F`'/g' \
+            CITATION.cff >> tmp
+          mv tmp CITATION.cff
+
       - name: commit
         run: git commit -am 'Increment ${{ inputs.release }} version'
 
