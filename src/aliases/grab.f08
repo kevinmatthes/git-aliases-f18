@@ -46,7 +46,7 @@
 impure subroutine grab () bind (c)
 implicit none
     call git ( 'grab'                                                          &
-             , '!git pull --all && git store'                                  &
+             , '!git pull --all && git pull --tags --force && git store'       &
              , 'Download and backup all latest changes.'                       &
              )
 end subroutine grab
