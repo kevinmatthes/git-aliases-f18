@@ -40,13 +40,15 @@
 !>
 !> The backup is written to the configured default backup remote repository,
 !> `backup-drive`.
+!>
+!> \note This alias will also fetch all updated tags automatically.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 impure subroutine grab () bind (c)
 implicit none
     call git ( 'grab'                                                          &
-             , '!git pull --all && git store'                                  &
+             , '!git pull --all && git pull --tags --force && git store'       &
              , 'Download and backup all latest changes.'                       &
              )
 end subroutine grab
