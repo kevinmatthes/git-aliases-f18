@@ -65,10 +65,13 @@ jobs:
       - name: user
         uses: fregante/setup-git-user@v1.1.0
 
-      #- name: commit
-      #  run: git commit -am 'Increment version'
+      - name: commit
+        run: git commit -am 'Increment version'
 
       - name: push
-        run: echo ${{github.ref}}
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
 
 ################################################################################
