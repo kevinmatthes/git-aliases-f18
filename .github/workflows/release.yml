@@ -71,53 +71,11 @@ jobs:
       - name: user
         uses: fregante/setup-git-user@v1.1.0
 
-  major:
-    name: major
-    runs-on: ubuntu-latest
-    if: ${{ inputs.release == major }}
-    needs: init
-    steps:
       - name: bump2version
-        run: just major
+        run: just ${{ inputs.release }}
 
       - name: commit
-        run: git commit -am 'Increment major version'
-
-      - name: push
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
-
-  minor:
-    name: minor
-    runs-on: ubuntu-latest
-    if: ${{ inputs.release == minor }}
-    needs: init
-    steps:
-      - name: bump2version
-        run: just minor
-
-      - name: commit
-        run: git commit -am 'Increment minor version'
-
-      - name: push
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
-
-  patch:
-    name: patch
-    runs-on: ubuntu-latest
-    if: ${{ inputs.release == patch }}
-    needs: init
-    steps:
-      - name: bump2version
-        run: just patch
-
-      - name: commit
-        run: git commit -am 'Increment patch version'
+        run: git commit -am 'Increment ${{ inputs.release }} version'
 
       - name: push
         uses: ad-m/github-push-action@v0.6.0
