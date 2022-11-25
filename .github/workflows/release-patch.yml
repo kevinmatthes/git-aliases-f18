@@ -50,9 +50,6 @@ jobs:
         with:
           python-version: 3.9
 
-      - name: user
-        uses: fregante/setup-git-user@v1.1.0
-
       - name: checkout
         uses: actions/checkout@v3.1.0
         with:
@@ -64,7 +61,16 @@ jobs:
       - name: bump2version
         run: just patch
 
+      - name: user
+        uses: fregante/setup-git-user@v1.1.0
+
       - name: commit
-        run: git commit -m 'Increment versions'
+        run: git commit -am 'Increment version'
+
+      - name: push
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
 
 ################################################################################
