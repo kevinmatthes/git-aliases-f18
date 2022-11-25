@@ -32,7 +32,8 @@
 name: release
 
 on:
-  workflow_dispatch:
+  #workflow_dispatch:
+  push:
 
 permissions:
   contents: read
