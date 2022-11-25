@@ -32,7 +32,7 @@
 name: release-major
 
 on:
-  workflow_dismajor:
+  workflow_dispatch:
 
 permissions:
   contents: write
