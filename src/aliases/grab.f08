@@ -40,6 +40,8 @@
 !>
 !> The backup is written to the configured default backup remote repository,
 !> `backup-drive`.
+!>
+!> \note This alias will also fetch all updated tags automatically.
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
