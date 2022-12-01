@@ -53,6 +53,23 @@ All pending changelog entries are stored in `changelog.d`_.
 
 .. scriv-insert-here
 
+.. _changelog-0.2.0:
+
+0.2.0 — 2022-12-01
+------------------
+
+Added
+.....
+
+- GitHub Action:  preparations for major release
+
+- GitHub Action:  preparations for minor release
+
+Changed
+.......
+
+- rename release GitHub Action workflow
+
 .. _changelog-0.1.3:
 
 0.1.3 — 2022-11-25
