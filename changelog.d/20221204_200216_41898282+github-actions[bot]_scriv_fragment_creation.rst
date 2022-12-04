@@ -7,11 +7,15 @@ Added
 
 - GitHub Action workflow:  Scriv fragment creation
 
-.. Changed
-.. .......
-..
-.. - A bullet item for the Fixed category.
-..
+Changed
+.......
+
+- adjust the descriptions of the GitHub Action workflows
+
+- rename some GitHub Action workflows
+
+- rename some GitHub Action workflow jobs
+
 .. Deprecated
 .. ..........
 ..
