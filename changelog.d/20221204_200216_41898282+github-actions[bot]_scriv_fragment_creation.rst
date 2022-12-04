@@ -6,22 +6,23 @@ Added
 .....
 
 - GitHub Action workflow:  Scriv fragment creation
-..
+
 .. Changed
 .. .......
 ..
-.. - A bullet item for the Changed category.
+.. - A bullet item for the Fixed category.
 ..
 .. Deprecated
 .. ..........
 ..
 .. - A bullet item for the Deprecated category.
 ..
-.. Fixed
-.. .....
-..
-.. - A bullet item for the Fixed category.
-..
+Fixed
+.....
+
+- rename all occurrences of "GitHub Action" in CHANGELOG to "GitHub Action
+  workflow" where appropriate
+
 .. Removed
 .. .......
 ..
