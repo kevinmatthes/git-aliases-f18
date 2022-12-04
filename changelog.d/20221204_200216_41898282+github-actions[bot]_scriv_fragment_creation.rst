@@ -2,10 +2,10 @@
 ..
 .. Uncomment the header that is right (remove the leading dots).
 ..
-.. Added
-.. .....
-..
-.. - A bullet item for the Added category.
+Added
+.....
+
+- GitHub Action workflow:  Scriv fragment creation
 ..
 .. Changed
 .. .......
