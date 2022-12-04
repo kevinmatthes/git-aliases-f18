@@ -125,7 +125,7 @@ Added
 
 - language mode:  C++11
 
-- GitHub Action:  preparations for patch release
+- GitHub Action workflow:  preparations for patch release
 
 Fixed
 .....
@@ -228,9 +228,9 @@ Added
 
 - Dependabot:  pip setup
 
-- GitHub Action:  Valgrind memory management analysis
+- GitHub Action workflow:  Valgrind memory management analysis
 
-- GitHub Action:  version increment check
+- GitHub Action workflow:  version increment check
 
 - Python 3 software requirements list
 
@@ -508,7 +508,7 @@ Added
 
 - Doxygen settings:  literature databases
 
-- GitHub Action:  CFF validation
+- GitHub Action workflow:  CFF validation
 
 - GitHub Issue Template:  new alias
 
