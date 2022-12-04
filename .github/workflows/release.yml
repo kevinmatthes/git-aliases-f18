@@ -20,7 +20,7 @@
 ################################################################################
 ##
 ##  AUTHOR      Kevin Matthes
-##  BRIEF       The definition of a GitHub Action.
+##  BRIEF       Release a new version of this project.
 ##  COPYRIGHT   GPL-3.0
 ##  DATE        2022
 ##  FILE        release.yml
