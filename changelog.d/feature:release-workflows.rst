@@ -1,6 +1,6 @@
 Added
 .....
 
-- GitHub Action:  preparations for major release
+- GitHub Action workflow:  preparations for major release
 
-- GitHub Action:  preparations for minor release
+- GitHub Action workflow:  preparations for minor release
