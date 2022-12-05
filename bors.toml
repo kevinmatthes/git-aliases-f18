@@ -32,4 +32,7 @@
 # The CI steps to watch for.
 status = ["increment", "memcheck"]
 
+# Settings for the merging strategy.
+use_squash_merge = true
+
 ################################################################################
