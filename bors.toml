@@ -30,7 +30,7 @@
 ################################################################################
 
 # The CI steps to watch for.
-status = ["bump2version/increment", "valgrind/memcheck"]
+status = ["ci"]
 
 # Settings for the merging strategy.
 delete_merged_branches = true
