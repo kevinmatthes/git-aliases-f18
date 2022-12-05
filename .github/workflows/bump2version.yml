@@ -43,8 +43,8 @@ permissions:
   contents: read
 
 jobs:
-  increment:
-    name: increment
+  bump2version:
+    name: bump2version
     runs-on: ubuntu-latest
     steps:
       - name: just

@@ -39,8 +39,8 @@ permissions:
   contents: read
 
 jobs:
-  validate:
-    name: validate
+  cffconvert:
+    name: cffconvert
     runs-on: ubuntu-latest
     steps:
       - name: checkout
