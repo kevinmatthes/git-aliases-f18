@@ -20,20 +20,45 @@
 ################################################################################
 ##
 ##  AUTHOR      Kevin Matthes
-##  BRIEF       Settings for Bors.
+##  BRIEF       Run the Valgrind memory management analysis.
 ##  COPYRIGHT   GPL-3.0
 ##  DATE        2022
-##  FILE        bors.toml
+##  FILE        valgrind.yml
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-# The CI steps to watch for.
-status = ["increment", "memcheck"]
+name: valgrind
 
-# Settings for the merging strategy.
-delete_merged_branches = true
-use_squash_merge       = true
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - staging
+      - trying
+
+permissions:
+  contents: read
+
+jobs:
+  memcheck:
+    name: memcheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: dependencies
+        run: sudo apt-get install valgrind -y
+
+      - name: just
+        uses: extractions/setup-just@v1.5.0
+
+      - name: checkout
+        uses: actions/checkout@v3.1.0
+        with:
+          persist-credentials: false
+
+      - name: valgrind
+        run: just v
 
 ################################################################################
