@@ -33,6 +33,7 @@
 status = ["increment", "memcheck"]
 
 # Settings for the merging strategy.
-use_squash_merge = true
+delete_merged_branches = true
+use_squash_merge       = true
 
 ################################################################################
