@@ -17,52 +17,52 @@
 !!                                                                            !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-    private :: git
-    private :: overview
-    private :: self_information
-    private :: table_header
-    public  :: configure
-    public  :: header
+private :: git
+private :: overview
+private :: self_information
+private :: table_header
+public  :: configure
+public  :: header
 
-    interface
-        impure module subroutine configure () bind (c)
-        implicit none
-        end subroutine configure
-    end interface
+interface
+    impure module subroutine configure () bind (c)
+    implicit none
+    end subroutine configure
+end interface
 
-    interface
-        impure module subroutine git (alias, definition, comment)
-        implicit none
-            character (*), intent (in) :: alias
-            character (*), intent (in) :: comment
-            character (*), intent (in) :: definition
-        end subroutine git
-    end interface
+interface
+    impure module subroutine git (alias, definition, comment)
+    implicit none
+        character (*), intent (in) :: alias
+        character (*), intent (in) :: comment
+        character (*), intent (in) :: definition
+    end subroutine git
+end interface
 
-    interface
-        impure module subroutine header () bind (c)
-        implicit none
-        end subroutine header
-    end interface
+interface
+    impure module subroutine header () bind (c)
+    implicit none
+    end subroutine header
+end interface
 
-    interface
-        impure module subroutine overview (alias, comment)
-        implicit none
-            character (*), intent (in) :: alias
-            character (*), intent (in) :: comment
-        end subroutine overview
-    end interface
+interface
+    impure module subroutine overview (alias, comment)
+    implicit none
+        character (*), intent (in) :: alias
+        character (*), intent (in) :: comment
+    end subroutine overview
+end interface
 
-    interface
-        impure module subroutine self_information
-        implicit none
-        end subroutine self_information
-    end interface
+interface
+    impure module subroutine self_information
+    implicit none
+    end subroutine self_information
+end interface
 
-    interface
-        impure module subroutine table_header
-        implicit none
-        end subroutine table_header
-    end interface
+interface
+    impure module subroutine table_header
+    implicit none
+    end subroutine table_header
+end interface
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
