@@ -53,6 +53,51 @@ All pending changelog entries are stored in `changelog.d`_.
 
 .. scriv-insert-here
 
+.. _changelog-0.1.4:
+
+0.1.4 — 2022-12-05
+------------------
+
+Added
+.....
+
+- GitHub Action workflow:  Scriv fragment creation
+
+- settings for Bors
+
+- Bors badge to README
+
+- license badge to summary section of README
+
+- automatic release date version update for CITATION.cff
+
+- GitHub Action workflow:  preparations for major release
+
+- GitHub Action workflow:  preparations for minor release
+
+Changed
+.......
+
+- adjust the descriptions of the GitHub Action workflows
+
+- rename some GitHub Action workflows
+
+- rename some GitHub Action workflow jobs
+
+- split library source file into one included source file per submodule
+
+- adjust GitHub Action workflows to support Bors
+
+- always run CFF validation
+
+- rename release GitHub Action workflow
+
+Fixed
+.....
+
+- rename all occurrences of "GitHub Action" in CHANGELOG to "GitHub Action
+  workflow" where appropriate
+
 .. _changelog-0.1.3:
 
 0.1.3 — 2022-11-25
