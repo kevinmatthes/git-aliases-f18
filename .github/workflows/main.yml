@@ -23,13 +23,13 @@
 ##  BRIEF       Run the Valgrind memory management analysis.
 ##  COPYRIGHT   GPL-3.0
 ##  DATE        2022
-##  FILE        valgrind.yml
+##  FILE        main.yml
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-name: valgrind
+name: CI
 
 on:
   pull_request:
@@ -41,8 +41,42 @@ permissions:
   contents: read
 
 jobs:
-  memcheck:
-    name: memcheck
+  ci:
+    name: ci
+    if: ${{ success() }}
+    needs:
+      - bump2version
+      - valgrind
+    runs-on: ubuntu-latest
+    steps:
+      - name: success
+        run: exit 0
+
+  bump2version:
+    name: bump2version
+    runs-on: ubuntu-latest
+    steps:
+      - name: just
+        uses: extractions/setup-just@v1.5.0
+
+      - name: python
+        uses: actions/setup-python@v4.3.0
+        with:
+          python-version: 3.9
+
+      - name: checkout
+        uses: actions/checkout@v3.1.0
+        with:
+          persist-credentials: false
+
+      - name: dependencies
+        uses: py-actions/py-dependency-install@v4.0.0
+
+      - name: bump2version
+        run: just versions
+
+  valgrind:
+    name: valgrind
     runs-on: ubuntu-latest
     steps:
       - name: dependencies
