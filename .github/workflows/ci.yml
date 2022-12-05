@@ -20,22 +20,24 @@
 ################################################################################
 ##
 ##  AUTHOR      Kevin Matthes
-##  BRIEF       Run the Valgrind memory management analysis.
+##  BRIEF       Run the complete CI workflow.
 ##  COPYRIGHT   GPL-3.0
 ##  DATE        2022
-##  FILE        main.yml
+##  FILE        ci.yml
 ##  NOTE        See `LICENSE' for full license.
 ##              See `README.md' for project details.
 ##
 ################################################################################
 
-name: CI
+name: ci
 
 on:
   pull_request:
   push:
     branches:
       - main
+      - staging
+      - trying
 
 permissions:
   contents: read
