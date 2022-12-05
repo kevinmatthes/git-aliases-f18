@@ -206,6 +206,5 @@
         implicit none
         end subroutine withdraw
     end interface
-end module libgaf18
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
