@@ -72,7 +72,6 @@ follows:
 
 | Requirement       | Type          | Role                                  |
 |:------------------|:-------------:|:--------------------------------------|
-| bump2version      | Python CLI    | automatic version increment           |
 | Doxygen           | application   | source code documentation             |
 | G++               | application   | C++11 compiler                        |
 | GCC               | application   | C99 compiler                          |
@@ -80,7 +79,6 @@ follows:
 | Git               | application   | application to configure              |
 | Just              | Rust binary   | execution of the build instructions   |
 | Latexmk           | application   | LaTeX compilation of Doxygen manual   |
-| Scriv             | Python CLI    | changelog management                  |
 | TeX Live (full)   | package       | LaTeX environment for Doxygen manual  |
 | Valgrind          | application   | memory leak detection                 |
 
@@ -110,10 +108,6 @@ project employs **Latexmk** as LaTeX build manager for the manual finalisation.
 
 The memory management of the compiled applications is analysed by **Valgrind**
 upon request.
-
-In order to simplify the maintenance, **bump2version** as well as **Scriv** are
-used to automate the release generation.  Scriv will compile the changelog on
-release after all version numbers were incremented by bump2version.
 
 ## Description
 
