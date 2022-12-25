@@ -41,7 +41,7 @@
 impure subroutine self_information
 implicit none
     print '(a / a / a / a, a / a)'                                             &
-        , 'git-aliases, v0.1.4'                                                &
+        , 'git-aliases, v0.1.5'                                                &
         , 'Copyright (C) 2022 Kevin Matthes.'                                  &
         , 'This is free software according to GPL-3.0.'                        &
         , 'THERE IS ABSOLUTELY NO WARRANTY, WITHOUT EVEN THE IMPLIED '         &
