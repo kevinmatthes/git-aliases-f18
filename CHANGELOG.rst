@@ -53,6 +53,23 @@ All pending changelog entries are stored in `changelog.d`_.
 
 .. scriv-insert-here
 
+.. _changelog-0.1.5:
+
+0.1.5 — 2022-12-25
+------------------
+
+Changed
+.......
+
+- use my own GitHub Action for CFF release date updates
+
+Removed
+.......
+
+- software requirement:  bump2version
+
+- software requirement:  Scriv
+
 .. _changelog-0.1.4:
 
 0.1.4 — 2022-12-05
