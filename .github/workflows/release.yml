@@ -42,7 +42,7 @@ on:
         options:
         - major
         - minor
-        - patch 
+        - patch
 
 permissions:
   contents: write
@@ -76,11 +76,7 @@ jobs:
         run: just ${{ inputs.release }}
 
       - name: cff
-        run: |
-          sed \
-            's/^date-released: ....-..-../date-released: '`date +%F`'/g' \
-            CITATION.cff >> tmp
-          mv tmp CITATION.cff
+        uses: kevinmatthes/cff-release-today@v0.1.0
 
       - name: commit
         run: git commit -am 'Increment ${{ inputs.release }} version'
