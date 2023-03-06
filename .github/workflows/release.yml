@@ -70,7 +70,7 @@ jobs:
         uses: py-actions/py-dependency-install@v4.0.0
 
       - name: user
-        uses: fregante/setup-git-user@v2.0.0
+        uses: fregante/setup-git-user@v2.0.1
 
       - name: bump2version
         run: just ${{ inputs.release }}
