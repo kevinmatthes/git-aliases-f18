@@ -76,7 +76,7 @@ jobs:
         run: just ${{ inputs.release }}
 
       - name: cff
-        uses: kevinmatthes/cff-release-today@v0.5.1
+        uses: kevinmatthes/cff-release-today@v0.5.2
 
       - name: commit
         run: git commit -am 'Increment ${{ inputs.release }} version'
